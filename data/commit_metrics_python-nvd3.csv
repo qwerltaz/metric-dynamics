@@ -1,0 +1,939 @@
+,hash,author,date,commit_message,is_merge,codebase_size,lines,all_lines,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing
+0,a5548807f9572b7b1886e1ead314d96d98d26086,Areski Belaid,2013-04-08 10:44:56+00:00,Initial commit,False,39,39,39,39,0,,,
+1,24b4b7470099debe1777eda7cee823cbcf80525b,Areski Belaid,2013-04-08 10:45:11+00:00,Rename README.md to README.rst,False,39,8,47,4,4,,,
+2,9ab86189068a665bea7110bc3e19edcfc4b0587e,Areski Belaid,2013-04-08 10:46:24+00:00,import nvd3 python,False,481,442,489,442,0,0.46794871794871795,0.46794871794871795,0.42948717948717946
+3,a586acde31b11e85e0d3c1a3320c18b331f0d68c,Areski Belaid,2013-04-08 10:56:02+00:00,project skel,False,666,185,674,185,0,0.18181818181818182,0.18181818181818182,0.18181818181818182
+4,a91b02df9e7dd190ee74801c3051b75fb5ec61e6,Areski Belaid,2013-04-08 11:04:13+00:00,update README,False,685,19,693,19,0,,,
+5,85284d6a5baf65ea4b617f4734b5418207497154,Areski Belaid,2013-04-08 11:10:41+00:00,update README,False,722,41,734,39,2,,,
+6,9ecf439757aa8de067f47bd63414aee9ce19540a,Areski Belaid,2013-04-08 11:12:14+00:00,add docs,False,1421,703,1437,701,2,,,
+7,192162cfdb9ba9b862499522467914dbc3c7bd51,Areski Belaid,2013-04-08 11:25:13+00:00,clean up code header / add more info on the top file nvd3.py,False,1399,64,1501,21,43,,,
+8,f46ff8d5c1174c814983c2e80b95052bf593b85f,Areski Belaid,2013-04-08 11:25:45+00:00,update gitignore,False,1400,1,1502,1,0,,,
+9,d7576a2e3b0fbe194b90297563710263066591c2,Areski Belaid,2013-04-08 11:25:54+00:00,update gitignore,False,1400,2,1504,1,1,,,
+10,80bc5c1efc72bb02148b7736dcc015e479bcba92,Areski Belaid,2013-04-08 11:58:25+00:00,improve samples data,False,1411,89,1593,50,39,1.0,0.0,0.0
+11,3598e68a66a37817a17b31cd02d9400818225e0d,Areski Belaid,2013-04-08 11:58:42+00:00,update gitignore,False,1412,1,1594,1,0,,,
+12,ed029fb17cbdfbfd880a47f551d16891409a02d8,Areski Belaid,2013-04-08 12:01:17+00:00,add examples py file,False,1421,185,1779,97,88,,,
+13,e56a8b144f81645c45255c86707dfcea33e13e93,Areski Belaid,2013-04-08 12:03:20+00:00,update usage example,False,1419,10,1789,4,6,,,
+14,84b381017372428ea8801db74ae423358ae76b12,Areski Belaid,2013-04-08 13:35:10+00:00,update documentation / example / add screenshot,False,1449,100,1889,65,35,,,
+15,a2a0beeca6c282f77e40447ab3efb41da073ab98,Areski Belaid,2013-04-08 13:40:00+00:00,update readme and include image,False,1454,7,1896,6,1,,,
+16,52e64b69e07b71be23a1a3f601dc58949dab9d3e,Areski Belaid,2013-04-08 13:43:40+00:00,update doc,False,1454,6,1902,3,3,,,
+17,d6d495d484adb6f9f34756095209c8dc806a260e,Areski Belaid,2013-04-08 13:45:02+00:00,update doc,False,1462,8,1910,8,0,,,
+18,af046ef2b0a5d8e0483a95a26357504e5824b304,Areski Belaid,2013-04-08 15:15:31+00:00,update doc / improve code,False,1510,108,2018,78,30,1.0,1.0,1.0
+19,cc8692150ea59f5720ccce9d85d96c83b4434ba5,Areski Belaid,2013-04-08 15:18:01+00:00,update version,False,1510,2,2020,1,1,,,
+20,1c7547c8a54e0dc335a4abe7c060ee816b1ffee8,Areski Belaid,2013-04-08 16:02:52+00:00,add stackedAreaChart support + refactor code,False,1537,71,2091,49,22,1.0,1.0,0.0
+21,25f81f4c3fc693191eaaec7c696111f62adaf01c,Areski Belaid,2013-04-08 16:10:28+00:00,add demo,False,1551,14,2105,14,0,,,
+22,9e9404f48fc4f683c4ce04fdb58707e6b5e50a1b,Areski Belaid,2013-04-08 16:16:06+00:00,update TODO,False,1553,8,2113,5,3,,,
+23,1519539fa1916fbd387aa556200caf50af7a389d,Areski Belaid,2013-04-08 17:13:06+00:00,refactoring,False,1568,91,2204,53,38,1.0,1.0,0.9230769230769231
+24,bbc9baba5f34cc29582378c433bd16588c07e85d,Areski Belaid,2013-04-08 17:13:17+00:00,add new example,False,1598,30,2234,30,0,,,
+25,931eb0a1f1eea59f9991e5bed46cf68df6599b5e,Areski Belaid,2013-04-08 21:16:13+00:00,typo correction,False,1598,6,2240,3,3,,,
+26,d1f9ac9950bfa6be3611fe51e52d82ee027fe294,Shrenik Patel,2013-04-09 06:20:08+00:00,add sample doc string on nvd3 classes,False,1649,51,2291,51,0,,,
+27,6c29f208825c5146befb99b60b085397f635b6ab,Shrenik Patel,2013-04-09 07:10:23+00:00,add sample doc string on nvd3 classes,False,1709,72,2363,66,6,,,
+28,f86f334cac9a12f39f47bb5a2700ff7e08efa06e,Shrenik Patel,2013-04-09 07:31:56+00:00,sample test code file,False,1733,28,2391,26,2,1.0,1.0,1.0
+29,405798448c99ee8793e39f5d2625019dbb41d2a6,Shrenik Patel,2013-04-09 07:56:44+00:00,sample testcases,False,1782,55,2446,52,3,1.0,1.0,1.0
+30,1b3455c682337a4939b81e932991c4b7b6f9d0b8,Areski Belaid,2013-04-09 09:36:47+00:00,switch example order,False,1781,33,2479,16,17,,,
+31,f1785e5969756c42023c60e1d90db4c0c6706544,Shrenik Patel,2013-04-09 09:48:36+00:00,sample doc string on nvd3 classes,False,1822,43,2522,42,1,,,
+32,859324cdab757cda9797d4378e0a32d83e921041,Shrenik Patel,2013-04-09 09:49:43+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,1821,33,2555,16,17,,,
+33,748c62d23681335cb3678f3bcee6efa2263bbf4f,Areski Belaid,2013-04-09 09:53:49+00:00,add new method set_containerheader,False,1822,27,2582,14,13,1.0,1.0,1.0
+34,6572add02db7466749c0ad5e6304d8f0d9bd9634,Areski Belaid,2013-04-09 09:53:54+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,1863,43,2625,42,1,,,
+35,bddcd20c201c1d58a40f9b98db57e5c422af8831,Shrenik Patel,2013-04-09 10:10:21+00:00,sample doc string on nvd3 classes,False,1937,82,2707,78,4,,,
+36,023e3c77e40b3ec12a7fb7b662b5bffbf8032573,Shrenik Patel,2013-04-09 10:47:01+00:00,try to override buildjschart for piechart,False,1974,71,2778,54,17,0.0,1.0,1.0
+37,60bf359db0ce11decefc084b8fc25f87e6ed40e3,Areski Belaid,2013-04-09 11:03:34+00:00,rollback,False,1974,88,2866,44,44,1.0,0.0,0.0
+38,7a9a08be16d10d6f6c189a746b4a4f223203d73f,Areski Belaid,2013-04-09 11:08:50+00:00,method logical/readable  order,False,1978,22,2888,13,9,,,
+39,84bb99ec726b773dd52cbdda1db674b500dedfb8,Areski Belaid,2013-04-09 11:57:13+00:00,update header carriage return,False,1981,7,2895,5,2,,,
+40,71d1ec53ffa442ea675c832ecb495be8b2aa7842,Shrenik Patel,2013-04-09 12:53:55+00:00,comment code for tooltip,False,1984,3,2898,3,0,,,
+41,86a0484b898a27f8372ad4eb1b397f7adfea7df3,Shrenik Patel,2013-04-10 06:26:41+00:00,sample code to add custom tooltip in jschart,False,2000,20,2918,18,2,0.6666666666666666,0.6666666666666666,0.8888888888888888
+42,bdd249b46432278fe5e6bba90e8d2bbe468bae15,Shrenik Patel,2013-04-10 07:56:04+00:00,update on custom tooltip,False,2002,16,2934,9,7,1.0,1.0,1.0
+43,5855e5ffe459f6df59b1ccc8d77a0cb98fc4c0f7,Shrenik Patel,2013-04-10 10:32:44+00:00,update example,False,2006,18,2952,11,7,1.0,1.0,0.0
+44,eff6c26160d7170f7bae0200c7b602e78843d2f2,Shrenik Patel,2013-04-10 13:41:34+00:00,fix time series,False,2007,27,2979,14,13,0.0,0.0,0.0
+45,4db3fe8321be9b58af3ff8152be797e083df8307,Shrenik Patel,2013-04-11 06:00:22+00:00,fix tooltip msg,False,2008,3,2982,2,1,1.0,1.0,1.0
+46,a29b4247ac752b5b085f737a1d6908a77e4a5be3,Shrenik Patel,2013-04-11 10:16:59+00:00,update pie chart js code,False,1988,54,3036,17,37,0.8333333333333334,0.8333333333333334,1.0
+47,4e81b27f9a2c663c275a734c3c9ebf6d8bca282e,Areski Belaid,2013-04-11 13:17:27+00:00,add series,False,1988,4,3040,2,2,,,
+48,dee811943dc00f91f169739d574919c9199e3123,Shrenik Patel,2013-04-11 13:49:01+00:00,add multiBarHorizontalChart example,False,2071,83,3123,83,0,1.0,1.0,0.0
+49,095c4c8de5f0c7c7b89e907d8e345aa7b12776cf,Areski Belaid,2013-04-11 13:55:56+00:00,fix style,False,2058,21,3144,4,17,1.0,1.0,0.0
+50,fb40b24797c81937de8ce107c31e27b733081b61,Areski Belaid,2013-04-11 13:57:48+00:00,update README,False,2059,1,3145,1,0,,,
+51,4d907b4436c29e19f15f29dc32bd18b48eada709,Shrenik Patel,2013-04-11 14:19:56+00:00,moved MultiBarChart code to examples01.py,False,2062,43,3188,23,20,,,
+52,dd5feb2390b480d085226326ca3f3e32d7820830,Shrenik Patel,2013-04-11 14:20:25+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,2050,22,3210,5,17,,,
+53,c45fe5d2e0d6ecd564d6e2007bdc9736e08b1773,Shrenik Patel,2013-04-12 07:51:26+00:00,add example for linePlusBarChart,False,2153,115,3325,109,6,1.0,1.0,0.0
+54,bdc2d050df5bfc208a720933e12c8eaa13a485bc,Shrenik Patel,2013-04-12 08:09:10+00:00,add example for cumulativeLineChart,False,2252,103,3428,101,2,1.0,1.0,0.0
+55,60cae92085786596fe5cf9ae9d429c1c87c05990,Shrenik Patel,2013-04-12 08:10:56+00:00,Update README,False,2254,2,3430,2,0,,,
+56,097dd64014a63d22b1e9060dc7a52409d683e50b,Shrenik Patel,2013-04-12 10:00:00+00:00,add example for discreteBarChart,False,2322,70,3500,69,1,1.0,0.0,0.0
+57,1e077e54a36b86958e3cdc06dc40a78f1c7d2ac6,Shrenik Patel,2013-04-12 11:31:11+00:00,add example of sin/cos wave,False,2355,65,3565,49,16,,,
+58,14ac0d26012b3d5fa6a05d25b52037661df3341d,Shrenik Patel,2013-04-12 12:38:35+00:00,change set_axis to create_x_axis & create_y_axis,False,2368,95,3660,54,41,1.0,1.0,0.0
+59,06e06453f78b6ff6f298e496028c8e490e497c32,Shrenik Patel,2013-04-12 12:53:59+00:00,add missing line on lineWithFocusChart class,False,2370,6,3666,4,2,1.0,1.0,0.0
+60,b170d6501c8e0b520d3aaea9ff935a6673efc2b5,Shrenik Patel,2013-04-12 13:34:26+00:00,update linePlusBarChart example,False,2370,2,3668,1,1,,,
+61,27bf9ffccc4756055443db462315d9e44cf2d12c,Shrenik Patel,2013-04-12 14:31:05+00:00,add example for scatterChart,False,2480,120,3788,115,5,0.5333333333333333,0.5333333333333333,0.26666666666666666
+62,61c05c9e27ae216bd802df955339f31ffe29a52e,Shrenik Patel,2013-04-12 14:35:58+00:00,update doc string,False,2485,11,3799,8,3,,,
+63,49ce7fe4192d72a21da9154b599afbccfa2fae39,Areski Belaid,2013-04-13 11:42:15+00:00,rework on a clean directory / code structure for new charts,False,2692,2399,6198,1303,1096,,,
+64,f40a1762a6cfcbacd5cc2856d0b05904b9413559,Shrenik Patel,2013-04-15 06:25:41+00:00,fix import,False,2692,4,6202,2,2,,,
+65,558cf9a203bd0b63e157eb5ea4002103ddaa4a1e,Shrenik Patel,2013-04-15 06:54:54+00:00,update testcases,False,2774,96,6298,89,7,1.0,1.0,1.0
+66,6357f04cfccfb69afa42a3ce6dca8c7f71f61a09,Shrenik Patel,2013-04-15 07:54:42+00:00,remove json,False,2772,4,6302,1,3,,,
+67,c1abbc7cf397f9c7a06988a9fb635ff653bee408,Shrenik Patel,2013-04-15 08:25:10+00:00,Update scatterChart class,False,2780,20,6322,14,6,1.0,1.0,1.0
+68,48fec7b32c3b1a4acc0ca18fda2ccd49e80dda41,Shrenik Patel,2013-04-15 10:27:30+00:00,move scatterChart & fix y-axis tooltip,False,2782,46,6368,24,22,,,
+69,cd2a1966900a3b379e4046611686ed37ec93d498,Shrenik Patel,2013-04-15 11:17:59+00:00,update doc string,False,2791,31,6399,20,11,,,
+70,281198412481b207c6da61bafbc361438e16ebe3,Shrenik Patel,2013-04-15 11:32:03+00:00,update doc example,False,2785,26,6425,10,16,,,
+71,f96553439afb99c214775e9212f4cde7c88bcce9,Shrenik Patel,2013-04-15 12:23:05+00:00,move multiBarHorizontalChart example to another file to fix tooltip,False,2804,51,6476,35,16,,,
+72,50d315ebb73d3ab5849b92553d80c28b378ae5ec,Areski Belaid,2013-04-15 12:28:37+00:00,add screenshot,False,2804,0,6476,0,0,,,
+73,2847dfd37a2ea728a722db3cd718f85c71c3b136,Areski Belaid,2013-04-15 12:32:23+00:00,update doc version,False,2804,4,6480,2,2,,,
+74,4c4cc9a918afd7067b2c9c7e657fa017c7dbb1d5,Areski Belaid,2013-04-15 12:48:52+00:00,add travis yml,False,2817,13,6493,13,0,,,
+75,19f1c702dae20893754fbee6ace471ab2670bebb,Areski Belaid,2013-04-15 12:52:26+00:00,update readme,False,2820,3,6496,3,0,,,
+76,187fd9337ffdca34fc9c5af3b4a0ff17983bc7ff,Shrenik Patel,2013-04-15 13:06:54+00:00,add sample screenshot,False,2820,0,6496,0,0,,,
+77,9b20c9fc9c300dc4b3a928f9e91dac9c96350e65,Shrenik Patel,2013-04-15 13:42:23+00:00,update sample screenshot,False,2820,0,6496,0,0,,,
+78,67407c6fc28cea1bff0006ef33bbb6697b6a202f,Shrenik Patel,2013-04-15 13:53:08+00:00,add scatterChart + mulitBarHorizontalChart png,False,2820,0,6496,0,0,,,
+79,127c6b7a0cddc333db6a373b332555adea614059,Shrenik Patel,2013-04-15 14:00:31+00:00,add pieChart + discreteBarChart + mulitBarChart png,False,2820,0,6496,0,0,,,
+80,22754fa1978d823d66a3457cccfd85e28a897939,Shrenik Patel,2013-04-15 14:23:50+00:00,update NVD3Chart class doc string,False,2846,28,6524,27,1,,,
+81,bad70b8ebe9d2e98b8c108d1bbdb9598fa3fb6fd,Shrenik Patel,2013-04-16 06:14:00+00:00,sample pic-chart doc file,False,2913,67,6591,67,0,,,
+82,7001c97acd527c8f32fb14f2fc65448db0ac5fe2,Shrenik Patel,2013-04-16 06:29:53+00:00,add chart classes doc file,False,3020,107,6698,107,0,,,
+83,336827b0acf2545d6190f5872c89b1ceb9b76b23,Shrenik Patel,2013-04-16 06:47:11+00:00,add chart classes doc file,False,3165,145,6843,145,0,,,
+84,405533fa1483832950ac6500f333c93e26dec8a2,Shrenik Patel,2013-04-16 07:06:49+00:00,add chart classes doc file,False,3485,320,7163,320,0,,,
+85,add9f948af0cf323becf79f3bd562462088a1f22,Shrenik Patel,2013-04-16 07:22:28+00:00,update chart classes doc string,False,3515,34,7197,32,2,,,
+86,88eb8da1749a2819f09c48af113c934b2d2ce75c,Shrenik Patel,2013-04-16 07:49:39+00:00,update screenshot,False,3515,0,7197,0,0,,,
+87,83dee992f0f75488bff2afe1911a03537d9b445a,Areski Belaid,2013-04-16 08:04:10+00:00,move screenshot,False,3515,0,7197,0,0,,,
+88,148995fb34763ede6ad0634ef89a2cbd2e0bdedb,Areski Belaid,2013-04-16 08:05:45+00:00,update readme,False,3515,12,7209,6,6,,,
+89,94eb5fd0e153c31283ac9281cd1d8c28bfd77d8c,Shrenik Patel,2013-04-16 08:07:08+00:00,update NVD3 class doc string,False,3530,17,7226,16,1,,,
+90,e70681649d9c03cc3c287f8a0a2706727f59fe01,Areski Belaid,2013-04-16 08:07:25+00:00,update readme,False,3533,29,7255,16,13,,,
+91,1e0f63d99169506a512110e0de457f51628b0776,Shrenik Patel,2013-04-16 08:07:41+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3536,39,7294,21,18,,,
+92,65b4eedbeff9c0edf95a8e9987783fe56966f844,Areski Belaid,2013-04-16 08:11:17+00:00,update doc,False,3552,32,7326,24,8,,,
+93,6bada1368d26681f6e7a32f34eff2d1530c8c24b,Areski Belaid,2013-04-16 08:11:29+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3567,17,7343,16,1,,,
+94,ca5915d9288e99bf54a264cb50b3c53906336d50,Areski Belaid,2013-04-16 08:22:03+00:00,update image path,False,3579,52,7395,32,20,,,
+95,637077a0faaf56b59bb703b37ef236cedcafac9d,Areski Belaid,2013-04-16 08:23:21+00:00,update readme,False,3581,2,7397,2,0,,,
+96,fc07367de76c5bae235eb40f4cb284c8025864b0,Areski Belaid,2013-04-16 08:24:15+00:00,update readme,False,3581,2,7399,1,1,,,
+97,80c9226529a2da611356ffd22701e03384824ee0,Shrenik Patel,2013-04-16 08:26:35+00:00,update doc conf + picChart doc,False,3516,83,7482,9,74,,,
+98,1770c7ee68e59f51151810bffea6f6d4a0144c91,Shrenik Patel,2013-04-16 08:32:24+00:00,update image path in intro doc,False,3518,30,7512,16,14,,,
+99,bca56a269016bae8e35cc516b12253ec546500e6,Shrenik Patel,2013-04-16 08:49:05+00:00,update class doc with automodule/autoclass,False,2959,689,8201,65,624,,,
+100,ca77711c44c38f7657686c8390e1fc5428d43653,Shrenik Patel,2013-04-16 09:55:35+00:00,Add NVD3Chart class in doc,False,2945,36,8237,11,25,,,
+101,833f0dadf4e47a3014905ef1b1483a2f13d71c79,Shrenik Patel,2013-04-16 10:24:13+00:00,update screenshots,False,2945,0,8237,0,0,,,
+102,8041abb0e8f034b6bbf178d481c4b51b2e584b1f,Shrenik Patel,2013-04-16 10:38:47+00:00,move NVD3 class to class reference,False,2946,3,8240,2,1,,,
+103,4c8f74a46a828755c4f91ab5d3d6029ec6a31db1,Areski Belaid,2013-04-16 10:40:24+00:00,cleanup the installation section on documentation,False,2939,39,8279,16,23,,,
+104,68708232bf4ac2449483c46bdfab5c0166c27f33,Areski Belaid,2013-04-16 10:40:33+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,2940,3,8282,2,1,,,
+105,713a02ad6602a2024a9665165beee1faa88f1674,Areski Belaid,2013-04-16 10:45:30+00:00,change order,False,2938,4,8286,1,3,,,
+106,40005ba22e77ea791b8cca6d36e2e26bc3a4d341,Shrenik Patel,2013-04-16 10:58:55+00:00,Update Doc string in NVD3 class,False,2938,50,8336,25,25,,,
+107,26ebfc5bdcbe5bf271dcc9765db5b6a85d992ee7,Areski Belaid,2013-04-16 14:05:37+00:00,change version,False,2938,2,8338,1,1,,,
+108,681a6cc7d388edcf7c5a10f5cd1ce08a79fea36d,Areski Belaid,2013-04-16 14:05:47+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,2938,50,8388,25,25,,,
+109,0fd1870fe5f301538d02b469f9e64b7e50fd40c9,Areski Belaid,2013-04-16 14:40:22+00:00,add MANIFEST,False,2942,4,8392,4,0,,,
+110,b61c1c3c62e8a36e5c38e0892154a520de43cf5a,Areski Belaid,2013-04-16 14:42:46+00:00,update version and changelog,False,2959,21,8413,19,2,,,
+111,87a855399bb300716a5809e9a9842ddd8d5b3878,Areski Belaid,2013-04-16 15:10:49+00:00,"fix documentation, javascript generated",False,2959,40,8453,20,20,,,
+112,b1b635216cad07de37e0dc7a23eca121bbe88da2,Areski Belaid,2013-04-16 15:18:42+00:00,update README,False,2959,6,8459,3,3,,,
+113,ca7368a061859513d839eef923cf748d19075def,Areski Belaid,2013-04-16 21:51:54+00:00,add space,False,2958,1,8460,0,1,,,
+114,09b169525a484262742c84433b4de1812b541511,Areski Belaid,2013-04-16 22:13:09+00:00,add endorse badge,False,2963,5,8465,5,0,,,
+115,40b8a5248dd3e3ae5a77fc20033627b81b4b1810,Areski Belaid,2013-04-16 22:30:07+00:00,add TODO element,False,2962,3,8468,1,2,,,
+116,79e31fc01d209c86dcbbb008472781d10f4aee07,Areski Belaid,2013-04-16 22:37:37+00:00,update TODO,False,2955,7,8475,0,7,,,
+117,0eeb9112afd3983149f03241d26ff179ea43d980,Shrenik Patel,2013-04-17 06:40:12+00:00,fix type name,False,2955,2,8477,1,1,,,
+118,0ffa053a22ab01cd4554fc3e48964bd6814d6c07,Areski Belaid,2013-04-17 07:45:45+00:00,update descripton on pypi,False,2955,2,8479,1,1,,,
+119,2ad4387bc200baa8fdbc3ca6061316d05b122323,Areski Belaid,2013-04-17 07:45:55+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,2955,2,8481,1,1,,,
+120,32168ed789c0bf1f9fa343623801155d7d55f9f8,Areski Belaid,2013-04-17 07:50:20+00:00,fix indent in readme,False,2955,16,8497,8,8,,,
+121,7a420091757df3008c1725c9d82ca6731584db34,Areski Belaid,2013-04-17 07:50:48+00:00,fix indent in readme,False,2955,2,8499,1,1,,,
+122,dd9cecde0729bb46e49c1f8d90bbbcf8de16e5fc,Areski Belaid,2013-04-17 09:02:51+00:00,update README,False,2945,20,8519,5,15,,,
+123,6978a51a9e23aebffd7bf3d0645b3d36d41ed266,Shrenik Patel,2013-04-17 14:25:20+00:00,sample code for custom tooltip on piechart,False,2963,22,8541,20,2,0.75,0.75,0.25
+124,260fcceb02daff7cf7b5adabc205b2162859bc03,Shrenik Patel,2013-04-17 14:30:34+00:00,sample code for custom tooltip on piechart,False,2966,7,8548,5,2,1.0,0.0,0.0
+125,27faad18ae7cf69d36cabfd416e6684771edaf5f,Shrenik Patel,2013-04-17 14:51:07+00:00,update tooltip on multibarhorizontalchart,False,2977,37,8585,24,13,0.0,0.125,0.0
+126,12da02419e1673dd6d09fd0d826f84b9a737546a,Areski Belaid,2013-04-17 15:42:15+00:00,fix version and PEP8,False,2977,10,8595,5,5,,,
+127,fe04ae05bec9066c7cdcf2ca7f46c276f682c4f9,Areski Belaid,2013-04-17 15:43:39+00:00,fix tests,False,2977,2,8597,1,1,,,
+128,a7be5893db0fc92b85eee9cdbf9f4e5f80a86d8d,Shrenik Patel,2013-04-18 06:19:28+00:00,Update NVD3Chart class with custom_tooltip method,False,2981,60,8657,32,28,0.0,0.0,0.0
+129,b66c53774453f964707f986393f30c7f2e493874,Shrenik Patel,2013-04-18 07:46:49+00:00,update custom_tooltip method,False,2985,24,8681,14,10,0.0,0.75,0.0
+130,c5fb5f30706c30c4ab225470dcd9a8ec7a0bc1ab,Shrenik Patel,2013-04-18 11:16:06+00:00,example chart on call count/duration with custom tooltip,False,3028,55,8736,49,6,0.0,0.0,0.0
+131,972fb68b2f598f993fe32eb28a0536a35714bbb2,Areski Belaid,2013-04-18 11:23:31+00:00,Update,False,3028,2,8738,1,1,,,
+132,cf82f19cd9cf81b2b4b6fe28e0bc69be3caa9706,Shrenik Patel,2013-04-18 11:35:11+00:00,update function arg,False,3028,6,8744,3,3,,,
+133,8e8408b576c512930eac41db1563117deedf2fa0,Areski Belaid,2013-04-18 11:36:50+00:00,Update,False,3026,6,8750,2,4,,,
+134,441650f47326f5b286fa176a601182cb33d7b2b0,Areski Belaid,2013-04-18 11:37:12+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3026,6,8756,3,3,,,
+135,6f0cd007a092e29b229e423121c6d8fd8ddcb57d,Areski Belaid,2013-04-18 11:41:33+00:00,improve API for tooltip,False,3028,6,8762,4,2,,,
+136,6bf915b71be0c04e6c304b2ea62cd3787747772d,Shrenik Patel,2013-04-18 12:09:05+00:00,update lineChart example with custom tooltip,False,2999,77,8839,24,53,1.0,1.0,1.0
+137,b354834ba0363abb6f8b86a82336ad32fb2a57d6,Shrenik Patel,2013-04-18 12:25:45+00:00,update pieChart example,False,3009,24,8863,17,7,0.0,0.0,0.0
+138,24d0c976dcb7d81954d0f8ac50d5b933baf961a0,Shrenik Patel,2013-04-18 13:36:04+00:00,update chart examples,False,3018,49,8912,29,20,0.0,0.0,0.2857142857142857
+139,fc05d08c4f8105ca3b91e1dd218d185f681a679b,Shrenik Patel,2013-04-18 14:18:08+00:00,update cumulativeLineChart example,False,3023,19,8931,12,7,0.0,0.0,0.0
+140,4cd61ec4c8d6afbf98b76e3ed6e2d86d0d9c3c87,Shrenik Patel,2013-04-18 14:45:38+00:00,working on example02,False,3025,28,8959,15,13,,,
+141,608217b0a04a24ac3fb7f2901e0306ac5f8380f7,Areski Belaid,2013-04-18 18:00:40+00:00,work in progress on tooltip,False,3047,52,9011,37,15,0.5,1.0,0.5
+142,ed9d8b2a7450fc689838a8355bbb0c3c8f78c60c,Shrenik Patel,2013-04-19 06:14:26+00:00,update example03 multibarhorizontalchart,False,3051,14,9025,9,5,,,
+143,d649e81c58b5c569fca18c4b364967f04a7f161f,Shrenik Patel,2013-04-19 06:33:15+00:00,update example02 scatterchart,False,3053,14,9039,8,6,,,
+144,92a932768c644a8f40624570bffdbbff460d3f28,Shrenik Patel,2013-04-19 07:16:09+00:00,update tooltip for discretBarChart,False,3065,22,9061,17,5,0.0,1.0,1.0
+145,24ef56c3792a142cb4e251526c0ce17775dcdb15,Shrenik Patel,2013-04-19 07:28:59+00:00,Update example01 multibarchart,False,3070,21,9082,13,8,,,
+146,7b307aa45c4bb9c233a606989575d1a037bd855e,Shrenik Patel,2013-04-19 07:37:10+00:00,Update NVD3Chart class,False,3070,2,9084,1,1,,0.0,
+147,7075ee25cec577fe7d83ede7afbb09e98c0de699,Shrenik Patel,2013-04-19 08:19:22+00:00,update custom_tooltip_flag in NVD3Chart & exampls,False,3060,90,9174,40,50,,,0.0
+148,b06750aebc7aaf714cfdb11858d049c492e199d8,Areski Belaid,2013-04-19 08:34:54+00:00,rename piechart example,False,3060,0,9174,0,0,,,
+149,50ca817bcd92ddbcc7e85c8cb5ed0cc0e4e0e3cf,Areski Belaid,2013-04-19 08:35:25+00:00,rename multiBarHorizontalChart example,False,3023,37,9211,0,37,,,
+150,d11446b98c9ea5ce415da23dd3c54fbb05ef1c19,Areski Belaid,2013-04-19 08:35:29+00:00,rename multiBarHorizontalChart example,False,3060,37,9248,37,0,,,
+151,acd10e8e42715813961a0c3c62057c64ca81d9d7,Areski Belaid,2013-04-19 08:35:43+00:00,rename multiBarHorizontalChart example,False,3060,0,9248,0,0,,,
+152,d3f997d49cba2ee6568267c1410592a509bdc7fe,Areski Belaid,2013-04-19 08:35:59+00:00,rename pieChart example,False,3028,32,9280,0,32,,,
+153,252e81efb687fecc1961a908444d0f096e9587b5,Areski Belaid,2013-04-19 08:36:03+00:00,rename pieChart example,False,3060,32,9312,32,0,,,
+154,7c825b775bbdfec867d580417a2080865b88e3cd,Areski Belaid,2013-04-19 08:37:08+00:00,rename scatterChart example,False,3105,45,9357,45,0,,,
+155,a7db9cf4456ff092abfa6694237d896b99a3793a,Areski Belaid,2013-04-19 08:37:29+00:00,remove scatterChart example from example02,False,3079,26,9383,0,26,,,
+156,3b9199d1145cee7cb9955dc853b9306f179e07fd,Areski Belaid,2013-04-19 08:37:59+00:00,rename lineChart example,False,3037,42,9425,0,42,,,
+157,38069cf66fabfdd7b719ee149a4de19e9956176f,Areski Belaid,2013-04-19 08:38:02+00:00,rename lineChart example,False,3079,42,9467,42,0,,,
+158,db81db3f78daa6dc44e1113d5ff7377174a07ee0,Areski Belaid,2013-04-19 08:38:54+00:00,cleanup code,False,3078,3,9470,1,2,,,
+159,28f9c8856a0ecdb6a9bb09a9ad03b9befc139cac,Areski Belaid,2013-04-19 08:39:09+00:00,cleanup code,False,3078,2,9472,1,1,,,
+160,45d737b6a7c8badf3c86988c9fcc08d49d0629e5,Areski Belaid,2013-04-19 08:39:24+00:00,cleanup code,False,3078,2,9474,1,1,,,
+161,9454b4cea4e8f2312d5a9ea3bcecbe5573ff2325,Areski Belaid,2013-04-19 08:39:41+00:00,cleanup code,False,3075,5,9479,1,4,,,
+162,cac43c81844872bc71547ef94d0ef637cbb454f0,Areski Belaid,2013-04-19 08:40:14+00:00,cleanup code,False,3061,14,9493,0,14,,,
+163,3480023c3fa5aee0a70a73e21cce27ed127e0722,Areski Belaid,2013-04-19 08:40:52+00:00,example multiBarChart,False,3097,36,9529,36,0,,,
+164,5b05cd471a77ef4b58a91099605b621a7e02c34b,Areski Belaid,2013-04-19 08:41:02+00:00,cleanup code,False,3097,2,9531,1,1,,,
+165,b707cea38e798bed04bdbc8141a9773ee8f2bc06,Areski Belaid,2013-04-19 08:41:15+00:00,cleanup code,False,3097,2,9533,1,1,,,
+166,9a80c2b543a71e39c0e273ef1bfc201bcbb72eba,Areski Belaid,2013-04-19 08:41:29+00:00,example discreteBarChart,False,3047,50,9583,0,50,,,
+167,026b0064989e2454b2c92c9b56639a2b2004b1db,Areski Belaid,2013-04-19 08:41:33+00:00,example discreteBarChart,False,3097,50,9633,50,0,,,
+168,7396e95dfec263541c6fb12fe6b776b31f749788,Areski Belaid,2013-04-19 08:41:54+00:00,cleanup code,False,3079,20,9653,1,19,,,
+169,a5933fb80945a1c32c64326eecd56a7e7985540a,Areski Belaid,2013-04-19 08:42:14+00:00,cleanup code,False,3079,2,9655,1,1,,,
+170,39f1cee63e8c0e97b842dd569eb8331057732c9c,Shrenik Patel,2013-04-19 09:08:49+00:00,update multiBarHorizontalChart example,False,3078,3,9658,1,2,,,
+171,35315c0fbbb917f9a07cf6ea443ba6d42e6be06e,Shrenik Patel,2013-04-19 09:35:47+00:00,refactor NVD3class,False,3077,7,9665,3,4,1.0,1.0,0.0
+172,c659cceac0d5c4e6d58e1b65c3c37ccef82bc9a1,Shrenik Patel,2013-04-19 09:49:45+00:00,update README,False,3079,6,9671,4,2,,,
+173,7815f15e8a3b88759da5a451f7ad0e8c93292551,Shrenik Patel,2013-04-19 10:38:42+00:00,update doc string,False,3212,195,9866,164,31,,,
+174,31d03217611b953e41d31067ac63a5a36a77e925,Areski Belaid,2013-04-19 11:55:56+00:00,update CHANGELOG,False,3219,33,9899,20,13,,,
+175,fd313300ea9703a806d9711b8547769bf34ed32d,Areski Belaid,2013-04-19 11:56:19+00:00,update TODO,False,3220,3,9902,2,1,,,
+176,60d8f86bb1365ce2e875bffc5a74fbef69dd77bd,Areski Belaid,2013-04-19 11:57:18+00:00,delete author file,False,3218,2,9904,0,2,,,
+177,981b128853e57524429fe245cf97785852d2e41e,Areski Belaid,2013-04-19 12:01:00+00:00,clean code,False,3218,6,9910,3,3,,,
+178,87da6013e979ad6e06a4a5180f8b64e056c97fa8,Shrenik Patel,2013-04-19 13:00:35+00:00,change lineChart example + NVD3Chart class for color field,False,3223,9,9919,7,2,0.0,0.0,0.0
+179,03291b249376f1077040ddaf1e1301a314d7cda2,Areski Belaid,2013-04-19 13:10:06+00:00,update README,False,3223,4,9923,2,2,,,
+180,61f061832f818848d88f6fe5941b71d48c5fea30,Areski Belaid,2013-04-19 13:11:43+00:00,update doc,False,3224,7,9930,4,3,,,
+181,15aa043fa7246406caa2472acd55c964cfcd5a3b,Shrenik Patel,2013-04-19 13:16:20+00:00,update demo_all.py,False,3231,19,9949,13,6,,,
+182,310db7c8bda97a982f6f37e4f3ce0dd13b7b02b5,Shrenik Patel,2013-04-19 13:58:04+00:00,add color_category in NVD3Chart class,False,3240,13,9962,11,2,0.0,0.0,0.4
+183,05a98fd509b987ad993b04367df9ef5ec50ae109,Shrenik Patel,2013-04-19 14:04:39+00:00,update doc string in NVD3Chart class,False,3242,10,9972,6,4,0.0,0.0,0.0
+184,f0dd0a19aba057b21ea5156791064b00d2402acd,Shrenik Patel,2013-04-19 14:10:31+00:00,update NVD3Chart class,False,3240,8,9980,3,5,,,
+185,1c5cc1523f6aa1b9f8f1e6f7e3702da511a8c94b,Areski Belaid,2013-04-19 14:12:03+00:00,update demo output,False,3240,2,9982,1,1,,,
+186,49e16a825d1c84079b4cd4affce66f5dd3b49abc,Shrenik Patel,2013-04-19 14:12:19+00:00,update README,False,3240,4,9986,2,2,,,
+187,0013094518f5c8d4640b8526f06e8ce9d74cca0c,Areski Belaid,2013-04-19 14:15:00+00:00,update demo color to keep the output elegant,False,3237,15,10001,6,9,,,
+188,58969a32ae45c4eeb90a648560978b40b446320f,Areski Belaid,2013-04-19 14:15:07+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3237,4,10005,2,2,,,
+189,82976fc46e419798edd9fa08e9a566751b504931,Areski Belaid,2013-04-19 14:16:33+00:00,update TODO / Changelog,False,3243,10,10015,8,2,,,
+190,2f52fe0358e4e64c1bcbaaa7f5e543916ccfe004,Areski Belaid,2013-04-19 14:21:46+00:00,regroup all example,False,3313,70,10085,70,0,,,
+191,f734e63f1d1b6f8dc15641f22901f596f3a2dcb6,Areski Belaid,2013-04-19 14:22:14+00:00,regroup all example,False,3313,52,10137,26,26,,,
+192,06efeef32a9f1c644f6a85e7af8355b35e8a2f7e,Areski Belaid,2013-04-19 14:36:55+00:00,change live example,False,3313,4,10141,2,2,,,
+193,b619dfac5be1e6e52b9ba0acbe118fb9f9c5939f,Areski Belaid,2013-04-19 14:37:24+00:00,update version,False,3313,2,10143,1,1,,,
+194,1887d36da08ca89c02ee8655b4a3d9da7b3a8e93,Areski Belaid,2013-04-19 19:16:37+00:00,update header,False,3398,115,10258,100,15,,,
+195,4f6fdcee5396115887ea5dee37c6ebcb16ff0b7a,Areski Belaid,2013-04-19 19:24:44+00:00,update documentation version,False,3399,7,10265,4,3,,,
+196,c703b553888c4d2c791fc5c56a0f3618f85d9e52,Areski Belaid,2013-04-20 16:54:22+00:00,update screenshot linefocusbar,False,3399,0,10265,0,0,,,
+197,afe11b9fce46c1e433cb845655766adca7365d68,Areski Belaid,2013-04-20 17:00:49+00:00,update documentation,False,3408,9,10274,9,0,,,
+198,5abe3027fdfb126222cfaf1ec7f243d0960d3e17,Areski Belaid,2013-04-20 17:22:26+00:00,update screenshot for linefocuschart,False,3408,0,10274,0,0,,,
+199,a11635901fb0c633a54eb0156c54ec979e669bfa,Areski Belaid,2013-04-20 17:28:50+00:00,update screenshot for linefocuschart,False,3408,0,10274,0,0,,,
+200,7b342b78f2f593d52dfa1ed30ed98a8fc3be9d7f,Shrenik Patel,2013-04-22 12:50:21+00:00,to fix lineChart tooltip,False,3400,8,10282,0,8,1.0,0.0,0.0
+201,fca390e7dd0d806cd87fa3570ce23ad132d8c852,Areski Belaid,2013-04-22 13:51:17+00:00,add new example,False,3448,48,10330,48,0,,,
+202,1f68ef80ac186c1e555b35e86ecb8521aff5dd43,Areski Belaid,2013-04-22 13:51:24+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3440,8,10338,0,8,,,
+203,aef31c41fff154d0eed882143ee137376f47732b,Areski Belaid,2013-04-22 13:52:35+00:00,new version / update changelog,False,3445,9,10347,7,2,,,
+204,eeb17d27658e7d8c4c4e811b599fa4e0bc69dec4,Areski Belaid,2013-04-22 14:05:58+00:00,update TODO,False,3447,2,10349,2,0,,,
+205,95b3becd3246cd955916ac778eeab0fb38f890a5,David Arcos,2013-04-22 16:32:28+00:00,"The data series it now valid js
+
+The data series (self.series) was in python format, in example:
+
+    {'y': 6, 'x': 1338501600000L}
+
+Now it's in javascript format, in example:
+
+    {'y': 6, 'x': 1338501600000}
+
+The default examples (linechart, linewithfocuschart) were failing ('Uncaught SyntaxError: Unexpected token ILLEGAL') because of the invalid js.",False,3449,4,10353,3,1,0.0,0.0,1.0
+206,161984e953abbff3803a62d4a42a0d9a25d49e07,Areski Belaid,2013-04-23 09:33:05+00:00,update TODO,False,3449,6,10359,3,3,,,
+207,94f905892fa9b5243518d78e82012f3a166ec449,Areski Belaid,2013-04-23 09:34:06+00:00,"Merge pull request #1 from DZPM/patch-1
+
+The data series it now in javascript format",True,3451,4,10363,3,1,,,
+208,0426af09d62d6be7f5d13b359fa29a1e9bdad64f,Areski Belaid,2013-04-23 09:47:48+00:00,update travisci version python,False,3448,3,10366,0,3,,,
+209,6ab50139f02a05cf3ef27981ce333a863838d1b6,Areski Belaid,2013-04-23 09:49:45+00:00,update version / changelog,False,3453,7,10373,6,1,,,
+210,16f118d62d6f3d199dde993ca2ed14d8f08df17a,Areski Belaid,2013-04-23 15:53:51+00:00,"* support for px and % on height and width
+* add tag_script_js property to disable tag <script>",False,3469,36,10409,26,10,0.5714285714285714,0.0,1.0
+211,59f7e93242f1b99803733257a8d50d7832152cbe,Areski Belaid,2013-04-23 16:20:40+00:00,update version / fix style,False,3477,20,10429,14,6,1.0,0.0,1.0
+212,19360c39fe6bbc128176e55b9dcdad492537dbfd,Shrenik Patel,2013-04-24 06:43:38+00:00,add custom dateformat var for tooltip,False,3485,18,10447,13,5,0.0,0.25,0.25
+213,00ac0a484bf8c83112e8db42b6ec06c4077d6823,Shrenik Patel,2013-04-24 07:10:42+00:00,Add x_axis_date_format var on various chart to modify x-axis display value,False,3486,35,10482,18,17,,,
+214,9108a304d39643b9519b7cc4432dba623e273a91,Shrenik Patel,2013-04-24 07:28:17+00:00,update doc string + examples,False,3491,27,10509,16,11,,,
+215,81ea92fd231f14051ae2a8cd362c24af6a2a1634,Areski Belaid,2013-04-24 07:59:58+00:00,add color_category,False,3490,5,10514,2,3,1.0,1.0,1.0
+216,b123f352d0218ab2cc3e7e55dc403c4495cfb03c,Areski Belaid,2013-04-24 08:01:05+00:00,merge,True,3504,78,10592,46,32,,,
+217,46d04b03dce90b751d5019bbd6629214d62c0b93,Areski Belaid,2013-04-24 08:06:56+00:00,update version / changelog,False,3510,12,10604,9,3,,,
+218,b7c5cae19a4ed259db8fc96dfc180a654b2c33a7,Areski Belaid,2013-04-25 11:38:28+00:00,add CONTRIBUTORS,False,3514,4,10608,4,0,,,
+219,4a389ec08110cfd4614ad49ddbfa35746c1bb6d7,Areski Belaid,2013-04-28 14:25:18+00:00,support for python3,False,3515,141,10749,71,70,0.6,0.6,0.6
+220,633f05d5b119cfe3bc78b906cba605548d6896af,Areski Belaid,2013-04-28 14:27:04+00:00,add example cumulativeLineChart,False,3559,44,10793,44,0,,,
+221,06c8c2645eb06b8a48ed3dcb38c71cc941c14129,Areski Belaid,2013-04-28 14:30:14+00:00,support for python3 - tests,False,3559,40,10833,20,20,,,
+222,31e64c413e782498d0d50e6baad35d299d1dce37,Areski Belaid,2013-04-28 14:33:32+00:00,update changelog / version,False,3565,8,10841,7,1,,,
+223,ed0751963abe31238dec9cc2ba51aec148741d24,Christopher Mejía Montoya,2013-04-29 07:05:36+00:00,test height,False,3565,2,10843,1,1,,,
+224,ff89c25547cff4e68db6bcb7cfd41f0669cec5c7,Christopher Mejía Montoya,2013-04-29 07:15:06+00:00,Resolve height problem,False,3565,2,10845,1,1,,,
+225,f41c70b7663b8594a97d0ae5ed12dd3ade920b7c,Areski Belaid,2013-04-29 09:43:12+00:00,"Merge pull request #3 from chrids/master
+
+Resolve height pie problem",True,3565,2,10847,1,1,,,
+226,d6dc717030f5d5ebe2adb7e174bde6f6d4ae1346,jordanvg,2013-05-06 20:43:59+00:00,"Remove x-axis sorting
+
+Sorting the x-axis ruins the mapping between the ydata and xdata lists.",False,3564,1,10848,0,1,1.0,1.0,1.0
+227,a877af29deadfb8430553ec75e9f2ff1c7c44dac,Areski Belaid,2013-05-06 21:45:33+00:00,"Merge pull request #4 from jordanvg/master
+
+Remove x-axis sorting",True,3563,1,10849,0,1,,,
+228,0910486a4c04c68d322ee9c0de004a5a62a602f1,Areski Belaid,2013-05-06 21:47:17+00:00,change version / changelog / contributors,False,3570,11,10860,9,2,,,
+229,493cbe44077fc297df4a0700378c089f5de4839d,Shrenik Patel,2013-05-28 13:05:55+00:00,added color list on piechart,False,3597,35,10895,31,4,0.0,0.0,0.8421052631578947
+230,5dc734f19db0c6e1a3a040fd4fec32266e2fb974,Areski Belaid,2013-05-28 13:17:25+00:00,Set the color for piechart to match the fruit color,False,3597,2,10897,1,1,,,
+231,c55da8dbd746596a43dd16528fc9e609b70fc9fd,Areski Belaid,2013-05-28 13:25:05+00:00,release v0.5,False,3603,8,10905,7,1,,,
+232,399dcd0d7f17fec2660e70959fb066cc94eea106,Shrenik Patel,2013-05-28 13:29:55+00:00,update doc string,False,3605,2,10907,2,0,,,
+233,10d4dcf27d32890333c0635b2031d5e8bbc3e80a,Shrenik Patel,2013-05-28 13:30:54+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,3611,10,10917,8,2,,,
+234,838f891c5027f9a008fd84e1e390b9c6981abc01,Shrenik Patel,2013-05-30 12:06:31+00:00,update multiBarChart,False,3660,55,10972,52,3,1.0,1.0,0.0
+235,1524c6257e491d69ec4229b5b1384abae53045b2,Areski Belaid,2013-05-30 12:41:05+00:00,add example all / rename examples/date_multiBarChart.py,False,3681,25,10997,23,2,,,
+236,5b649a6da781a23c7b1ac13bef4982886e619571,Areski Belaid,2013-05-30 12:48:45+00:00,update version / Changelog,False,3688,9,11006,8,1,,,
+237,38aa4817981792102fdbcd0273b52ffee758b6d6,Areski Belaid,2013-05-30 16:23:47+00:00,fix for Python3,False,3690,8,11014,5,3,1.0,1.0,1.0
+238,21678a7016e3417382c96dec7c816c0715f31e57,Areski Belaid,2013-05-30 16:25:25+00:00,add fix for Python3 in changelog,False,3692,2,11016,2,0,,,
+239,ebd9f37e0ab6a4bcbb13ecb5e06742d24f9c788d,rodrigoprior,2013-05-31 15:16:09+00:00,enable plot size in scatterChart kwargs,False,3692,12,11028,6,6,,,
+240,bf1efb057f895d6b8a3e276bba1e6fe75abc9dbe,Areski Belaid,2013-05-31 16:36:50+00:00,"Merge pull request #5 from RodrigoPrior/master
+
+scatterChart - enable plot size kwargs",True,3692,12,11040,6,6,,,
+241,077191598cfb14a17348e6fe8f9a2e25371c2569,Areski Belaid,2013-05-31 16:53:48+00:00,add fix for size on scatterchart - set default valule,False,3696,18,11058,11,7,0.0,0.0,0.0
+242,881f73f74e8a9b2dac7573002c85e0a3d3177c8d,Areski Belaid,2013-05-31 16:55:23+00:00,update CHANGELOG / Version,False,3700,6,11064,5,1,,,
+243,176e24919d0cfcde4d25c4bfd0fb24dd3af1ac23,Areski Belaid,2013-05-31 16:58:54+00:00,add RodrigoPrior to contributor file,False,3701,3,11067,2,1,,,
+244,eaef3138f2d97e0d241c299567d0c5f39b8faed7,DanMeakin,2013-06-04 14:50:40+00:00,"Added size variable to ScatterPlot series
+
+ScatterPlots previously only supported a fixed/random size for points. This has been changed to support per-point variable size allowing for a third variable to be plotted along with the usual x, y variables.",False,3710,15,11082,12,3,0.0,0.0,0.0
+245,9ca603ae76c255117b04c9b158b43362048b6457,DanMeakin,2013-06-04 15:23:34+00:00,Amended typo (shape -> cshape),False,3710,2,11084,1,1,,,
+246,8945d45dc46691c38cf1953443935cb8e245a28e,Areski Belaid,2013-06-04 15:29:41+00:00,"Merge pull request #6 from DanMeakin/master
+
+ScatterPlot - added variable size",True,3719,15,11099,12,3,,,
+247,a328af62efabc06ec8e22f2d3545be117d4203bd,Shrenik Patel,2013-06-05 14:37:47+00:00,add sample AM_PM function for x-axis on lineChart,False,3750,55,11154,43,12,0.15,0.0,0.65
+248,93472b80c788fb92296306490cb2723ba3b90c91,Areski Belaid,2013-06-05 14:50:27+00:00,update CHANGELOG / Version,False,3756,8,11162,7,1,,,
+249,cbdf11580146787e1a038d38a85246de1f251e5b,Areski Belaid,2013-06-05 15:00:16+00:00,update CHANGELOG,False,3756,0,11162,0,0,,,
+250,8594d5f5d8502488bbf166fc3d8e937f50e6e22f,Areski Belaid,2013-06-05 15:03:47+00:00,update README,False,3767,11,11173,11,0,,,
+251,af40cdedc02c3c607cd5a4658b172fcbca2fba8a,Areski Belaid,2013-06-05 15:05:41+00:00,update README,False,3769,10,11183,6,4,,,
+252,858b7c36b8103c7cbcb95d86f8347d7023038094,Areski Belaid,2013-06-12 11:50:05+00:00,Fix #7 - Str conversion of x-axis dates issue,False,3774,17,11200,11,6,1.0,1.0,1.0
+253,85edcf031afcba34c5fe7b289399937e781db734,John Stowers,2013-07-09 09:27:18+00:00,"generalise axis_format handling
+
+replace x_axis_date_format with x_axis_format, and support
+y_axis_format too.",False,3776,26,11226,14,12,0.0,1.0,0.0
+254,f3a64d1c3931163a98db0e3ec5063bd5a7d0ef30,John Stowers,2013-07-09 09:28:18+00:00,support hiding the chart legend,False,3784,8,11234,8,0,0.0,0.0,0.8
+255,370d3a122fa0bfc4c6f57a5cd6e518968205611a,John Stowers,2013-07-09 09:28:43+00:00,add another linechart example showing new features,False,3820,36,11270,36,0,,,
+256,f5cd9d3fd24d01780f71927c6555274cf55d9588,Areski Belaid,2013-07-09 12:10:10+00:00,"Merge pull request #8 from strawlab/line-fixes
+
+Line fixes",True,3866,70,11340,58,12,,,
+257,81de10e706f3d05a56f0612ab147063fb557acd9,Areski Belaid,2013-07-09 12:25:06+00:00,update all examples with x_axis_format formalization,False,3866,28,11368,14,14,,,
+258,96f20fdab1af9c8d84905d73dd8400d4831edfbd,Areski Belaid,2013-07-09 13:24:17+00:00,fix issue with discretbar + add new example to demoall,False,3886,56,11424,38,18,0.0,0.0,1.0
+259,5a804ca1c1a8098629e4e48b94b31720931e1ec4,Areski Belaid,2013-07-09 13:27:16+00:00,add nzjrs (John Stowers) to contributors,False,3887,3,11427,2,1,,,
+260,84ed7817fd45c6414cb9ce585f2864acd2183598,Areski Belaid,2013-07-09 13:29:55+00:00,next version 0.7,False,3890,5,11432,4,1,,,
+261,f2abd2b498b0ff6576134f85c857452c1d8ab753,John Stowers,2013-07-09 18:57:10+00:00,"small tidy ups:
+
+importantly, you should not put mutable objects
+as class instances (header_css) otherwise odd things
+happen",False,3867,55,11487,16,39,0.0,0.0,0.0
+262,0e8fcc86cbf5629d7a4355cbb5f8db3ea5dbaa57,Areski Belaid,2013-07-09 21:43:57+00:00,update Changelog,False,3867,26,11513,13,13,,,
+263,553b0a0d79bf01e86c01bf618bec60152895ff72,Areski Belaid,2013-07-09 21:47:05+00:00,merge,True,3844,55,11568,16,39,,,
+264,5d4ea2e48cfd940e87c19db223ea2564f01162e8,Areski Belaid,2013-07-09 21:47:18+00:00,Merge branch 'strawlab-tidy',True,3821,55,11623,16,39,,,
+265,46603042987b0f6651359799ff67fe4efd2f6721,Ruslan Popov,2013-07-11 13:43:33+00:00,allow to hide labels,False,3827,42,11665,24,18,0.0,0.0,0.8
+266,4bc84620caa404b3f5004ac44b0980ab484f46d0,Areski Belaid,2013-07-11 15:41:49+00:00,"Merge pull request #10 from RaD/master
+
+Allow to hide labels.",True,3833,42,11707,24,18,,,
+267,0a65b08d9306bd6b48e1e2b449f919bd147b5b38,Areski Belaid,2013-07-11 16:07:38+00:00,fix ShowLabels + add RaD to contributors,False,3840,17,11724,12,5,0.0,0.0,1.0
+268,6c4beaa7d90dede18e9966ae5a47b447703d4eca,Chris Morgan,2013-08-15 10:34:27+00:00,"add NVD3Chart.buildcontent()
+
+NVD3Chart().buildcontent() constructs NVD3Chart().htmlcontent with no head,
+body tags. To be useful probably need the attribute jquery_on_ready to be set,
+so the chart is evaluated once the page is loaded.
+
+This is useful if you are plugging NVD3Chart into another templating engine
+(such as Tornado's) and simply require the chart and content.
+
+Note: updated examples/demo_all.py to use the buildcontent() method.",False,3890,116,11840,83,33,0.38461538461538464,0.38461538461538464,0.7692307692307693
+269,2ab662ea689e2f64589bf6a1cebf21983ec15ed3,Areski Belaid,2013-08-15 11:01:12+00:00,"Merge pull request #11 from cmorgan/master
+
+add NVD3Chart.buildcontent()",True,3940,116,11956,83,33,,,
+270,2d81867afd32569aee65e178df6180dccf015f1e,Areski Belaid,2013-08-15 11:02:42+00:00,add cmorgan (Chris Morgan) to contributor file,False,3941,3,11959,2,1,,,
+271,7a63c9004383e6809e4b9d6a4041b852cf70a0bb,Areski Belaid,2013-08-15 11:05:04+00:00,fix pep8 and update change log / version,False,3944,11,11970,7,4,,,
+272,05049597543716f1b5516529d42b907261c583ff,Areski Belaid,2013-08-15 11:14:40+00:00,replace // by http://,False,3944,6,11976,3,3,,,
+273,62cb3e0a28f95c432e27c945be3744a8fa56ff76,Areski Belaid,2013-08-15 11:45:25+00:00,"remove graph that use numpy from demo_all, cause numpy is not a dependency",False,3921,23,11999,0,23,,,
+274,aa0a24cd13fc67362abdf755cfd0f3c055e96f4e,Areski Belaid,2013-09-30 09:37:40+00:00,Update NVD3.js and D3.js / Use bower to install NVD3.js and D3.js,False,3939,34,12033,26,8,0.0,0.0,0.0
+275,efe2356ae7575c21d06b5b4835c7715b44305ef1,Areski Belaid,2013-09-30 09:40:13+00:00,update CHANGELOG / version 0.9.0,False,3946,9,12042,8,1,,,
+276,4e11a604ed521c7c4e027f5e48f9aa93c35ca5cb,Areski Belaid,2013-09-30 09:43:47+00:00,remove endorse,False,3941,5,12047,0,5,,,
+277,07ccb5623d884a336ace56e0ebe45608cd3b9e0d,Areski Belaid,2013-09-30 09:44:49+00:00,update readme,False,3941,6,12053,3,3,,,
+278,bf12643a6776f0b66d80cd620e7f8195972a216a,Areski Belaid,2013-09-30 10:06:52+00:00,update readme,False,3941,2,12055,1,1,,,
+279,286b4ed4586e3f42fa758cc0447d6a888c0d83c7,Areski Belaid,2013-09-30 15:44:58+00:00,Fix Version,False,3941,4,12059,2,2,,,
+280,7af62e34096077c4cfb9c2c59cb9ee657dd60348,Shrenik Patel,2013-10-01 08:37:31+00:00,update pie chart + nvd3 file include,False,3944,25,12084,14,11,0.0,0.0,0.0
+281,3e4087215ddd0032f9754e75608877d801ed785b,Shrenik Patel,2013-10-01 11:20:06+00:00,add linePlusBarChart example,False,3987,43,12127,43,0,,,
+282,227f4e99890ea58b26f89f8e1e3de8333edb4c89,Shrenik Patel,2013-10-01 11:49:50+00:00,revert back changed in self.header_js,False,3993,26,12153,16,10,,,
+283,fa61fc09a082769127e65718a0fe0a4de6c750fb,Shrenik Patel,2013-10-01 11:55:09+00:00,sample linePlusBarWithFocusChart,False,4113,120,12273,120,0,1.0,1.0,0.0
+284,4a91753ee679422a9aadd08bc2a3edc710b006fc,Areski Belaid,2013-10-01 12:48:55+00:00,fix piechart,False,4116,17,12290,10,7,0.0,0.0,1.0
+285,cec05f1487966e7bbf2671353385bafe347df1da,Areski Belaid,2013-10-01 12:49:06+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4236,120,12410,120,0,,,
+286,891106f61005c7f3e906a5c4af3b8790ecdf3611,Areski Belaid,2013-10-01 12:49:39+00:00,enable linePlusBarWithFocusChart,False,4236,6,12416,3,3,,,
+287,4b45a946df89796373141be89406f94d52f5edc0,Shrenik Patel,2013-10-01 13:27:16+00:00,update linePlusBarWithFocusChart class,False,4261,129,12545,77,52,0.6190476190476191,0.6190476190476191,0.9047619047619048
+288,e71efd86fb69bb3bd745d8d44c3a28a6fefc7ae9,Shrenik Patel,2013-10-01 13:27:36+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4264,11,12556,7,4,,,
+289,53d18c9e26333a769e4349488a32f30593ea3d6a,Shrenik Patel,2013-10-01 14:05:43+00:00,update linePlusBarWithFocusChart class,False,4281,39,12595,28,11,0.0,0.8,0.0
+290,da9da365e5403406eeaf96e53d21330a318f90f1,Shrenik Patel,2013-10-01 14:20:25+00:00,update linePlusBarWithFocusChart class,False,4281,10,12605,5,5,,,
+291,caa378cccc504912b329c1ce42b7fe50b33f6f57,Shrenik Patel,2013-10-01 14:50:54+00:00,update linePlusBarWithFocusChart class,False,4282,9,12614,5,4,,,
+292,dc19d41870ce450832b28e190eb762b59aa7a081,Shrenik Patel,2013-10-02 06:13:10+00:00,add example of linePlusBarWithFocusChart,False,4335,53,12667,53,0,,,
+293,ad862b457e5c2e3284fe1167c3273e1be63e6d15,Shrenik Patel,2013-10-02 06:23:06+00:00,add linePlusBarWithFocusChart example in demo_all.py,False,4356,25,12692,23,2,,,
+294,5c74137b97628ff63cfc5b6436c096fb17d19420,Shrenik Patel,2013-10-02 07:07:27+00:00,update doc,False,4368,36,12728,24,12,,,
+295,57ed7f591493aa34337ad9ebef1249d7f89d7b91,Shrenik Patel,2013-10-02 07:18:47+00:00,update README,False,4370,2,12730,2,0,,,
+296,94494d430beafc2c23c87b0d4fd8215a69a1a483,Shrenik Patel,2013-10-02 07:27:40+00:00,update screenshot of lineplusbarwithfocus,False,4370,0,12730,0,0,,,
+297,5773ccabbd655d36f2c0222f811cd6a8d3521755,Areski Belaid,2013-10-02 17:46:56+00:00,improve example linePlusBarWithFocusChart,False,4370,14,12744,7,7,,,
+298,7d00ea94a3b8f806e9ba07b5d7b0887c1dc09712,Areski Belaid,2013-10-02 17:54:16+00:00,update screenshot,False,4370,0,12744,0,0,,,
+299,183a68f87c38cc47fbc775eff48cb3d39213f0f3,Areski Belaid,2013-10-02 18:24:47+00:00,fix on demo_all display,False,4371,3,12747,2,1,,,
+300,681c38451fd61f3276d66dcbc61876ae75777f70,Areski Belaid,2013-10-02 18:27:01+00:00,update CHANGELOG / version 0.10.0,False,4379,10,12757,9,1,,,
+301,f6922b60372c7c8fffcf6dea0a4e287ed1f244d2,Areski Belaid,2013-10-02 18:32:36+00:00,update version 0.10.0 in doc,False,4379,4,12761,2,2,,,
+302,302a3c9dd04831e2c2355585a46e489b89a6311b,Areski Belaid,2013-10-02 22:32:36+00:00,update doc: add missing screenshot for lineplusbarwithfocuschart,False,4383,4,12765,4,0,,,
+303,64fca077ab5d03256512f8de1d1b7f370d5bf4fa,Shrenik Patel,2013-10-03 11:16:10+00:00,remove $ sign from linePlusBarWithFocusChart,False,4383,4,12769,2,2,,,
+304,57a2d51e9e8a0305722a06a9dedcfa581b94f227,Areski Belaid,2013-10-03 11:23:11+00:00,update CHANGELOG / version 0.10.1,False,4389,10,12779,8,2,,,
+305,2d5edaeafa62bfd44be1e38200e0c459746dc3b9,Shrenik Patel,2013-10-04 06:44:47+00:00,add date example in discreteBarChart,False,4435,50,12829,48,2,1.0,1.0,0.0
+306,24bcf9a2f05670561a35e30799ae64e664b7df19,Areski Belaid,2013-10-04 09:20:58+00:00,update CHANGELOG / version 0.10.2,False,4441,10,12839,8,2,,,
+307,d9c57ba05b70d455e33df140eb35c8f6b8e3e5fa,Areski Belaid,2013-10-04 09:35:50+00:00,change package description,False,4441,2,12841,1,1,,,
+308,6ec1ab07d832668f903ef22afa06582e0884653b,Areski Belaid,2013-10-04 10:35:24+00:00,typo,False,4441,2,12843,1,1,,,
+309,40a9984014aca4c8fdbd4a86f8f14bbfd228d093,imom0,2013-10-05 07:35:18+00:00,Remove unnecessary class inherits,False,4402,49,12892,5,44,,,
+310,ce30796a9e03145046d60936c99ec00d7caa1f58,imom0,2013-10-05 07:37:05+00:00,Remove unnecessary class inherits,False,4363,49,12941,5,44,,,
+311,b9f22a077a24231fd3e5aa6d5c7dbf73cd7acdaa,Areski Belaid,2013-10-05 07:53:38+00:00,"Merge pull request #16 from imom0/remove-class-inherits
+
+Remove unnecessary class inherits",True,4324,49,12990,5,44,,,
+312,f63834f71164f14a412004840d9417414ae8f6a9,Areski Belaid,2013-10-05 07:54:25+00:00,pep8 fix,False,4324,4,12994,2,2,,,
+313,a470d0f7d700081448e4e328c057856401459ebb,Areski Belaid,2013-10-05 07:54:28+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4285,49,13043,5,44,,,
+314,1f92822b8a5d5050b85e300b775ff343a3d9ee10,Areski Belaid,2013-10-05 07:55:20+00:00,add imom0 to Contributors,False,4286,1,13044,1,0,,,
+315,6e67c46ab25ea8de383e11f92f3ba85932510c17,imom0,2013-10-05 07:57:27+00:00,Merge branch 'master' of https://github.com/areski/python-nvd3,True,4287,5,13049,3,2,,,
+316,9dc0d91055605c6ae4f96170aac2f09b6f06450f,imom0,2013-10-06 17:08:12+00:00,Add translator.py,False,4348,61,13110,61,0,1.0,1.0,0.88
+317,ba8666b618965ddd58210c9f1369a3d7e5600511,imom0,2013-10-06 18:01:36+00:00,Add assignment,False,4364,32,13142,24,8,1.0,1.0,0.5
+318,9134a9ddd0ad1d858ae4e12d56f7b784330a8fb3,imom0,2013-10-07 01:39:50+00:00,Add TranslatorTest,False,4379,63,13205,39,24,0.2727272727272727,1.0,1.0
+319,bf672df5b99e28eb5d8e55de4a71df972c39439a,Areski Belaid,2013-10-07 23:35:41+00:00,uniform parameters and kwargs,False,4369,132,13337,61,71,0.75,1.0,1.0
+320,89be855154ac7b4d54590494adc7c7631a3e67a7,Shrenik Patel,2013-10-08 07:59:13+00:00,update NVD3Chart classes,False,4412,141,13478,92,49,0.0,1.0,1.0
+321,61a3654d769db909c5193524cb028ca74b3b8761,Shrenik Patel,2013-10-08 08:20:21+00:00,refactor NVD3Chart class,False,4415,35,13513,19,16,1.0,0.0,0.0
+322,4a0dceee16d7a7fdc7fac8ea4fbfd6f71bd31a2c,Shrenik Patel,2013-10-08 10:20:14+00:00,refactor NVD3Chart class,False,4412,21,13534,9,12,1.0,1.0,1.0
+323,be65d2f02a67f53b82bb75bec7c10538f248e00a,Shrenik Patel,2013-10-08 11:03:44+00:00,update doc string in NVD3Chart class,False,4431,21,13555,20,1,,,
+324,b1951e640c6d8219ca3d382c75860835bd80f4a8,Areski Belaid,2013-10-08 13:09:41+00:00,remove old version for command line,False,4432,3,13558,2,1,,,
+325,cc80e5f08701d355c1c7e92867c7b3b557068dc6,Areski Belaid,2013-10-08 13:15:20+00:00,add name parameters as example,False,4432,8,13566,4,4,,,
+326,723708bd8096d8add852cae2c86ecbc0f02b36f8,Shrenik Patel,2013-10-08 14:07:34+00:00,remove comment,False,4425,7,13573,0,7,,,
+327,c3d47650e2de56d03391da355c64f7197fed3526,Areski Belaid,2013-10-08 22:32:01+00:00,add tag_script_js parameter in constructor,False,4426,1,13574,1,0,0.0,1.0,1.0
+328,9a0a5375ec5da4f9f1faad863cd90977d0f45d9e,Areski Belaid,2013-10-09 10:15:54+00:00,update CHANGELOG / version 0.11.0,False,4426,10,13584,5,5,,,
+329,b5327c369120f1f730246942c2a1a1eac8f87052,Areski Belaid,2013-10-09 10:35:30+00:00,update version 0.11.0,False,4426,2,13586,1,1,,,
+330,0622660f2ca834b7b028f28418e0e25c07eb454d,Areski Belaid,2013-10-09 14:21:07+00:00,"Merge pull request #17 from imom0/master
+
+Add python wrapper classes for generating javascript",True,4518,92,13678,92,0,,,
+331,4c36ebbadfad03d1c8e77b6f3d1f5717c5308d04,Shrenik Patel,2013-10-10 11:41:46+00:00,remove unwanted line,False,4517,1,13679,0,1,1.0,0.0,0.0
+332,c4a612a8c3d8600d300a39733ea009759b753683,Shrenik Patel,2013-10-10 11:42:37+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4609,92,13771,92,0,,,
+333,505bf0e0ea6c4f518e899a5b94f83ea02d4bbc21,bevanj,2013-10-13 22:37:31+00:00,add color_list attribute so it gets kwargs,False,4610,1,13772,1,0,0.0,1.0,1.0
+334,ce3ed2cc1f3282656455313c4bcb353b9bdaa351,Areski Belaid,2013-10-15 17:22:11+00:00,quote normalization - thanks @kbsali,False,4610,68,13840,34,34,,,
+335,c3785455b58ea05bac1a478403958e619ed3297f,Kevin Saliou,2013-10-18 10:17:41+00:00,add assets_directory variable and update README documentation concerning npm/bower dependencies,False,4624,40,13880,27,13,0.0,1.0,1.0
+336,a5ebe8fc6801f6b1f834e654a8bf6d2f2c9ffed4,Areski Belaid,2013-10-18 10:21:26+00:00,"Merge pull request #21 from kbsali/master
+
+add assets_directory variable and update README documentation concerning npm/bower dependencies",True,4638,40,13920,27,13,,,
+337,672f29f3ad1555dc6d21488418e54d4c9281d1f7,Areski Belaid,2013-10-18 10:23:17+00:00,add @kbsali to Contributors,False,4639,1,13921,1,0,,,
+338,a151f39563a779d7449e4ee404b711bf9e9aa89b,zebulon2,2013-12-12 11:10:24+00:00,added custom chart attributes,False,4644,5,13926,5,0,0.0,0.3333333333333333,1.0
+339,332aca65025f903f5659b3a6d040cfe0f2951f58,zebulon2,2013-12-12 11:11:52+00:00,typo,False,4644,2,13928,1,1,,,
+340,9e1a456823edcb669485ef9ea8ac4e4e8389e496,zebulon2,2013-12-19 10:50:28+00:00,fix for AttributeError: 'NoneType' object has no attribute 'items',False,4644,2,13930,1,1,,,
+341,822725944604af022b40b7a8f0c1741ce63a4a29,Areski Belaid,2013-12-20 12:45:39+00:00,"Merge pull request #24 from zebulon2/master
+
+Custom chart attribute",True,4649,5,13935,5,0,,,
+342,c4811b69dbc13da274b55601694e984f36e59b51,Areski Belaid,2013-12-20 12:47:08+00:00,update gitignore,False,4651,4,13939,3,1,,,
+343,d5cd82751728e8a097a59464acc85ba36d5e7eb8,Areski Belaid,2013-12-20 12:47:18+00:00,update gitignore,False,4651,2,13941,1,1,,,
+344,8b72527d196a97599fdc69cf904271600b685ae7,Areski Belaid,2013-12-20 12:49:20+00:00,add @zebulon2 to Contributors,False,4652,1,13942,1,0,,,
+345,4b0abc88cb52b9731f46bce8a812476c59636a7c,Areski Belaid,2013-12-20 13:26:00+00:00,fix colors for linecharts related to https://github.com/areski/django-nvd3/issues/16,False,4652,4,13946,2,2,,,
+346,e55ce74dc1e01762ecb8758304b1d8ffc9c13574,Areski Belaid,2013-12-20 13:31:39+00:00,"Merge pull request #19 from bevanj/color_list
+
+add color_list attribute so it gets kwargs",True,4653,1,13947,1,0,,,
+347,f36b08343713d6c59d0b1a0fb3625e1fb6afb97b,Areski Belaid,2013-12-20 13:32:34+00:00,add @bevanj to Contributors,False,4654,1,13948,1,0,,,
+348,b0f8dd7fc6986f7b33427121dddadac54b331423,Frederik Wiehr,2014-01-16 00:55:22+00:00,"When using other shapes than circels for the scatteredPlot, the setting
+is was not actually applied. Now setting chart.scatter.onlyCircles(false)
+when the javascipt is build, fixes the problem.",False,4659,5,13953,5,0,0.0,0.0,1.0
+349,c568e7358b5498df956abc8034a0ace66215eae6,Areski Belaid,2014-01-16 13:11:50+00:00,"Merge pull request #27 from frewie/master
+
+Allowing other shapes for scatteredPlot",True,4664,5,13958,5,0,,,
+350,0adc90884b6f1aadfd8a9b8c4676b292d5312559,Areski Belaid,2014-01-16 13:12:29+00:00,add @frewie to contributors,False,4665,1,13959,1,0,,,
+351,dc4690e0ffb86ee10af8cd8e0fc814ec9d1710f2,Alex Gorrod,2014-02-10 01:00:18+00:00,"Add ability to specify explicit margin sizes to graphs.
+
+Set the defaults so that reasonable values fit. Allow applications to
+configure any combination of margins explicitly by using separate
+fields.",False,4682,17,13976,17,0,0.0,0.5,1.0
+352,69b8f8dd1efb8622f3224870d413d391b74f6578,Alex Gorrod,2014-02-10 01:14:25+00:00,Remove confusing default value duplicates.,False,4682,8,13984,4,4,,,
+353,89860d60e662e0e8909776467f4bf8e4607442d6,Areski Belaid,2014-02-10 14:26:48+00:00,"Merge pull request #28 from agorrod/add-margins
+
+Add ability to specify explicit margin sizes to graphs.",True,4699,17,14001,17,0,,,
+354,deb12255fa61f0ff3fa4b41699e0ef8e62fbd4a6,Areski Belaid,2014-02-10 14:27:20+00:00,Add @agorrod to contributors,False,4700,1,14002,1,0,,,
+355,51ae61455d1cee313fe9127efa345c6430f72f53,Aleksey Shirokih,2014-02-18 10:57:18+00:00,"allow custom chart_attr
+
+to make some ting like
+
+    chart_attr = {
+        'xAxis': '.rotateLabels(-25)',
+        'margin': {'bottom': 90}
+    }
+    data = {
+        'charttype': charttype,
+        'chartdata': chartdata,
+        'chartcontainer': chartcontainer,
+        'extra': {
+            'x_is_date': False,
+            'x_axis_format': '',
+            'tag_script_js': True,
+            'jquery_on_ready': True,
+            'chart_attr': chart_attr,
+        },",False,4703,7,14009,5,2,0.0,0.0,1.0
+356,c5ecd698a5749eee25550a727ad673303d12cef6,Areski Belaid,2014-02-18 12:27:06+00:00,"Merge pull request #30 from freeseacher/master
+
+allow custom chart_attr",True,4706,7,14016,5,2,,,
+357,c59d901fad72822710a649eec0aa350bb2540109,Areski Belaid,2014-02-18 12:28:54+00:00,Update CHANGELOG.rst,False,4710,4,14020,4,0,,,
+358,7196f682700269697d75cd7b80f9c2eece3bb868,Areski Belaid,2014-02-18 12:30:27+00:00,Add @freeseacher to contributors,False,4711,1,14021,1,0,,,
+359,b04d844ec7372c223b7707195267785b6f8982d0,usuari,2014-02-23 16:41:29+00:00,Implemented use of InteractiveGuideline,False,4743,34,14055,33,1,0.0,0.25,1.0
+360,5e89092436cff6e4acbcbce7485193f3d5365b6f,areski,2014-03-03 00:01:56+00:00,update gitignore,False,4745,2,14057,2,0,,,
+361,44eca38853fd8b75a429707daa39c876d1430eb9,areski,2014-03-03 00:02:01+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4777,36,14093,34,2,,,
+362,42fb94f1fe1f2a5a809111a57e72735385ebe99a,Areski Belaid,2014-03-03 00:11:49+00:00,"Merge pull request #31 from miquelcamprodon/InteractiveGuideline
+
+Implemented use of InteractiveGuideline",True,4809,34,14127,33,1,,,
+363,dde234d80250266b2987dd41861782ef38730553,Areski Belaid,2014-03-03 00:12:22+00:00,Add @miquelcamprodon to contributors,False,4810,1,14128,1,0,,,
+364,701540a992816151f571cfb3e04a1c8411891a12,areski,2014-03-03 00:15:59+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,4843,35,14163,34,1,,,
+365,172bbcbf67aaca50fd05784510beb1401d1fcedc,jdavidheiser,2014-03-14 17:32:38+00:00,Added IPython Notebook support,False,5366,523,14686,523,0,0.4722222222222222,1.0,0.4722222222222222
+366,4e71e7862a523649ac08334fc0c695d16ff4c775,jdavidheiser,2014-03-14 20:41:02+00:00,import fix,False,5366,2,14688,1,1,,,
+367,79deede59b373b9cc641e28027b4ac5d5b6cf8d1,jdavidheiser,2014-03-14 21:59:40+00:00,python 3 print compatibility,False,5366,2,14690,1,1,,,
+368,5781b40a4747f72e233949d809a97e63b7fe8688,T.N.T,2014-03-15 10:49:18+00:00,fixed erroneous discreteBarChart example in the docs; fixed url in README.rst; chmoded screenshots from 0755 to 0644,False,5355,57,14747,23,34,,,
+369,a79b0739d0993039cea50c14f135a35fe19bfd5d,T.N.T,2014-03-15 11:03:48+00:00,fixed discreteBarChart.png to really match the doc example,False,5355,0,14747,0,0,,,
+370,7faa67567347972536f94a45b34fa93454c18f8f,T.N.T,2014-03-15 12:04:14+00:00,"created a seperate dir for the doc example images (""doc_images"")",False,5355,2,14749,1,1,,,
+371,4b208357329cddc0f79d0c4dbb30f05ecd381b0b,T.N.T,2014-03-15 16:26:23+00:00,turned the multiBarChart doc example into something that makes some sense,False,5347,66,14815,29,37,,,
+372,ca6791c880fb307cb83d66e543f284328d54f84d,Areski Belaid,2014-03-15 19:16:32+00:00,"Merge pull request #34 from tnt/master
+
+Changes to the doc examples I complained about",True,5328,125,14940,53,72,,,
+373,ab659709b8749b13e6bb72ef429d0497f493510a,areski,2014-03-15 19:18:51+00:00,add tnt to Contributors file,False,5329,1,14941,1,0,,,
+374,65149c35050543ebbb31e3bfecd2288b889edbce,Areski Belaid,2014-03-16 23:40:27+00:00,"Merge pull request #33 from jdavidheiser/master
+
+Added IPython Notebook support",True,5852,523,15464,523,0,,,
+375,fdee9482b169ab053c98ebf882c2e8dfe22f4f93,areski,2014-03-16 23:44:13+00:00,add @jdavidheiser & @fdeheeger to Contributors file,False,5854,2,15466,2,0,,,
+376,989b7601ce7a28f1728d41df8c92fd44ae3c6ed0,areski,2014-03-16 23:50:15+00:00,pep fixes in ipython notebook file + add Notebook support in Readme,False,5862,46,15512,27,19,1.0,0.0,1.0
+377,95a71d0be144dd9aabfd7e821d3e14793adb6081,shrenik,2014-03-21 06:49:52+00:00,sample example of linePlusBarWithFocusChart_AMPM,False,5930,70,15582,69,1,0.0,0.0,1.0
+378,fd4793da744f7edd6c7e1211d6810cb3df560a88,James Finucane,2014-03-25 10:18:40+00:00,added donut parameter to piechart in NVD3Chart,False,5994,64,15646,64,0,0.6153846153846154,0.6923076923076923,1.0
+379,4547d7b8509c65e92cd92e29a90a6367f4b65938,James Finucane,2014-03-25 10:24:57+00:00,remove test-nvd3.html,False,5946,48,15694,0,48,,,
+380,5a0ac7fad52fb29dbd47f44717497944595c1426,James Finucane,2014-03-25 10:41:38+00:00,add donut ratio parameter,False,5949,3,15697,3,0,0.0,0.5,1.0
+381,2ff71620d01dd8a72063e814fde0c8fc495935d1,James Finucane,2014-03-25 10:43:05+00:00,fix test,False,5948,5,15702,2,3,0.0,0.0,0.0
+382,e48b083c3e00b189668793b286552087af36914d,Areski Belaid,2014-03-25 10:59:33+00:00,"Merge pull request #36 from jnishiyama/addadonut
+
+Add a donut support for PieChart",True,5966,18,15720,18,0,,,
+383,1368f939c2b20fd0aaca93e89646d7495cc2878d,Areski Belaid,2014-03-25 11:00:06+00:00,Add @jnishiyama to Contributors,False,5967,1,15721,1,0,,,
+384,c7bb4f1bfd5d0dc6b0ee3e8dfab6add1fac40985,Moritz Emanuel Beber,2014-03-27 15:24:48+00:00,repair template,False,5969,18,15739,10,8,,,
+385,31ce6ced7d5f68f741edea8635a696227302145c,Moritz Emanuel Beber,2014-03-28 10:02:10+00:00,"Merge remote-tracking branch 'upstream/master' into fixhtml
+
+update the fork",True,5988,19,15758,19,0,,,
+386,56e21d9fb96ad3110c03bf00b4c2a8651974d614,Areski Belaid,2014-03-28 10:12:27+00:00,"Merge pull request #38 from Midnighter/fixhtml
+
+Fix the HTML page template to close tags",True,5990,18,15776,10,8,,,
+387,4cbd01ea7f71e77df954a5661fd654bda735e4db,Areski Belaid,2014-03-28 10:13:09+00:00,Add @Midnighter to Contributors,False,5991,1,15777,1,0,,,
+388,58ad4c5db5a32ea2e8a1441d651d6aef81d3f875,Justin Duke,2014-04-05 21:04:00+00:00,"Update NVD3Chart.py
+
+Mini typo!",False,5991,2,15779,1,1,,,
+389,487f8eadea39e4c40c78e57d37ade7bacb0ad328,Justin Duke,2014-04-05 21:05:28+00:00,Another typo.,False,5991,2,15781,1,1,,,
+390,c0edf957f5a707ac23d5e288793f00fe2bd8da88,Areski Belaid,2014-04-05 21:44:47+00:00,"Merge pull request #42 from jmduke/master
+
+Update NVD3Chart.py",True,5991,4,15785,2,2,,,
+391,dd7077d9af266184f7c75e80c78522e6614c9a0f,Justin Duke,2014-04-09 03:41:14+00:00,Slugify chart names.,False,6000,11,15796,10,1,1.0,1.0,1.0
+392,9a419f2990d1c4c634a5785e76b8226cab4a0878,Areski Belaid,2014-04-09 08:52:32+00:00,Add @jmduke to contributors,False,6001,1,15797,1,0,,,
+393,c72826cb3e3d194adfc7468e804312bf36fd6d0d,areski,2014-04-09 14:53:24+00:00,add Makefile & update_version.sh from project jeffknupp/sandman,False,6026,25,15822,25,0,,,
+394,cabf20b818b64a7dc29b21c6902588e5d9a99c3b,areski,2014-04-09 14:53:34+00:00,Merge branch 'master' of github.com:areski/python-nvd3,True,6049,43,15865,33,10,,,
+395,21a7a539efd91d34ed2a507a53179f0dc85f6b7f,areski,2014-04-09 14:55:02+00:00,rollback docs/source/_static/screenshot/discreteBarChart.png,False,6049,0,15865,0,0,,,
+396,d4321911c1243248152bb790c0d104afdd2316e3,Justin Duke,2014-04-10 04:08:22+00:00,Don't invoke axes that haven't been changed,False,6055,10,15875,8,2,0.3333333333333333,0.3333333333333333,1.0
+397,7ce17aa7e499d1b91849ab34019564314d04561f,Justin Duke,2014-04-10 04:09:45+00:00,Update documentation to reflect skipping unchanged axes,False,6052,3,15878,0,3,,,
+398,6e7ad80715dd56d83e7e49b11eb199e7414ae721,Areski Belaid,2014-04-10 10:14:50+00:00,"Merge pull request #46 from jmduke/master
+
+Skip writing about axes that we haven't touched",True,6064,24,15902,18,6,,,
+399,640d62468bb14c825fb0d7f0e39ed31f2bf04f6a,areski,2014-04-16 11:24:38+00:00,fix slugify chart name issue fix #48,False,6068,36,15938,20,16,1.0,1.0,0.0
+400,79e2138b236d77be1452e4d86b1ad4370c59405d,areski,2014-04-16 11:49:52+00:00,damn me with print,False,6067,1,15939,0,1,1.0,0.0,0.0
+401,c66a3bff4fad1e804a391416986faf7da8dd247a,Areski Belaid,2014-05-06 14:17:15+00:00,Update README.rst,False,6067,2,15941,1,1,,,
+402,9c55a03f35f7e45732f34405f714b058022db6fb,Areski Belaid,2014-05-06 14:17:49+00:00,Update introduction.txt,False,6067,2,15943,1,1,,,
+403,c60ec28583aeff66fcbbad1bc5d94e6fca34b9d3,areski,2014-05-26 13:22:07+00:00,rebase,False,6190,379,16322,251,128,1.0,1.0,0.0
+404,621f42282c0de17290e886d043f84792d992e734,areski,2014-05-26 13:24:10+00:00,rebase,False,6189,65,16387,32,33,1.0,0.0,0.0
+405,375c5ae201cc090ca9cef4f8b0b586b4185e10a6,Justin Duke,2014-05-26 13:24:25+00:00,Made things less broken.,False,6183,36,16423,15,21,0.0,0.0,0.0
+406,1b9813d13cd1ff100ad96f368b9e1c89d845b123,Justin Duke,2014-05-26 13:24:25+00:00,Better refactoring and added the piechart.,False,6065,434,16857,158,276,1.0,1.0,0.0
+407,ceab102c4226159a600dd6c115ac18e587d136a4,Justin Duke,2014-05-26 13:24:25+00:00,Converted all subcharts to Jinja.,False,6080,107,16964,61,46,0.6388888888888888,0.6388888888888888,0.0
+408,c65f7ab6549c92196495b6f696e7bb8ea6bdc126,Justin Duke,2014-05-26 13:24:25+00:00,no more d3_select_extra,False,6074,10,16974,2,8,0.0,0.0,0.0
+409,db0bbc53444f30fb0fe0b2f0a35473a64005b478,Justin Duke,2014-05-26 13:24:25+00:00,Unneeded stab references.,False,6074,8,16982,4,4,,,
+410,d1b11a7e82a582dcae35ff2778c9b8573192736e,areski,2014-05-26 13:24:25+00:00,fix linePlusBarWithFocusChart with Jinja2,False,6115,49,17031,45,4,1.0,1.0,1.0
+411,4ba10244f828242ed9219fc391e8900f31e3ad54,areski,2014-05-26 13:29:05+00:00,fix template - wrong rebase,False,6115,4,17035,2,2,,,
+412,57525a7b5d9fa7902ff9f4611cece406d3de97f7,areski,2014-05-26 13:37:46+00:00,fix axisLabel,False,6115,4,17039,2,2,,,
+413,7285e6e9328e7e36ce246ef113f9006e15aaf0c5,areski,2014-05-26 13:52:44+00:00,improve indent,False,6118,327,17366,165,162,,,
+414,3a1f666ca056294654ca166df1dab9ba6f873011,areski,2014-05-26 14:01:37+00:00,update version script,False,6119,9,17375,5,4,,,
+415,4bcc5c87f3144564c5d197657b4343956224b074,areski,2014-05-26 16:51:37+00:00,fix for support on Django-NVD3,False,6142,59,17434,41,18,1.0,1.0,1.0
+416,63fb44187c64c11db8ec5dcda3880d147841177a,areski,2014-05-26 16:53:17+00:00,update version script,False,6142,2,17436,1,1,,,
+417,cb2076e147d4ebda2ba638952c9fa8d1650a464b,areski,2014-05-26 16:53:50+00:00,Merge branch 'release/v0.12.0',True,6165,61,17497,42,19,,,
+418,f85e5cd8f9325dbe6642bff767de6b2276768762,areski,2014-05-26 17:23:42+00:00,update version 0.12.0,False,6165,4,17501,2,2,,,
+419,e7b5fe2634ffc3dbef2bc93024e01d9223fb6be2,areski,2014-05-26 22:47:36+00:00,update script,False,6165,2,17503,1,1,,,
+420,acea32f84359aef6773e2d2be22753f27272b8b0,areski,2014-05-27 09:48:19+00:00,refactoring + fixes to integrate with Django,False,6157,248,17751,120,128,0.0,0.0,1.0
+421,98811bedd6b753f826da497d4adc4b215b45548a,areski,2014-05-27 09:49:25+00:00,update version,False,6162,5,17756,5,0,,,
+422,547691a1fe7d0618047c311341acd35c526827ac,areski,2014-05-27 09:49:36+00:00,Update to version v0.12.1,False,6162,2,17758,1,1,,,
+423,73c103b5198cb14738030f0e22eff7035e5a5bd3,areski,2014-05-27 09:49:36+00:00,Merge branch 'release/v0.12.1',True,6159,257,18015,127,130,,,
+424,64759ed7beb976cde1727504cb5ab9a7d787644b,areski,2014-05-27 09:49:46+00:00,Merge branch 'release/v0.12.1' into develop,True,6159,2,18017,1,1,,,
+425,653fc5a5d156c32ce7f92c8174ada570a14ea446,areski,2014-05-30 11:45:57+00:00,change indent,False,6159,16,18033,8,8,1.0,0.0,0.0
+426,f0f63b6b7a861d8d8fc5b324f129c9dc1163f091,areski,2014-05-30 11:46:08+00:00,Merge branch 'master' into develop,True,6159,16,18049,8,8,,,
+427,6d60a25a9faeaed0d9acfd1df21eab2137a22ac4,areski,2014-05-30 11:48:40+00:00,change travis branch,False,6163,14,18063,9,5,,,
+428,8b7a15233a7e5dc7a6f676eea5187ca91f0405bf,areski,2014-05-30 11:49:10+00:00,Merge branch 'master' into develop,True,6167,14,18077,9,5,,,
+429,eb3d51fcae024baf228d293545f27c469e380af1,areski,2014-05-30 11:53:23+00:00,fix requirements,False,6167,6,18083,3,3,1.0,1.0,1.0
+430,2d8d1b091c97b093c4fdecf4dcfa59106d4a5b46,areski,2014-05-30 11:56:41+00:00,remove print / fail for python3,False,6166,1,18084,0,1,0.0,0.0,0.0
+431,d35c494ec0d0fc3c3937b68c8900c7de0e0cabf9,areski,2014-05-30 14:02:16+00:00,fix unicode and update dependencies on slugify to awesome slugify,False,6165,23,18107,11,12,,,
+432,767d2c9937afd4fa1b0d720682a2b09f6727e180,areski,2014-05-30 14:13:20+00:00,fix for python3,False,6165,2,18109,1,1,,,
+433,ec0c58ccd50a191dbfe95810f96eb4cdb8d36b13,areski,2014-05-30 14:17:52+00:00,Update to version v0.12.2,False,6165,2,18111,1,1,,,
+434,967eb22546d61e7077257f68dd83fc2670ddb75d,areski,2014-05-30 14:17:52+00:00,Merge branch 'release/v0.12.2',True,6163,32,18143,15,17,,,
+435,ee5f1f44a25dbad374913ff2916a63410eb3448a,areski,2014-05-30 14:18:07+00:00,Merge branch 'release/v0.12.2' into develop,True,6163,2,18145,1,1,,,
+436,40a99758b1f47bfbd5ac90b3f02916577c1635dd,areski,2014-05-31 09:45:37+00:00,Add y_axis_format as a param in discreteBarChart - fix #54 from @gannetson,False,6165,2,18147,2,0,0.0,1.0,1.0
+437,0c782e9f53293d7640241ef5258bad0a3347f203,areski,2014-05-31 10:29:57+00:00,add example of linechart with different X-Axis #17,False,6190,25,18172,25,0,,,
+438,d864b4e717432896472b640b3dc256d6e70ade11,David Barajas,2014-06-09 20:54:56+00:00,Add axis labels to scatter charts,False,6189,5,18177,2,3,,,
+439,785c491b33492ea51d3e2e84d52f61752a9ad721,Areski Belaid,2014-06-09 23:13:43+00:00,"Merge pull request #56 from davidbt/feature-axisLabel_scatterChart
+
+Add axis labels to scatter charts",True,6188,5,18182,2,3,,,
+440,e05f2998b5d25711eea4f0a3ee19216c1534da38,Areski Belaid,2014-06-09 23:14:12+00:00,Add @davidbt to contributors,False,6189,1,18183,1,0,,,
+441,f794cec7b3b584bdb5bcfaa57946e64b6452dead,Pavan Rikhi,2014-06-13 23:11:05+00:00,Use Jinja's Template Tests,False,6189,2,18185,1,1,,,
+442,435c3f3b5c5969c1037b605efa0ab02f897da403,Areski Belaid,2014-06-14 08:39:36+00:00,"Merge pull request #58 from prikhi/develop
+
+Use Jinja's Template Tests",True,6189,2,18187,1,1,,,
+443,4c7d35ad791f649d7413297eab8b2e1dab2197c8,David Barajas,2014-06-20 16:27:17+00:00,Allow to have custom formats in line charts,False,6191,6,18193,4,2,,,
+444,d265865bf36838613fa9ac37ebc32a7811bc2ce8,Areski Belaid,2014-06-26 15:40:23+00:00,"Merge pull request #60 from davidbt/feature-custom-format-lineChart
+
+Allow to have custom formats in line charts",True,6193,6,18199,4,2,,,
+445,3b82c50bde6adb6834513c94469c4098dfb161eb,oz123,2014-07-02 11:07:41+00:00,"Fix for issue #61
+
+Improve LinePlusBarChart documentation",False,6194,3,18202,2,1,,,
+446,482658ae6c27736a5232271ca701f3d8a9aadee4,Areski Belaid,2014-07-02 21:30:21+00:00,"Merge pull request #62 from oz123/develop
+
+Fix for issue #61",True,6195,3,18205,2,1,,,
+447,fb7bfead678f22deb988c831633f5d85a92a6f8d,Areski Belaid,2014-07-02 21:32:21+00:00,Add @oz123 to contributors,False,6196,1,18206,1,0,,,
+448,f4285f76e08abf216edb920066a63c018ee7235e,areski,2014-07-02 21:46:22+00:00,bit of code refactoring,False,6201,45,18251,25,20,0.0,1.0,1.0
+449,61d8c409f5051f3312519c3c5d6f1a0983d8d880,areski,2014-07-02 21:46:36+00:00,Merge branch 'develop' of github.com:areski/python-nvd3 into develop,True,6203,4,18255,3,1,,,
+450,38f054da4bfb489cf0afdff2a029e282883c4e16,oz123,2014-07-03 12:12:56+00:00,"Fix for issue #61
+
+Improve LinePlusBarChart documentation",False,6204,3,18258,2,1,,,
+451,a550ec49620e55a066f949106e95dcac275c2a41,Areski Belaid,2014-07-03 12:12:57+00:00,Add @oz123 to contributors,False,6205,1,18259,1,0,,,
+452,1fd6f683d829389ab7eac54041a175bde6a488aa,oz123,2014-07-04 07:07:59+00:00,Add chart extras to template and add documentation,False,6240,43,18302,39,4,0.6666666666666666,1.0,1.0
+453,957a2281682750761c481079408d58a008afebb0,oz123,2014-07-04 07:08:05+00:00,"Add missing requirements
+
+ * So that make build target works
+
+ setuptools is redundant in requirements
+
+ * If you distribute a file with setuptools (pip, virtualenv and so)
+   It's OK to assume setuptools is pre-existing",False,6242,2,18304,2,0,,,
+454,e22f9b5b162804ef7aa4e9ae9b1ea73b9295bf64,Areski Belaid,2014-07-04 07:42:07+00:00,"Merge pull request #64 from oz123/develop
+
+Add extra parameters to graphs and missing requirements",True,6279,45,18349,41,4,,,
+455,baca002f625391ee148228909918130eb4daf9d3,oz123,2014-07-04 08:11:52+00:00,"Allow easier customizing of the y-axis formats
+
+This is especially useful if you have a line
+and bar chart with two data series with extreme differences.
+Such as:
+
+    data_y1 = [10, 13, 14, 20]
+    data_y2 = [0.0003, 0.0032, 0.0057, 0.0081]
+
+In the above case one may one would like to format the first
+y axis with:
+
+        cart.y1Axis
+                    .tickFormat(d3.format(',f'));
+
+and the second y axis with:
+
+        chart.y2Axis
+                    .tickFormat(function(d) {
+                     return d3.format(',0.4f')(d) });
+
+This is now possible with passing a keyword ```yaxis2_format```
+when creating a new ```linePlusBarChart`:
+
+    chart = linePlusBarChart(name=""linePlusBarChart"",
+                             width=500, height=400, x_axis_format=None,
+                             yaxis2_format=""function(d) { return d3.format(',0.4f')(d) }"")",False,6296,21,18370,19,2,0.0,1.0,1.0
+456,45531aec13749bd6c7257ebca1c51310b0079cc4,Areski Belaid,2014-07-07 08:53:40+00:00,"Merge pull request #65 from oz123/develop
+
+Allow easier customizing of the y-axis formats",True,6313,21,18391,19,2,,,
+457,44ec17019adfa67f83f5ec5ff93c2ece55f997a4,Oz,2014-07-07 09:40:40+00:00,Update README to show the correct build,False,6312,3,18394,1,2,,,
+458,736a276afde63ce05cebbfad146517b9b2730bc6,Areski Belaid,2014-07-07 09:46:28+00:00,"Merge pull request #66 from oz123/develop
+
+Update README to show the correct build",True,6311,3,18397,1,2,,,
+459,efd0f92719139a0511427bc4ccd2e77cc2aa9a51,oz123,2014-07-16 22:13:02+00:00,"Prepare the base for including js graphs
+
+ * This huge commit addes the _page.html template
+   with inclusion of the d3 and nvd3 static files
+ * Remove some more references to pngs
+ * Remove the pngs themselves from the tree
+ * Remove all references to hard coded images
+ * Add js css and page template",False,7150,993,19390,916,77,1.0,0.9393004115226338,0.9403292181069959
+460,090ddcd9a91f436a8861eec58c1e46096925e585,oz123,2014-07-16 22:15:03+00:00,"Replace automodule instructions with autoclass
+
+All the classes are available from nvd3 directly,
+so it make sense to treat them as classes rather then module.
+That said, the modules containing the classes, are pointed from
+the module index!",False,7155,61,19451,33,28,,,
+461,b6ee92cc179bcc57252f646367a9ba55e538768b,oz123,2014-07-16 22:21:14+00:00,Replace hard coded js with cloudflare,False,7149,12,19463,3,9,,,
+462,4e5840fff8a6bdb693fa389c4efb74b98d239ba4,oz123,2014-07-16 22:34:14+00:00,"Improve README.rst
+
+Usage and teaser  before boring technical details",False,7145,138,19601,67,71,,,
+463,1a2813d19cc18e70f5cd7589bc9f05ec81fa53be,oz123,2014-07-16 22:36:13+00:00,all classes now include live js code,False,7097,1076,20677,514,562,,,
+464,f8abfdfb7a68fc33430c24d1635fa03e259b09f1,oz123,2014-07-16 22:52:37+00:00,Small improvements of the documentation,False,7099,134,20811,68,66,,,
+465,bae5761f53385179b3e97f5f7b32ccba2d497567,Areski Belaid,2014-07-17 10:07:10+00:00,"Merge pull request #69 from oz123/sphinx_doc
+
+Sphinx doc",True,7887,2276,23087,1532,744,,,
+466,36d3774f4bed58eebfadccba8f03bba86a9a4ad1,areski,2014-07-17 10:45:51+00:00,fix images - clean of readme / introduction documentation,False,7884,89,23176,43,46,,,
+467,31f729bc178d33c1960c8286f2edc5f82d563e4a,areski,2014-07-17 11:15:58+00:00,little update in documentation index page,False,7884,20,23196,10,10,,,
+468,3c651b86cdcceb7e378579ffc1e8977b927b3307,areski,2014-07-17 11:29:20+00:00,documentation - fix height / width of charts,False,7884,14,23210,7,7,,,
+469,1f96b72d4ae5fd08e65a6812705e8da29de269f9,areski,2014-07-17 11:36:12+00:00,restructure chart examples,False,7896,34,23244,23,11,,,
+470,9ea0af323b5da01c3d4f8ac867dd76054e0a0001,areski,2014-07-17 11:48:48+00:00,fix chart height,False,7896,2,23246,1,1,,,
+471,9a164ecfd867265afb9d92459b999ae7fc7bcb41,oz123,2014-07-18 20:03:41+00:00,"Update of NVD3Chart
+
+Extend documentation, and make most class attribute instance
+attributes.",False,7900,208,23454,106,102,0.0,0.9411764705882353,0.9411764705882353
+472,92bf9fab345063548d3981d7f45912903ba21e4b,oz123,2014-07-18 20:10:40+00:00,"Add attributes related to pieChart
+
+* These were removed earlier from NVD3Chart base class",False,7904,6,23460,5,1,1.0,1.0,1.0
+473,f9ff8534d6c5a143444be2f523a0d0df26ef9d87,oz123,2014-07-18 20:11:26+00:00,pep8ify,False,7914,20,23480,15,5,,,
+474,0687d17a20f6d5234be72070d1596c0df5da5c0a,oz123,2014-07-21 07:28:20+00:00,"Merge branch 'develop', remote branch 'areski/develop' into develop",False,7914,0,23480,0,0,,,
+475,8b68776c3e5e35bc100bd7ef8de8698c4195b01e,oz123,2014-07-23 04:47:47+00:00,Introduce template inheritance,False,7930,62,23542,39,23,,,
+476,6bf0ea56e1c9f123471dabb16f90f0c911661004,Areski Belaid,2014-07-23 15:26:06+00:00,"Merge pull request #70 from oz123/demo_template_inheritance
+
+Demo template inheritance",True,7964,294,23836,164,130,,,
+477,31ae8ac6b0a04d938e14ca30f67d9df1b92b26d7,oz123,2014-07-23 19:22:24+00:00,Merge branch 'develop' of https://github.com/areski/python-nvd3 into develop,True,7998,294,24130,164,130,,,
+478,2de9292182d844dcb186990f3c721a137454044a,oz123,2014-07-26 17:12:44+00:00,"Remove unnecessary check of chart.model
+
+When dealing with pieChart, there is no axislist. Hence,
+we are ok, when we don't check this.",False,7996,20,24150,9,11,,,
+479,16d3b8e7a8a984f97d86face16aa628f702db64d,oz123,2014-07-26 17:14:25+00:00,"Remove complex if else,
+
+We can simply set the value of chart.show_legend by using a
+jinja filter",False,7992,8,24158,2,6,,,
+480,ac076583f8232cd36e3c75e28ac8f07d44fc1234,oz123,2014-07-26 17:24:09+00:00,Remove more pieChart specific stuff from content,False,7996,24,24182,14,10,,,
+481,b13fe476a6ca30e858064f85c0c8d5cc8d58cd5e,oz123,2014-07-26 17:24:48+00:00,"Remove closing and opening from base.html
+
+This is already handled by content.html",False,7989,7,24189,0,7,,,
+482,2423d241b7b85a5dc45c7315dbf5907aa5194c99,oz123,2014-07-26 17:25:41+00:00,Don't call super in pie.html,False,7989,2,24191,1,1,,,
+483,31e4718bbf366419d53aadb493575603be5ce1c2,oz123,2014-07-26 17:30:04+00:00,"Remove closing script from content
+
+Add infra template. This template eventually should replace
+content, but it should be much more sparse, since most
+of the if else structures will go to the individual graph
+templates.",False,8016,61,24252,44,17,,,
+484,98abd84713adb41c0a5aeb1e0cf03c4a04432e82,oz123,2014-07-26 17:30:21+00:00,Fix a bug introduced earlier in scatterChart,False,8016,2,24254,1,1,,,
+485,5db8bb5a63e65d9e91a96a166f125e2036e10831,oz123,2014-07-26 17:31:17+00:00,"Remove scatterChart only attributes from content
+
+Add them to scatterChart template",False,8022,20,24274,13,7,,,
+486,4e5dc1c479ecbe36da4f938e03c67deff6943d6d,oz123,2014-07-26 17:32:15+00:00,"Add data block
+
+In this block the data series of the graph is written",False,8027,17,24291,11,6,,,
+487,f1b11af67cf0fe1415416f597eb4a73ae9194b2e,oz123,2014-07-26 17:34:12+00:00,Line chart template now extends content,False,8030,7,24298,5,2,,,
+488,8a663e2d78a8e937b0936411e30dfd8cb6e69ac3,oz123,2014-07-26 17:34:48+00:00,Discrete bar chart has it's own template now,False,8042,12,24310,12,0,1.0,1.0,1.0
+489,8047cbec5fc727c500ec786935e2a3a1a3d84ba4,oz123,2014-07-26 17:35:31+00:00,"Use new style class for NVD3Chart
+
+This allows calling super",False,8042,2,24312,1,1,,,
+490,3a43eba2e209994ae53d0b094211dcf107bf27c5,oz123,2014-07-26 17:48:56+00:00,"Add a new class DiscreteBarChart
+
+Note the capital D. This is a new class which does not
+render so many templates like discreteBarChart. Rather,
+this class renders a templates which exploits Jinja
+template inheritance. This template simply extends the template
+content.html.
+
+Future release can do:
+
+    discreteBarChart = DiscreteBarChart
+
+Such that, if discreteBarChart is removed the old class is still
+available from the user's point of view.
+
+Also, this class violates the DRY principle, it overrides methods
+of NVD3Chart base class. This pattern will be introduced by all
+other Capital letter new classes. This methods can be moved later to
+a Mixin class.",False,8136,98,24410,96,2,0.37037037037037035,1.0,1.0
+491,65a8d77b990243536059fe9a45846b2477728255,oz123,2014-07-26 17:52:24+00:00,Add LineChart which uses template inheritance,False,8267,131,24541,131,0,0.29411764705882354,1.0,1.0
+492,8f436a627c13b3a94c4953cdacea02b976461636,oz123,2014-07-26 17:52:57+00:00,Add LinePlusBarWithFocusChart which supports inheritance,False,8426,161,24702,160,1,0.23809523809523808,1.0,1.0
+493,a336b8737d3801db5c2a2cc2b6ee81faf3e18142,oz123,2014-07-26 17:53:59+00:00,Add CumulativeLineChart,False,8546,120,24822,120,0,0.35714285714285715,1.0,1.0
+494,61804f96e76c78d63e5cbe2af27ff250c84f40d7,oz123,2014-07-26 17:54:53+00:00,Add LinePlusBarChart,False,8668,122,24944,122,0,0.3225806451612903,1.0,1.0
+495,ab1d373edff0e9448ca9328467c2b596ca6c948c,oz123,2014-07-26 18:21:44+00:00,Add LineWithFocusChart,False,8792,124,25068,124,0,0.3448275862068966,1.0,1.0
+496,eaa0d22fe5197b21383e8b1ce46b0ddc91fa3903,oz123,2014-07-26 18:23:21+00:00,Add MultiBarChart,False,8900,108,25176,108,0,0.38461538461538464,1.0,1.0
+497,873b75c9aa20f2c3c46881a40f5ab5bcbf836ce1,oz123,2014-07-26 18:23:45+00:00,Add MultiBarHorizontalChart,False,9002,102,25278,102,0,1.0,1.0,1.0
+498,30afcded698eae6d1f6ea4e2ddd6d5def8908df3,oz123,2014-07-26 18:26:09+00:00,Add PieChart,False,9158,166,25444,161,5,1.0,1.0,1.0
+499,603e2ac2394f08fc2dcd8421c88fc241eb2b54d5,oz123,2014-07-26 18:26:41+00:00,"Add more structure blocks to content.html
+
+LinePlusBarWithFocusChart has now it's own template",False,9198,58,25502,49,9,,,
+500,8b46547a316fc922950488eb5d69500c5dc79faf,oz123,2014-07-26 18:27:37+00:00,Add forgotten model property,False,9200,2,25504,2,0,0.0,1.0,1.0
+501,fae84a49b39a4cb2019283b03ce6e54b4613d1d0,oz123,2014-07-26 18:28:05+00:00,Modify example,False,9200,2,25506,1,1,,,
+502,34764dd7d3cf9190880c49d7c3021d3c643d4e33,oz123,2014-07-26 18:28:29+00:00,Add ScatterChart,False,9309,113,25619,111,2,1.0,1.0,1.0
+503,7f57ad2ec61d830669eeb5e6393ce840436cd562,oz123,2014-07-27 07:12:03+00:00,"Restructure content and linechart templates
+
+Add some documentation to LineChart",False,9314,103,25722,54,49,0.0,0.0,0.0
+504,12c9e8828b2b8cf960ccf3870311085270c0a2b9,oz123,2014-07-27 07:21:19+00:00,"Add TemplateMix to discreteBarChart
+
+Add template for stackedareachart",False,9292,50,25772,14,36,0.0,0.0,0.0
+505,6cbe45771111a290fb2776b775dfb8eca4fb3dcc,oz123,2014-07-27 07:21:23+00:00,Add the TemplateMix to base chart module,False,9312,20,25792,20,0,1.0,1.0,1.0
+506,0777d448b00864a3ecc5504f5a67e6f8df0cb7e2,oz123,2014-07-27 07:21:23+00:00,Add structure to discreteBarChart template,False,9339,27,25819,27,0,,,
+507,c3052c57b8e7aa0ade688d16dcdf0e61a0f17cae,oz123,2014-07-27 07:21:23+00:00,add ignore for vim swap files,False,9341,2,25821,2,0,,,
+508,0a6a71ce867a841f26c0c0ef66c990487e762c30,oz123,2014-07-27 07:27:05+00:00,Add mixin to CumulativeLineChart,False,9312,41,25862,6,35,0.0,0.0,0.0
+509,d540be471aa14ff55c0443796b15aa8a4f994e43,oz123,2014-07-27 07:31:31+00:00,"Add TemplateMixin to linePlusBarChart
+
+Clean all methods",False,9287,59,25921,17,42,0.0,0.0,0.0
+510,47b0b03bed5089dcd6d6dd467b8d218395738c3b,oz123,2014-07-27 07:33:59+00:00,Add template mixin to LinePlusBarWithFocusChart,False,9266,57,25978,18,39,0.0,0.0,0.0
+511,b4457449b014289579b8a8045b6245e7549d9415,oz123,2014-07-27 07:39:47+00:00,Add template mixin to LineWithFocusChart,False,9244,52,26030,15,37,0.0,0.0,0.0
+512,8912b31101239aa0f9687a9cf71b2da2c8653eb0,oz123,2014-07-27 07:39:50+00:00,Add template mixin to MultiBarChart,False,9214,34,26064,2,32,0.0,0.0,0.0
+513,d6eaf363ecfb226386e18018fef3f8491db2db75,oz123,2014-07-27 07:46:27+00:00,Added template Mixin to MultiBarHorizontalChart,False,9185,33,26097,2,31,0.0,0.0,0.0
+514,b7c453cbcadb021bb3823c4525baddd9eda7d1d7,oz123,2014-07-27 07:48:27+00:00,Add template mixin to PieChart,False,9156,33,26130,2,31,0.0,0.0,0.0
+515,bc3dcb566d3f697c96dc5e055115ca69bbb2beaf,oz123,2014-07-27 07:50:03+00:00,Add template mixin to ScatterChart,False,9130,42,26172,8,34,0.0,0.0,0.0
+516,5cfbd528e4b4c486dc93f93d6eb9f571150bde19,oz123,2014-07-27 08:18:42+00:00,"Add StackedAreaChart
+
+Add Working example of StackedAreaChart",False,9196,68,26240,67,1,0.0,1.0,1.0
+517,87c83a536007ca5628c55a39e71c553aa3dc056f,oz123,2014-07-27 08:50:35+00:00,"Update build for travis, Makefile as setup.py",False,9208,30,26270,21,9,,,
+518,f8bfc07af8a04f16631391c40f6bab5ecd4ce456,areski,2014-07-31 19:11:06+00:00,Add coverage reporting to travis and coveralls thanks to @oz123,False,9226,26,26296,22,4,,,
+519,ef1d017c58e1842de9b98d1a403db572598bded5,areski,2014-07-31 19:11:47+00:00,update gitigniore,False,9227,1,26297,1,0,,,
+520,49752cbc5f8f5fe49bdc995414293d54ae1e6b11,areski,2014-07-31 19:29:34+00:00,add coveralls.io badge,False,9232,5,26302,5,0,,,
+521,e0c6f5d2edd0f85732926f5bd4b6d4ed54c524d1,oz123,2014-08-01 21:35:48+00:00,"Merge branch 'develop' of https://github.com/areski/python-nvd3 into develop
+
+Conflicts:
+	.travis.yml",True,9251,19,26321,19,0,,,
+522,b39df74ff811f8b04e3dbf4db1558bf1ef70e8a3,Areski Belaid,2014-08-01 22:41:40+00:00,"Merge pull request #72 from oz123/advanced_templated
+
+Advanced templates",True,10449,1384,27705,1291,93,,,
+523,8ddd1625d73dff56d4d968f8256ecd758a99ac4d,oz123,2014-08-02 06:32:19+00:00,Merge branch 'develop' of https://github.com/areski/python-nvd3 into develop,True,11647,1384,29089,1291,93,,,
+524,f1d41edfed2c7163ed3b319acdae798d47dce970,oz123,2014-08-04 19:48:01+00:00,"Remove old lineChart class, add LineChart and alias
+
+From User's point of view no a difference",False,11603,52,29141,4,48,0.8888888888888888,0.0,0.0
+525,5a56a9667664f4e6a5595f74798936eb8a56d66d,oz123,2014-08-04 19:48:01+00:00,"Remove old pieChart class, add PieChart and alias
+
+From User's point of view no a difference",False,11572,37,29178,3,34,0.0,0.0,0.0
+526,c7f6f1af2dc4301dc20ae28df0b7c360429c2956,oz123,2014-08-04 19:48:01+00:00,"Remove old lineWithFocusChart add LineWithFocusChart
+
+Add alias, such that from user point of view there
+is no difference",False,11547,33,29211,4,29,1.0,0.0,0.0
+527,38996f42cec970d038a281be6fe639961cf986fc,oz123,2014-08-04 19:48:01+00:00,"Replace multiBarHorizontalChart with the new class
+
+And add alias ...",False,11531,20,29231,2,18,0.0,0.0,0.0
+528,467a283fc5122c76e9a083baac96a5b1a8c01f35,oz123,2014-08-04 19:48:01+00:00,Replace old with new class and alias,False,11511,26,29257,3,23,1.0,0.0,0.0
+529,a64083e086069c96a0388ed93241a3634c6f888a,oz123,2014-08-04 19:48:01+00:00,"Remove old unused templates
+
+These templates are no longer used, since
+the new class uses the newer templates.",False,11440,71,29328,0,71,,,
+530,9d969f5f5686189dedaed2d462207fb3933a5ea6,oz123,2014-08-04 19:48:01+00:00,"Renamed infra.html to html, update content.html",False,11423,63,29391,23,40,,,
+531,390a502b8761b16b67910a86609a7bc591ebb16b,oz123,2014-08-04 19:48:01+00:00,"Remove old class, add new class alias",False,11398,33,29424,4,29,1.0,0.0,0.0
+532,e554192bc9166a5fbfb913b30a09b74a6d84983f,oz123,2014-08-04 19:48:01+00:00,Remove old cumulativeLineChart add alias for new class,False,11379,41,29465,11,30,1.0,0.0,0.0
+533,08c1b429037ece180acb395bfa913cee483c72a7,oz123,2014-08-04 19:48:01+00:00,Replace old class scatterChart with alias to new class,False,11368,45,29510,17,28,0.0,0.0,0.0
+534,a90ab03a3f579bce02385e5b6b55705e77a94f6b,oz123,2014-08-04 19:48:01+00:00,Replace old class with an alias to the new class,False,11333,41,29551,3,38,0.8571428571428571,0.0,0.0
+535,56d09b1bdd94b760862366ab108fff7d967068e5,oz123,2014-08-04 19:48:01+00:00,Replace multiBarChart with alias to new class,False,11313,30,29581,5,25,1.0,0.0,0.0
+536,2a423aad4546df46a2c04226cfc74e2b88c1690c,oz123,2014-08-04 19:48:01+00:00,"Remove old linePlusBarWithFocusChart and relace with alias
+
+Also remove unused template",False,11241,80,29661,4,76,0.9166666666666666,0.0,0.0
+537,70f924957dc5386863dce6f93e489b599a324c47,oz123,2014-08-04 19:48:01+00:00,"Add jinja Environment and template loader to NVD3Chart
+
+Thus, there is no need to initialize the Environment and
+Loader with every child class.",False,11190,85,29746,17,68,,,
+538,3e560c16b28b5cd1fbd6b1303a24f95395299789,oz123,2014-08-04 19:48:01+00:00,"Replace FileSystemLoader with PackageLoader
+
+This is more elegant. We can add FileSystemLoader
+later when we allow users to customise their templates
+more easily ...
+Also removed unused imports",False,11188,20,29766,9,11,,,
+539,88bde04ed069993bf7ec6768eecd14ede1d3adde,oz123,2014-08-04 19:48:01+00:00,Remove duplicate targets in Makefile,False,11175,15,29781,1,14,,,
+540,1d8ee695135b7ad5efcb7ce130b568d61a7ef214,oz123,2014-08-04 19:48:02+00:00,Remove EVIL eval call !!!,False,11169,10,29791,2,8,0.0,0.0,0.0
+541,5c5c9de34d1c44e428994f493735bb76db1f3ac3,Areski Belaid,2014-08-04 22:34:29+00:00,"Merge pull request #73 from oz123/templates_clean
+
+Templates clean",True,10698,693,30484,111,582,,,
+542,19e0b1a38995112f6ea8837faafb5653390fa7c3,areski,2014-08-04 22:44:31+00:00,give credits to @oz123 for maintaining python-nvd3,False,10703,5,30489,5,0,,,
+543,ce2fa6be661502cb76bf51a0b2a325c21af4ad80,Oz,2014-08-05 05:09:33+00:00,"Update .travis.yml
+
+Fix missing dependencies",False,10704,1,30490,1,0,,,
+544,11c37425fc9c3e32d26638de3fc0b3f55066dbbb,oz123,2014-08-05 08:28:57+00:00,Fix for issue #37,False,10699,95,30585,45,50,0.0,0.0,0.0
+545,87dd2354ac9b5cc4a21be2a49bef71119bf700d8,oz123,2014-08-19 06:01:05+00:00,Small fixes for Makefile,False,10702,25,30610,14,11,,,
+546,cf8f0bb805617f4164769cfa497fdd1a1610eadd,oz123,2014-08-19 06:12:47+00:00,"Fix broken documentation
+
+fix for issue #75",False,10702,24,30634,12,12,,,
+547,a1f4c3d93b51df29eb0f8efbc8e77ecf1be52148,oz123,2014-08-19 07:13:42+00:00,Fix issue #67,False,10704,8,30642,5,3,0.0,0.0,1.0
+548,6e1c88eff7bbe699c968288f454ec8e8acae9157,areski,2014-09-22 11:41:32+00:00,warning notebook is broken,False,10706,2,30644,2,0,,,
+549,6a3cb3a0f8f0681765fc7370ac9d1a97a0ac48ff,areski,2014-09-22 12:06:51+00:00,Update to version v0.13.0,False,10706,2,30646,1,1,,,
+550,7ea5a3316aa2eb98027a0a8a253116153dedece0,areski,2014-09-22 12:06:52+00:00,Merge branch 'release/v0.13.0',True,12385,4079,34725,2879,1200,,,
+551,30dbaf4b91195c1f2fc944c117d269ae3f19adfb,areski,2014-09-22 12:07:14+00:00,"Merge tag 'v0.13.0' into develop
+
+release 0.13.0",True,12385,2,34727,1,1,,,
+552,aa72cdcd1749b57cc456e3d53c6615d81ececfe3,areski,2014-09-22 13:27:05+00:00,fix some bugs on class name and endif template,False,12361,132,34859,54,78,,,
+553,92b02b2c693cd4be196be88a6ec4ce9352a6db00,areski,2014-09-22 14:39:00+00:00,fix some on template to get the full demo working,False,12404,121,34980,82,39,,,
+554,d7011880e3d63cb055dc08a5eb3a7b9218b427ff,areski,2014-09-22 14:39:27+00:00,Update to version v0.13.1,False,12404,2,34982,1,1,,,
+555,c879ec847ce23fefddfebfb4a8ca8d18cfcab093,areski,2014-09-22 14:39:27+00:00,Merge branch 'release/v0.13.1',True,12423,255,35237,137,118,,,
+556,875f3da81e873243b19be0b927e0fa8134a158da,areski,2014-09-22 14:39:37+00:00,"Merge tag 'v0.13.1' into develop
+
+release/v0.13.1",True,12423,2,35239,1,1,,,
+557,59c106a67092e6442d9ca632d4a251295a118f7b,areski,2014-09-22 15:40:39+00:00,change dependencies for python slugify,False,12423,12,35251,6,6,,,
+558,4b5621603d6fcf9554ebe3b4a9a87408019589c9,areski,2014-09-22 15:40:47+00:00,Update to version v0.13.2,False,12423,2,35253,1,1,,,
+559,e883291e8674320268653aaab488920bacff9a2b,areski,2014-09-22 15:40:47+00:00,Merge branch 'release/v0.13.2',True,12423,14,35267,7,7,,,
+560,b054782ff861b652803570a52b2c1c1fa9716c13,areski,2014-09-22 15:41:01+00:00,"Merge tag 'v0.13.2' into develop
+
+release/v0.13.2",True,12423,2,35269,1,1,,,
+561,e7b0164d50cb5d9704615eb34d8190bd8f3866b3,areski,2014-09-25 23:18:13+00:00,fix issue to install packages,False,12420,7,35276,2,5,0.0,0.0,0.0
+562,499b55845edbdee6683f182f1f3f2b6d6ab33158,areski,2014-09-25 23:18:34+00:00,Update to version v0.13.3,False,12420,4,35280,2,2,,,
+563,a8c34e75a6b446047ae7ce26e38e56122f57935d,areski,2014-09-25 23:18:35+00:00,Merge branch 'release/v0.13.3',True,12417,9,35289,3,6,,,
+564,9fc39b2780df0b431a121360c20a389ef414420e,areski,2014-09-25 23:18:44+00:00,"Merge tag 'v0.13.3' into develop
+
+release/v0.13.3",True,12417,4,35293,2,2,,,
+565,eb9e37ca5b67a1660113441791d32dce254c01cc,areski,2014-09-25 23:22:49+00:00,update script update branch,False,12419,2,35295,2,0,,,
+566,60f3cfa930ae629106b68f55adc41dad29647855,areski,2014-09-30 16:09:42+00:00,let's add some amazing badges,False,12435,16,35311,16,0,,,
+567,9267805ea4812d24d62c5bba124b028356840699,areski,2014-09-30 16:10:49+00:00,add target on travis-ci badge,False,12436,1,35312,1,0,,,
+568,23291c3e160edcb11cd8c3bd83a65a27e2697231,areski,2014-11-13 12:02:45+00:00,Fix append series thanks to @jeffrl,False,12437,5,35317,3,2,,,
+569,81c717d5d40450dc214ec3969d7b1c1339684f56,areski,2014-11-13 12:05:27+00:00,Update to version v0.13.4,False,12437,4,35321,2,2,,,
+570,c35e2bb5c31abef0d4c8720122cb2887487385d3,areski,2014-11-13 12:05:27+00:00,Merge branch 'release/v0.13.4',True,12457,28,35349,24,4,,,
+571,45f04921058486ca34dc122fb2e18ff0a34ba453,areski,2014-11-13 12:05:36+00:00,"Merge tag 'v0.13.4' into develop
+
+release/v0.13.4",True,12457,4,35353,2,2,,,
+572,c9f5956fbec36650ca8796842cb8448fb530e633,areski,2014-11-13 12:12:16+00:00,Fix: color_list extra arguments is not mandatory on piechart,False,12458,13,35366,7,6,1.0,1.0,1.0
+573,befa7503c54a6e64bb83d738abb2b71e218dca06,areski,2014-11-13 12:12:21+00:00,Update to version v0.13.5,False,12458,4,35370,2,2,,,
+574,f7a69edb31903b15e54701670a74d98172c317e2,areski,2014-11-13 12:12:21+00:00,Merge branch 'release/v0.13.5',True,12459,17,35387,9,8,,,
+575,4b09b82c32694b2b11e4b6012db8e5663fde6698,areski,2014-11-13 12:12:31+00:00,"Merge tag 'v0.13.5' into develop
+
+release/v0.13.5",True,12459,4,35391,2,2,,,
+576,2e677886d7b36f3aca641bbb2cc1117c3589b849,areski,2014-11-13 12:44:59+00:00,Improve test coverage,False,12518,71,35462,65,6,0.4666666666666667,1.0,1.0
+577,611fefb14626846441d79190cc286b72b67a6a35,Kyle Solan,2015-02-23 05:54:08+00:00,"Fixed ipynb.py
+
+Changed return value of _print_html() from chart.container + chart.jschart to chart.htmlcontent, since chart.buildjschart() is no longer functional.",False,12517,5,35467,2,3,0.0,0.0,0.0
+578,d441d464d25dedbead3866a30a6bfe827a94f1a8,Oz,2015-02-23 06:05:16+00:00,"Merge pull request #85 from flyberry-capital/develop
+
+Fixed ipynb.py",True,12516,5,35472,2,3,,,
+579,4ebd4bf733ac4a0a2015f6f82be700be8754eb8c,Anand Patil,2015-03-12 03:24:26+00:00,Sourcing JS assets over https when appropriate,False,12520,24,35496,14,10,0.5,0.0,1.0
+580,b38b9ebcff765c4631666526d0235ceb5216de1d,Anand Patil,2015-03-12 03:30:10+00:00,Updated inline docs,False,12520,6,35502,3,3,,,
+581,92ac3e37577724770b50eebd585bc946ca882969,Anand Patil,2015-03-12 03:43:07+00:00,Some small fixes.,False,12520,4,35506,2,2,,,
+582,ae2dd8c6963c08446f0bf5c4ab94af34f535dc46,Anand Patil,2015-03-12 03:54:09+00:00,Missing global declaration,False,12521,1,35507,1,0,1.0,1.0,1.0
+583,472b32862ac82273d632fcb0cd1c6e22ca09f240,Anand Patil,2015-03-12 04:05:30+00:00,Further fix for global scope issue,False,12521,2,35509,1,1,,,
+584,69403453df24ea3045d19a82b54428c2e4c41db7,Oz,2015-04-02 18:16:28+00:00,"Merge pull request #86 from apatil/develop
+
+Sourcing JS assets over https when appropriate",True,12526,31,35540,18,13,,,
+585,a7368d5f7add11b74d473c0d638999fe8247d490,areski,2015-04-05 18:30:32+00:00,remove linePlusBarWithFocusChart as it's discontinued in nvd3>=1.7,False,12114,430,35970,9,421,1.0,0.0,0.0
+586,809af48974c18d9117907d11790d8fe4c735fee3,areski,2015-04-06 11:46:54+00:00,update changelog,False,12136,22,35992,22,0,,,
+587,d373d1a551148198ebc1117ef8b042314af75576,areski,2015-04-06 12:15:08+00:00,add support for focusEnable,False,12147,165,36157,88,77,0.0,0.0,1.0
+588,e2ccc20a6fecee3cfdbc1dc3d3468331d99e6cdf,areski,2015-04-06 12:15:58+00:00,Update to version v0.13.6,False,12147,4,36161,2,2,,,
+589,b4bcf1bf2a95900c38f284624b0baefafb539953,areski,2015-04-06 12:15:58+00:00,Merge branch 'release/v0.13.6',True,11831,662,36823,173,489,,,
+590,a9ef3a6bf2e547379ef10ea38f6987ce5c3a1e56,areski,2015-04-06 12:16:08+00:00,"Merge tag 'v0.13.6' into develop
+
+release/v0.13.6",True,11831,4,36827,2,2,,,
+591,ce319eea5c83bed6d29612c506fb2b3962de07f6,areski,2015-04-06 14:35:25+00:00,remove examples/LineChart.py,False,11790,41,36868,0,41,,,
+592,25cc5695b7e705b7f4303fd3549f852c73446b15,areski,2015-04-06 16:18:27+00:00,Create x2Axis if focus_enable,False,11801,11,36879,11,0,0.0,0.0,0.0
+593,a35a95b8782ce52627adc20dbfa86547cde3f31d,areski,2015-04-06 16:18:52+00:00,Update to version v0.13.7,False,11801,4,36883,2,2,,,
+594,5551afc4e6343b33d84d69e5d4453c5b4030a8c6,areski,2015-04-06 16:18:52+00:00,Merge branch 'release/v0.13.7',True,11771,56,36939,13,43,,,
+595,c9ea68ecd7bb90c2145ba0b30e06643a0cbd0187,areski,2015-04-06 16:19:01+00:00,"Merge tag 'v0.13.7' into develop
+
+release/v0.13.7",True,11771,4,36943,2,2,,,
+596,fa59bc1b0ee41a52a98f0b015ea04443b7cc72f4,Teodor Yantcheff,2015-04-08 22:54:05+00:00,Added simplejson to imports,False,11773,4,36947,3,1,,,
+597,040113122cc17fafab5d51228743dbe861e5bf74,Oz Nahum Tiram,2015-04-10 20:11:10+00:00,Update notes about IPython notebooks,False,11775,24,36971,13,11,,,
+598,a6b2677dd42e12a0e053c661fe6632e2692e2f99,Oz Nahum Tiram,2015-04-10 20:27:44+00:00,Fix requirements,False,11775,2,36973,1,1,,,
+599,38ad77486e33d5bd5ac7c09610d6294987dfe98b,Oz Nahum Tiram,2015-04-10 20:32:07+00:00,"Update resouces
+
+ This way users get demo work out of the box",False,11776,7,36980,4,3,,,
+600,2860ed10bd7d59da429b75fe5e5a9f3abc2bedbe,Oz Nahum Tiram,2015-04-10 22:11:26+00:00,Fix help string,False,11776,4,36984,2,2,,,
+601,7933c51f379a648fa32dd17de7427bbed66af786,areski,2015-04-12 09:41:48+00:00,fix scatterChart & demo_all,False,11774,44,37028,21,23,,,
+602,d8e838af710dbaf6631ef4e7e0b859786206387f,areski,2015-04-12 10:04:46+00:00,fix nvd3 version on RTD,False,11774,6,37034,3,3,,,
+603,916cddf3029d62a9a6c407e6b4af2d95f85ea821,areski,2015-04-12 10:17:39+00:00,Update to version v0.13.8,False,11780,10,37044,8,2,,,
+604,a3091a166f13663b3bfe8ff9a317801ed2720023,Oz Nahum Tiram,2015-04-13 17:59:27+00:00,Fix entry point for console scripts,False,11780,2,37046,1,1,,,
+605,4a92fddc4a932e278a71f99eb1daac43dc484eb7,Oz Nahum Tiram,2015-04-13 18:03:10+00:00,Fix broken links for css and js resources,False,11780,22,37068,11,11,,,
+606,127365620dbeb8420ec2d3fc25d8804cbd3a56fe,Oz Nahum Tiram,2015-04-13 18:03:17+00:00,Remove pep8 style classes from documentation,False,11780,20,37088,10,10,,,
+607,bc2b175d9115aacf6203eba9eedef3ea808ed253,Oz Nahum Tiram,2015-04-13 18:03:17+00:00,pep8ify,False,11786,18,37106,12,6,0.6666666666666666,0.6666666666666666,0.6666666666666666
+608,8a83575398c9f287f3de67f984396483168c75c2,Oz,2015-05-03 08:16:26+00:00,"Merge pull request #87 from teodoryantcheff/develop
+
+Add simplejson to imports",True,11788,4,37110,3,1,,,
+609,27f795b2b26f713204768ec7d0e71695bc93abfb,Oz Nahum Tiram,2015-05-03 08:19:42+00:00,pep8,False,11788,8,37118,4,4,,,
+610,45831148bcc8db88feef3ebf129b4c57a3fa7198,Oz Nahum Tiram,2015-05-03 08:49:20+00:00,Convert to new IPython notebook format,False,11542,600,37718,177,423,,,
+611,56d4cdb1503358575ba5561fccabb1ff2dadd892,Oz Nahum Tiram,2015-05-03 09:46:34+00:00,Update to version v0.13.9,False,11542,8,37726,4,4,,,
+612,364b1e19ec3c01de553ac829ecebe85999510891,Oz Nahum Tiram,2015-05-03 09:47:09+00:00,Merge branch 'release/v0.13.9',True,11542,8,37734,4,4,,,
+613,c389105fa091d034946dde412453314098a0f7b5,Oz Nahum Tiram,2015-05-03 09:49:43+00:00,Update to version v0.13.10,False,11542,4,37738,2,2,,,
+614,10a22fc8f74c418b301484b3b55db55f60d946a9,Oz Nahum Tiram,2015-05-03 09:49:43+00:00,Merge branch 'release/v0.13.10',True,11542,4,37742,2,2,,,
+615,b461979700568add53b61a1e069037b68157a8ee,Oz Nahum Tiram,2015-05-03 09:49:53+00:00,Merge branch 'release/v0.13.10' into develop,True,11542,4,37746,2,2,,,
+616,7daa727ce050eb4c1d86e33b3fab877cdeefd842,Oz N Tiram,2015-05-07 18:59:21+00:00,change to twinex,False,11542,6,37752,3,3,,,
+617,525f70517b08b03e6966286ae51857def5ae5105,Areski Belaid,2015-05-07 21:13:11+00:00,"Merge pull request #95 from oz123/twine
+
+change to twine",True,11542,6,37758,3,3,,,
+618,ee4ad7c95b3060ce073f745aeabdde090c1cc862,areski,2015-06-12 10:49:58+00:00,add badge from requires.io,False,11546,12,37770,8,4,,,
+619,8c87b9859d8a04cac1b4c76166e6fca8b7cad666,areski,2015-06-12 10:52:30+00:00,fix for badges,False,11546,20,37790,10,10,,,
+620,7731e29574e625c3de85cb4ab753fc39a192f29b,areski,2015-07-30 10:33:47+00:00,try to fix doc example,False,11546,2,37792,1,1,,,
+621,2b70bec5b1ae3faecfe95ac3d395b1c2b54f5484,areski,2015-07-30 14:33:40+00:00,fix in documentation and examples,False,11548,82,37874,42,40,,,
+622,d77f3a32031e418affb8a12bc9bb994b89ca5fc7,romainx,2015-08-04 21:37:07+00:00,Fix issue #97 color_category not handled in pieChart,False,11552,4,37878,4,0,,,
+623,8787dbd2e4eff97a57e0c002e89c37e5773e4242,areski,2015-08-04 21:47:12+00:00,rename and delete examples,False,11237,315,38193,0,315,,,
+624,a2817c9ebbdf2d585c17d4d2681bbbeea0caace8,Areski Belaid,2015-08-04 21:53:26+00:00,"Merge pull request #98 from romainx/develop
+
+Fix issue #97 color_category not handled in pieChart",True,11241,4,38197,4,0,,,
+625,cf6d7daaf81fa982b56d6bccb7c7b3c59ba6050b,areski,2015-08-04 21:56:18+00:00,add @romainx to contributors,False,11242,3,38200,2,1,,,
+626,52deaca26266a80d11381099f2456c5fcdc69913,areski,2015-08-16 13:57:01+00:00,fix linePlusBarChart focus - thanks @dnqbob,False,11281,51,38251,45,6,0.0,1.0,1.0
+627,fd4998549542343b74b82ca72cbcee97845b06ee,areski,2015-08-16 14:04:45+00:00,update readme django wrapper,False,11281,4,38255,2,2,,,
+628,3245e904b67c9c9c96f69d16f0e50df59f2e07fa,areski,2015-10-05 14:37:54+00:00,update README,False,11282,9,38264,5,4,,,
+629,f96590abc0d10c22e482201595bb8daf061b5b1e,areski,2015-10-08 09:32:28+00:00,remove keyword upload at the end twine command,False,11282,2,38266,1,1,,,
+630,d123c2b55272c92a1093ab00a64868ad353be523,areski,2015-10-27 22:24:18+00:00,run test on python 3.4 & 3.5,False,11284,8,38274,5,3,,,
+631,ec9ad31004cd36c90f326862b1143ac4e50a950e,djchou,2015-10-29 03:44:43+00:00,"Update for jupyter compatibility
+
+In Jupyter, the _ip.__module__ is 'ipykernel.zmqshell', which did not start with 'iPython'.  This prevented the remaining code from running.",False,11284,2,38276,1,1,,,
+632,deb127ec8a8d54d63ca42eb1792baceda97caacf,Areski Belaid,2015-10-29 08:43:38+00:00,"Merge pull request #102 from djchou/patch-1
+
+Update for jupyter compatibility",True,11284,2,38278,1,1,,,
+633,857a2a93f952eb0a9555d8ee7e2a5737c66721c2,areski,2015-11-11 15:15:52+00:00,use shields.io for badge,False,11284,8,38286,4,4,,,
+634,5371d719222c1bd46727b287639a3e970ea335e5,areski,2015-11-11 15:16:21+00:00,Merge branch 'develop' of github.com:areski/python-nvd3 into develop,True,11284,2,38288,1,1,,,
+635,8900907479c9e04c188f0b0a345a852aded22dbe,areski,2015-11-11 15:17:07+00:00,fix typo,False,11283,3,38291,1,2,,,
+636,ab666e82698c7b3c17c3cf46c52efee3b3e84fb4,areski,2015-11-11 15:20:32+00:00,bump requirements,False,11284,11,38302,6,5,,,
+637,e408e54c496eb60f482af5e0fe1f799379f3f099,areski,2015-12-09 17:53:10+00:00,update project structure,False,11324,234,38536,137,97,0.9534883720930233,0.9534883720930233,0.9534883720930233
+638,d3bcffdd4757bc022fca4f3b2930afad396270af,areski,2015-12-09 17:55:08+00:00,update changelog,False,11331,7,38543,7,0,,,
+639,18112153cf76ba1e9750145c486db1947fa8c325,areski,2015-12-09 17:55:21+00:00,Update to version v0.14.0,False,11331,4,38547,2,2,,,
+640,24741ae00f1e002333891e8ea4840e386054a530,areski,2015-12-09 17:58:45+00:00,fix changelog,False,11331,6,38553,3,3,,,
+641,58a5fba7abb59f9350e357e8d302a3b2843f7ad6,Bolke de Bruin,2018-03-26 13:47:27+00:00,[fix] Update python-slugify to at least 1.2.5 - thanks @bolkedebruin,False,11330,9,38562,4,5,,,
+642,f9f811ebc5abd625d63da79e936d9015497b5f58,areski,2018-03-26 13:53:21+00:00,Update to version v0.15.0,False,11330,4,38566,2,2,,,
+643,47859fbe1ca313adda1d91713b7a8789fa856d5f,areski,2018-03-26 13:55:31+00:00,[fix] merge,True,11116,730,39296,258,472,,,
+644,dc8e772597ed72f413b229856fc9a3318e57fcfc,areski,2020-10-29 12:23:45+00:00,[fix](examples) update for Python3,False,11117,9,39305,5,4,,,
