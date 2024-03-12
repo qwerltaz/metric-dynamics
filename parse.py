@@ -1,10 +1,8 @@
 import os
-import pickle
-import shutil
 
 import git
 import pandas as pd
-from pydriller import Repository
+from pydriller import Repository, Commit
 
 DATA_DIR = "data"
 
@@ -39,10 +37,11 @@ class MetricParse:
         traverser = Repository(
             self.repo_dir,
             only_in_branch=branch,
+            only_modifications_with_file_types=[".py"],
         ).traverse_commits()
 
-        sloc = 0  # Source lines of code
-        all_lines = 0
+        sloc = 0  # Source lines of code.
+        all_lines = 0  # All additions and deletions combined.
         for i, commit in enumerate(traverser):
             sloc = sloc + commit.insertions - commit.deletions
             all_lines = all_lines + commit.lines
@@ -54,9 +53,7 @@ class MetricParse:
                 '| lines: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions} )',
             )
 
-            # TODO: checkout commit, compute metrics.
-
-            commit_metrics_list.append({
+            commit_metric_dict = {
                 "hash": commit.hash,
                 "author": commit.author.name,
                 "date": commit.committer_date,
@@ -70,17 +67,19 @@ class MetricParse:
                 "dmm_unit_size": commit.dmm_unit_size,
                 "dmm_unit_complexity": commit.dmm_unit_complexity,
                 "dmm_unit_interfacing": commit.dmm_unit_interfacing,
-            })
+            }
+            commit_metric_dict |= self.get_metrics(commit)
+            commit_metrics_list.append(commit_metric_dict)
 
         commit_metrics_df = pd.DataFrame(commit_metrics_list)
         commit_metrics_df["date"] = pd.to_datetime(commit_metrics_df["date"], utc=True)
 
-        # # BUG: SHA b'd2d6f360b5d1ea91375f06547df0048ec47a4862' could not be resolved,
-        # #     git returned: b'd2d6f360b5d1ea91375f06547df0048ec47a4862 missing'
-        # with open(os.path.join(DATA_DIR, "commit_metrics_" + self.repo_name + ".pkl"), "wb") as f:
-        #     pickle.dump(commit_metrics_df["files"], f)
-
         commit_metrics_df.to_csv(os.path.join(DATA_DIR, "commit_metrics_" + self.repo_name + ".csv"))
+
+    def get_metrics(self, commit: Commit) -> dict:
+        metric_dict = dict()
+
+        return metric_dict
 
     @property
     def main_branch(self):
