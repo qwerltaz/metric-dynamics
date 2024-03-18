@@ -1,4 +1,4 @@
-,hash,author,date,commit_message,is_merge,codebase_size,lines,all_lines,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing
+,hash,author,date,commit_message,is_merge,codebase_size,lines_changed,total_lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing
 0,7c81952d6cdf4dee91ba2fbf21bd0d08f04faaa8,xuanqinanhai,2013-06-08 06:22:31+00:00,init bae version,False,7299,7299,7299,7299,0,0.706944096264728,0.7548257708698922,0.7350213085986462
 1,787bd8924d860361887776576ef2c847cec7905e,xuanqinanhai,2013-06-08 06:22:50+00:00,init local version,False,14579,7280,14579,7280,0,0.706944096264728,0.7548257708698922,0.7350213085986462
 2,1a906e1d47345f1f925eff3f1c3e7d5cf78d8907,xuanqinanhai,2013-08-04 11:00:24+00:00,应对百度改版更新,False,14592,29,14608,21,8,1.0,1.0,0.4

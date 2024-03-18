@@ -1,8 +1,11 @@
+import argparse
 import os
 
 import git
 import pandas as pd
 from pydriller import Repository, Commit
+from radon.cli import Config
+from radon.cli.harvest import Harvester
 
 DATA_DIR = "data"
 
@@ -12,7 +15,7 @@ class MetricParse:
 
     def __init__(self, repo_url: str):
         """
-        Initialize metric parser with repository url.
+        Initialize metric parser from repository url.
 
         :param repo_url: repository url
         """
@@ -26,6 +29,7 @@ class MetricParse:
             self.repo = git.Repo(self.repo_dir)
         else:
             self.repo = git.Repo.clone_from(self.repo_url, self.repo_dir)
+        self.repo.git.checkout(self.main_branch)
 
     def save_metrics_for_each_commit(self) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
@@ -38,6 +42,7 @@ class MetricParse:
             self.repo_dir,
             only_in_branch=branch,
             only_modifications_with_file_types=[".py"],
+            num_workers=4,
         ).traverse_commits()
 
         sloc = 0  # Source lines of code.
@@ -46,12 +51,13 @@ class MetricParse:
             sloc = sloc + commit.insertions - commit.deletions
             all_lines = all_lines + commit.lines
 
-            print(
-                'commit', i + 1, 'of', commit_count,
-                '| author:', commit.author.name,
-                '| date:', commit.committer_date,
-                '| lines: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions} )',
-            )
+            if __name__ == "__main__":
+                print(
+                    'commit', i + 1, 'of', commit_count,
+                    '| author:', commit.author.name,
+                    '| date:', commit.committer_date,
+                    '| lines_changed: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions})',
+                )
 
             commit_metric_dict = {
                 "hash": commit.hash,
@@ -60,14 +66,15 @@ class MetricParse:
                 "commit_message": commit.msg,
                 "is_merge": commit.merge,
                 "codebase_size": sloc,
-                "lines": commit.lines,
-                "all_lines": all_lines,
+                "lines_changed": commit.lines,
+                "total_lines_changed": all_lines,
                 "insertions": commit.insertions,
                 "deletions": commit.deletions,
                 "dmm_unit_size": commit.dmm_unit_size,
                 "dmm_unit_complexity": commit.dmm_unit_complexity,
                 "dmm_unit_interfacing": commit.dmm_unit_interfacing,
             }
+
             commit_metric_dict |= self.get_metrics(commit)
             commit_metrics_list.append(commit_metric_dict)
 
@@ -77,12 +84,18 @@ class MetricParse:
         commit_metrics_df.to_csv(os.path.join(DATA_DIR, "commit_metrics_" + self.repo_name + ".csv"))
 
     def get_metrics(self, commit: Commit) -> dict:
+        """Checkout commit and compute software metrics."""
         metric_dict = dict()
+
+        self.repo.git.checkout(commit.hash)
+
+        config = Config()
+        harvester = Harvester(self.repo_dir, config)
 
         return metric_dict
 
     @property
-    def main_branch(self):
+    def main_branch(self) -> str:
         """Main or master branch."""
 
         candidates = ["main", "master", "origin/main", "origin/master"]
@@ -90,10 +103,21 @@ class MetricParse:
         for candidate in candidates:
             if candidate in refs:
                 return candidate
-
         raise Exception(f"Main branch not in {self.repo_url}.")
 
 
-mp = MetricParse("https://github.com/areski/python-nvd3")
-# mp = MetricParse("https://github.com/daimajia/bleed-baidu-white")
-mp.save_metrics_for_each_commit()
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--size", dest="size", choices=['s', 'm', 'b'], default='s', help="Repo size.")
+    args = parser.parse_args()
+
+    if args.size == "s":
+        mp = MetricParse("https://github.com/daimajia/bleed-baidu-white")
+    elif args.size == "m":
+        mp = MetricParse("https://github.com/areski/python-nvd3")
+
+    mp.save_metrics_for_each_commit()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,4 @@
-,hash,author,date,commit_message,is_merge,codebase_size,lines,all_lines,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing
+,hash,author,date,commit_message,is_merge,codebase_size,lines_changed,total_lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing
 0,9ab86189068a665bea7110bc3e19edcfc4b0587e,Areski Belaid,2013-04-08 10:46:24+00:00,import nvd3 python,False,442,442,442,442,0,0.46794871794871795,0.46794871794871795,0.42948717948717946
 1,a586acde31b11e85e0d3c1a3320c18b331f0d68c,Areski Belaid,2013-04-08 10:56:02+00:00,project skel,False,627,185,627,185,0,0.18181818181818182,0.18181818181818182,0.18181818181818182
 2,9ecf439757aa8de067f47bd63414aee9ce19540a,Areski Belaid,2013-04-08 11:12:14+00:00,add docs,False,1326,703,1330,701,2,,,
