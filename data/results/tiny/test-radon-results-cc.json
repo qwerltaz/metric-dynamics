@@ -1,0 +1,124 @@
+{
+  "data\\repos\\ml_proj2022\\compare_models.py": [
+    {
+      "type": "function",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 0,
+      "endline": 17,
+      "name": "example_data",
+      "lineno": 13,
+      "closures": []
+    },
+    {
+      "type": "function",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 0,
+      "endline": 33,
+      "name": "main",
+      "lineno": 20,
+      "closures": []
+    }
+  ],
+  "data\\repos\\ml_proj2022\\models_handmade.py": [
+    {
+      "type": "class",
+      "rank": "A",
+      "complexity": 2,
+      "col_offset": 0,
+      "endline": 15,
+      "name": "DecisionTree",
+      "lineno": 12,
+      "methods": [
+        {
+          "type": "method",
+          "rank": "A",
+          "complexity": 1,
+          "col_offset": 4,
+          "endline": 15,
+          "classname": "DecisionTree",
+          "name": "__init__",
+          "lineno": 14,
+          "closures": []
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "rank": "A",
+      "complexity": 2,
+      "col_offset": 0,
+      "endline": 21,
+      "name": "NN",
+      "lineno": 18,
+      "methods": [
+        {
+          "type": "method",
+          "rank": "A",
+          "complexity": 1,
+          "col_offset": 4,
+          "endline": 21,
+          "classname": "NN",
+          "name": "__init__",
+          "lineno": 20,
+          "closures": []
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 0,
+      "endline": 9,
+      "name": "relu",
+      "lineno": 7,
+      "closures": []
+    },
+    {
+      "type": "method",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 4,
+      "endline": 15,
+      "classname": "DecisionTree",
+      "name": "__init__",
+      "lineno": 14,
+      "closures": []
+    },
+    {
+      "type": "method",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 4,
+      "endline": 21,
+      "classname": "NN",
+      "name": "__init__",
+      "lineno": 20,
+      "closures": []
+    }
+  ],
+  "data\\repos\\ml_proj2022\\ref_models.py": [
+    {
+      "type": "function",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 0,
+      "endline": 24,
+      "name": "decision_tree_full_pipeline",
+      "lineno": 15,
+      "closures": []
+    },
+    {
+      "type": "function",
+      "rank": "A",
+      "complexity": 1,
+      "col_offset": 0,
+      "endline": 46,
+      "name": "feedforward_nn_full_pipeline",
+      "lineno": 27,
+      "closures": []
+    }
+  ]
+}
