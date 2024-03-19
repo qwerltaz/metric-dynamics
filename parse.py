@@ -1,11 +1,13 @@
 import argparse
+import json
 import os
 
 import git
 import pandas as pd
 from pydriller import Repository, Commit
+import radon
 from radon.cli import Config
-from radon.cli.harvest import Harvester
+from radon.cli.harvest import CCHarvester, RawHarvester, HCHarvester, MIHarvester
 
 DATA_DIR = "data"
 
@@ -89,8 +91,43 @@ class MetricParse:
 
         self.repo.git.checkout(commit.hash)
 
-        config = Config()
-        harvester = Harvester(self.repo_dir, config)
+        config = Config(
+            exclude=[],
+            ignore=[],
+            no_assert=True,
+            show_closures=False,
+            order=radon.complexity.SCORE,
+            show_complexity=True,
+            min='A',
+            max='F',
+            total_average=True,
+            include_ipynb=False
+        )
+
+        cc_harvester = CCHarvester([self.repo_dir], config)
+        cc_results = cc_harvester.as_json()
+        with open("data/results/tiny/test-radon-results-cc.json", 'w', encoding='utf-8') as f:
+            f.write(cc_results)
+
+        raw_harvester = RawHarvester([self.repo_dir], config)
+        raw_results = raw_harvester.as_json()
+        with open("data/results/tiny/test-radon-results-raw-metrics.json", 'w', encoding='utf-8') as f:
+            f.write(raw_results)
+
+        config.multi = True  # Count multiline strings as comment lines as well.
+        mi_harvester = MIHarvester([self.repo_dir], config)
+        mi_results = mi_harvester.as_json()
+        with open("data/results/tiny/test-radon-results-mi.json", 'w', encoding='utf-8') as f:
+            f.write(mi_results)
+
+        config.by_function = False
+        hc_harvester = HCHarvester([self.repo_dir], config)
+        hc_results = hc_harvester.as_json()
+        with open("data/results/tiny/test-radon-results-hc.json", 'w', encoding='utf-8') as f:
+            f.write(hc_results)
+
+        # TODO add metrics to metric_dict
+        raise NotImplementedError
 
         return metric_dict
 
@@ -112,7 +149,7 @@ def main():
     args = parser.parse_args()
 
     if args.size == "s":
-        mp = MetricParse("https://github.com/daimajia/bleed-baidu-white")
+        mp = MetricParse("https://github.com/qwerltaz/ml_proj2022")
     elif args.size == "m":
         mp = MetricParse("https://github.com/areski/python-nvd3")
 

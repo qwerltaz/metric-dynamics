@@ -1,0 +1,140 @@
+{
+  "data\\repos\\ml_proj2022\\compare_models.py": {
+    "total": {
+      "h1": 1,
+      "h2": 2,
+      "N1": 1,
+      "N2": 2,
+      "vocabulary": 3,
+      "length": 3,
+      "calculated_length": 2.0,
+      "volume": 4.754887502163469,
+      "difficulty": 0.5,
+      "effort": 2.3774437510817346,
+      "time": 0.1320802083934297,
+      "bugs": 0.0015849625007211565
+    },
+    "functions": {
+      "example_data": {
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      },
+      "main": {
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      }
+    }
+  },
+  "data\\repos\\ml_proj2022\\models_handmade.py": {
+    "total": {
+      "h1": 0,
+      "h2": 0,
+      "N1": 0,
+      "N2": 0,
+      "vocabulary": 0,
+      "length": 0,
+      "calculated_length": 0,
+      "volume": 0,
+      "difficulty": 0,
+      "effort": 0,
+      "time": 0.0,
+      "bugs": 0.0
+    },
+    "functions": {
+      "relu": {
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      },
+      "__init__": {
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      }
+    }
+  },
+  "data\\repos\\ml_proj2022\\ref_models.py": {
+    "total": {
+      "h1": 1,
+      "h2": 2,
+      "N1": 1,
+      "N2": 2,
+      "vocabulary": 3,
+      "length": 3,
+      "calculated_length": 2.0,
+      "volume": 4.754887502163469,
+      "difficulty": 0.5,
+      "effort": 2.3774437510817346,
+      "time": 0.1320802083934297,
+      "bugs": 0.0015849625007211565
+    },
+    "functions": {
+      "decision_tree_full_pipeline": {
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      },
+      "feedforward_nn_full_pipeline": {
+        "h1": 1,
+        "h2": 2,
+        "N1": 1,
+        "N2": 2,
+        "vocabulary": 3,
+        "length": 3,
+        "calculated_length": 2.0,
+        "volume": 4.754887502163469,
+        "difficulty": 0.5,
+        "effort": 2.3774437510817346,
+        "time": 0.1320802083934297,
+        "bugs": 0.0015849625007211565
+      }
+    }
+  }
+}

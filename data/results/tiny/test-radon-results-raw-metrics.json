@@ -1,0 +1,29 @@
+{
+  "data\\repos\\ml_proj2022\\compare_models.py": {
+    "loc": 37,
+    "lloc": 21,
+    "sloc": 20,
+    "comments": 2,
+    "multi": 3,
+    "blank": 11,
+    "single_comments": 3
+  },
+  "data\\repos\\ml_proj2022\\models_handmade.py": {
+    "loc": 21,
+    "lloc": 14,
+    "sloc": 10,
+    "comments": 0,
+    "multi": 0,
+    "blank": 7,
+    "single_comments": 4
+  },
+  "data\\repos\\ml_proj2022\\ref_models.py": {
+    "loc": 46,
+    "lloc": 27,
+    "sloc": 26,
+    "comments": 2,
+    "multi": 4,
+    "blank": 12,
+    "single_comments": 4
+  }
+}
