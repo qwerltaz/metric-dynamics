@@ -34,7 +34,7 @@ class MetricParse:
 
         self.repo.git.checkout(self.main_branch)
 
-    def save_metrics_for_each_commit(self) -> None:
+    def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
         branch = self.main_branch
 
@@ -84,7 +84,8 @@ class MetricParse:
         commit_metrics_df = pd.DataFrame(commit_metrics_list)
         commit_metrics_df["date"] = pd.to_datetime(commit_metrics_df["date"], utc=True)
 
-        commit_metrics_df.to_csv(os.path.join(DATA_DIR, "commit_metrics_" + self.repo_name + ".csv"))
+        result_path = save_path or os.path.join(DATA_DIR, "results", self.repo_name + ".csv")
+        commit_metrics_df.to_csv(result_path)
 
     def get_metrics(self, commit: Commit) -> dict[str, float]:
         """
@@ -119,8 +120,7 @@ class MetricParse:
         keys = ["LOC",  # Lines of code (total).
                 "LLOC",  # Logical lines of code (containing exactly one statement).
                 "SLOC",  # Source lines of code.
-                "comments",  # Comment lines.
-                ]
+                "comments"]  # Comment lines.
         for key in keys:
             metric_dict["radon_" + key] = 0
         for file in raw_results.values():
@@ -142,7 +142,7 @@ class MetricParse:
         for file in mi_results.values():
             unit_complexity_lists["MI"].append(file["mi"])
 
-        # Halstead complexity. Per file.
+        # Halstead's complexity. Per file.
         config.by_function = False
         hc_harvester = HCHarvester([self.repo_dir], config)
         hc_results = json.loads(hc_harvester.as_json())
@@ -178,15 +178,17 @@ class MetricParse:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--size", dest="size", choices=['s', 'm', 'b'], default='s', help="Repo size.")
+    parser.add_argument("-s", "--size", dest="size", choices=['s', 'm', 'l'], default='s', help="Repo size.")
     args = parser.parse_args()
 
     if args.size == "s":
         mp = MetricParse("https://github.com/qwerltaz/ml_proj2022")
     elif args.size == "m":
         mp = MetricParse("https://github.com/areski/python-nvd3")
+    else:
+        mp = MetricParse("https://github.com/qwerltaz/ml_proj2022")
 
-    mp.save_metrics_for_each_commit()
+    mp.save_metrics_for_each_commit(save_path=os.path.join(DATA_DIR, "results", "tiny", mp.repo_name + ".csv"))
 
 
 if __name__ == "__main__":
