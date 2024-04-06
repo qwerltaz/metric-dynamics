@@ -31,6 +31,7 @@ class MetricParse:
             self.repo = git.Repo(self.repo_dir)
         else:
             self.repo = git.Repo.clone_from(self.repo_url, self.repo_dir)
+
         self.repo.git.checkout(self.main_branch)
 
     def save_metrics_for_each_commit(self) -> None:
@@ -106,8 +107,9 @@ class MetricParse:
 
         cc_harvester = CCHarvester([self.repo_dir], config)
         cc_results = cc_harvester.as_json()
-        with open("data/results/tiny/test-radon-results-cc.json", 'w', encoding='utf-8') as f:
-            f.write(cc_results)
+        # with open("data/results/tiny/test-radon-results-cc.json", 'w', encoding='utf-8') as f:
+        #     f.write(cc_results)
+        # TODO: add method to compute avg, put metrics in metric_dict for each harvester.
 
         raw_harvester = RawHarvester([self.repo_dir], config)
         raw_results = raw_harvester.as_json()
@@ -133,7 +135,7 @@ class MetricParse:
 
     @property
     def main_branch(self) -> str:
-        """Main or master branch."""
+        """Main or master branch of the parser's repository."""
 
         candidates = ["main", "master", "origin/main", "origin/master"]
         refs = self.repo.references
