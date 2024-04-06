@@ -86,8 +86,11 @@ class MetricParse:
 
         commit_metrics_df.to_csv(os.path.join(DATA_DIR, "commit_metrics_" + self.repo_name + ".csv"))
 
-    def get_metrics(self, commit: Commit) -> dict:
-        """Checkout commit and compute software metrics."""
+    def get_metrics(self, commit: Commit) -> dict[str, float]:
+        """
+        Checkout parser's repo at given commit and compute software metrics for that commit.
+        Computes total raw metrics (LOC, LLOC, SLOC, comments), and average of other metrics.
+        """
         metric_dict = dict()
 
         self.repo.git.checkout(commit.hash)
@@ -102,36 +105,64 @@ class MetricParse:
             min='A',
             max='F',
             total_average=True,
-            include_ipynb=False
+            include_ipynb=False,
+            multi=True,  # Count multiline strings as comment lines as well.
+            by_function=False,
         )
 
-        cc_harvester = CCHarvester([self.repo_dir], config)
-        cc_results = cc_harvester.as_json()
-        # with open("data/results/tiny/test-radon-results-cc.json", 'w', encoding='utf-8') as f:
-        #     f.write(cc_results)
-        # TODO: add method to compute avg, put metrics in metric_dict for each harvester.
+        # Dict to store lists of unit complexity metrics.
+        unit_complexity_lists = dict()
 
+        # Raw metrics. Summed across the commit.
         raw_harvester = RawHarvester([self.repo_dir], config)
-        raw_results = raw_harvester.as_json()
-        with open("data/results/tiny/test-radon-results-raw-metrics.json", 'w', encoding='utf-8') as f:
-            f.write(raw_results)
+        raw_results = json.loads(raw_harvester.as_json())
+        keys = ["LOC",  # Lines of code (total).
+                "LLOC",  # Logical lines of code (containing exactly one statement).
+                "SLOC",  # Source lines of code.
+                "comments",  # Comment lines.
+                ]
+        for key in keys:
+            metric_dict["radon_" + key] = 0
+        for file in raw_results.values():
+            for key in keys:
+                metric_dict["radon_" + key] += file[key.lower()]
 
-        config.multi = True  # Count multiline strings as comment lines as well.
+        # Cyclomatic complexity. Per function.
+        cc_harvester = CCHarvester([self.repo_dir], config)
+        cc_results = json.loads(cc_harvester.as_json())
+        unit_complexity_lists["cc"] = []  # Cyclomatic complexity.
+        for file in cc_results.values():
+            for unit in file:
+                unit_complexity_lists["cc"].append(unit["complexity"])
+
+        # Maintainability index. Per file.
         mi_harvester = MIHarvester([self.repo_dir], config)
-        mi_results = mi_harvester.as_json()
-        with open("data/results/tiny/test-radon-results-mi.json", 'w', encoding='utf-8') as f:
-            f.write(mi_results)
+        mi_results = json.loads(mi_harvester.as_json())
+        unit_complexity_lists["MI"] = []
+        for file in mi_results.values():
+            unit_complexity_lists["MI"].append(file["mi"])
 
+        # Halstead complexity. Per file.
         config.by_function = False
         hc_harvester = HCHarvester([self.repo_dir], config)
-        hc_results = hc_harvester.as_json()
-        with open("data/results/tiny/test-radon-results-hc.json", 'w', encoding='utf-8') as f:
-            f.write(hc_results)
+        hc_results = json.loads(hc_harvester.as_json())
+        keys = ["vocabulary", "length", "volume", "difficulty", "effort", "time", "bugs"]
+        for key in keys:
+            unit_complexity_lists[key] = []
+        for file in hc_results.values():
+            for key in keys:
+                unit_complexity_lists[key].append(file["total"][key])
 
-        # TODO add metrics to metric_dict
-        raise NotImplementedError
+        # Compute average of each metric, across the commit.
+        for metric in unit_complexity_lists:
+            metric_dict["radon_avg_" + metric] = self.metric_avg(unit_complexity_lists[metric])
 
         return metric_dict
+
+    @staticmethod
+    def metric_avg(metrics: list) -> float:
+        """Compute average of metrics."""
+        return sum(metrics) / len(metrics)
 
     @property
     def main_branch(self) -> str:
