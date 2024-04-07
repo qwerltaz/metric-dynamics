@@ -38,7 +38,6 @@ class MetricParse:
         """Save info and metrics for each commit in main branch in a csv file."""
         branch = self.main_branch
 
-        # TODO: count commits only in main branch
         commit_count = self.repo.git.rev_list('--count', 'HEAD')
         commit_metrics_list = []
         traverser = Repository(
@@ -48,12 +47,7 @@ class MetricParse:
             num_workers=4,
         ).traverse_commits()
 
-        sloc = 0  # Source lines of code.
-        all_lines = 0  # All additions and deletions combined.
         for i, commit in enumerate(traverser):
-            sloc = sloc + commit.insertions - commit.deletions
-            all_lines = all_lines + commit.lines
-
             if __name__ == "__main__":
                 print(
                     'commit', i + 1, 'of', commit_count,
@@ -68,9 +62,7 @@ class MetricParse:
                 "date": commit.committer_date,
                 "commit_message": commit.msg,
                 "is_merge": commit.merge,
-                "codebase_size": sloc,
                 "lines_changed": commit.lines,
-                "total_lines_changed": all_lines,
                 "insertions": commit.insertions,
                 "deletions": commit.deletions,
                 "dmm_unit_size": commit.dmm_unit_size,
@@ -84,7 +76,9 @@ class MetricParse:
         commit_metrics_df = pd.DataFrame(commit_metrics_list)
         commit_metrics_df["date"] = pd.to_datetime(commit_metrics_df["date"], utc=True)
 
-        result_path = save_path or os.path.join(DATA_DIR, "results", self.repo_name + ".csv")
+        result_path: str = save_path or os.path.join(DATA_DIR, "results")
+        result_path = os.path.join(result_path, self.repo_name + ".csv")
+
         commit_metrics_df.to_csv(result_path)
 
     def get_metrics(self, commit: Commit) -> dict[str, float]:
@@ -182,11 +176,11 @@ def main():
     args = parser.parse_args()
 
     if args.size == "s":
-        mp = MetricParse("https://github.com/qwerltaz/ml_proj2022")
+        mp = MetricParse("https://github.com/daimajia/bleed-baidu-white")
     elif args.size == "m":
         mp = MetricParse("https://github.com/areski/python-nvd3")
     else:
-        mp = MetricParse("https://github.com/qwerltaz/ml_proj2022")
+        mp = MetricParse("https://github.com/Hexxeh/libpebble")
 
     mp.save_metrics_for_each_commit(save_path=os.path.join(DATA_DIR, "results", "tiny", mp.repo_name + ".csv"))
 
