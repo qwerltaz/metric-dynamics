@@ -6,10 +6,15 @@ import git
 import pandas as pd
 from pydriller import Repository, Commit
 import radon
+import radon.complexity
 from radon.cli import Config
 from radon.cli.harvest import CCHarvester, RawHarvester, HCHarvester, MIHarvester
 
+from logger import get_logger
+
 DATA_DIR = "data"
+
+logger = get_logger()
 
 
 class MetricParse:
@@ -36,6 +41,14 @@ class MetricParse:
 
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
+        try:
+            self._save_metrics_for_each_commit(save_path)
+        finally:
+            self.repo.git.checkout(self.main_branch)
+            logger.info(f" Checked out {self.repo_name} at {self.main_branch}.")
+
+    def _save_metrics_for_each_commit(self, save_path: str = None) -> None:
+        """Save info and metrics for each commit in main branch in a csv file."""
         branch = self.main_branch
 
         commit_count = self.repo.git.rev_list('--count', 'HEAD')
@@ -48,13 +61,13 @@ class MetricParse:
         ).traverse_commits()
 
         for i, commit in enumerate(traverser):
-            if __name__ == "__main__":
-                print(
-                    'commit', i + 1, 'of', commit_count,
-                    '| author:', commit.author.name,
-                    '| date:', commit.committer_date,
-                    '| lines_changed: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions})',
-                )
+            print(
+                'repo', self.repo_name,
+                '| commit', i + 1, 'of', commit_count,
+                '| author:', commit.author.name,
+                '| date:', commit.committer_date,
+                '| lines_changed: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions})',
+            )
 
             commit_metric_dict = {
                 "hash": commit.hash,
@@ -70,25 +83,41 @@ class MetricParse:
                 "dmm_unit_interfacing": commit.dmm_unit_interfacing,
             }
 
-            commit_metric_dict |= self.get_metrics(commit)
+            sw_metrics = self.get_metrics(commit)
+            if sw_metrics is None:
+                # print("Error computing metrics, skipping repository: ", self.repo_name)
+                logger.info(
+                    f"Error computing metrics for {self.repo_name}. Skipped commit \"{commit.msg}\" ({commit.hash}).")
+                continue
+
+            # Add software metrics to commit metrics.
+            commit_metric_dict |= sw_metrics
             commit_metrics_list.append(commit_metric_dict)
+            sw_metrics = None
+
+        if not commit_metrics_list:
+            logger.warning(f"Found zero computable commits for {self.repo_name}.")
+            return
 
         commit_metrics_df = pd.DataFrame(commit_metrics_list)
         commit_metrics_df["date"] = pd.to_datetime(commit_metrics_df["date"], utc=True)
 
-        result_path: str = save_path or os.path.join(DATA_DIR, "results")
-        result_path = os.path.join(result_path, self.repo_name + ".csv")
+        if save_path:
+            result_path = save_path
+        else:
+            result_path: str = save_path or os.path.join(DATA_DIR, "results")
+            result_path = os.path.join(result_path, self.repo_name + ".csv")
 
         commit_metrics_df.to_csv(result_path)
 
-    def get_metrics(self, commit: Commit) -> dict[str, float]:
+    def get_metrics(self, commit: Commit) -> dict[str, float] | None:
         """
         Checkout parser's repo at given commit and compute software metrics for that commit.
         Computes total raw metrics (LOC, LLOC, SLOC, comments), and average of other metrics.
         """
         metric_dict = dict()
 
-        self.repo.git.checkout(commit.hash)
+        self.repo.git.checkout(commit.hash, force=True)
 
         config = Config(
             exclude=[],
@@ -117,23 +146,35 @@ class MetricParse:
                 "comments"]  # Comment lines.
         for key in keys:
             metric_dict["radon_" + key] = 0
-        for file in raw_results.values():
+        for file_path, file in raw_results.items():
             for key in keys:
+                if "error" in file:
+                    # print("harvester error: ", file)
+                    logger.info(f"Harvester error at file{file_path}: {file}")
+                    return
                 metric_dict["radon_" + key] += file[key.lower()]
 
         # Cyclomatic complexity. Per function.
         cc_harvester = CCHarvester([self.repo_dir], config)
         cc_results = json.loads(cc_harvester.as_json())
         unit_complexity_lists["cc"] = []  # Cyclomatic complexity.
-        for file in cc_results.values():
+        for file_path, file in cc_results.items():
             for unit in file:
+                if isinstance(unit, str):
+                    # print("harvester error: ", file)
+                    logger.info(f"Harvester error at file{file_path}: {file}")
+                    return
                 unit_complexity_lists["cc"].append(unit["complexity"])
 
         # Maintainability index. Per file.
         mi_harvester = MIHarvester([self.repo_dir], config)
         mi_results = json.loads(mi_harvester.as_json())
         unit_complexity_lists["MI"] = []
-        for file in mi_results.values():
+        for file_path, file in mi_results.items():
+            if "error" in file:
+                # print("harvester error: ", file)
+                logger.info(f"Harvester error at file{file_path}: {file}")
+                return
             unit_complexity_lists["MI"].append(file["mi"])
 
         # Halstead's complexity. Per file.
@@ -143,7 +184,11 @@ class MetricParse:
         keys = ["vocabulary", "length", "volume", "difficulty", "effort", "time", "bugs"]
         for key in keys:
             unit_complexity_lists[key] = []
-        for file in hc_results.values():
+        for file_path, file in hc_results.items():
+            if "error" in file:
+                # print("harvester error: ", file)
+                logger.info(f"Harvester error at file{file_path}: {file}")
+                return
             for key in keys:
                 unit_complexity_lists[key].append(file["total"][key])
 
@@ -154,8 +199,10 @@ class MetricParse:
         return metric_dict
 
     @staticmethod
-    def metric_avg(metrics: list) -> float:
+    def metric_avg(metrics: list) -> float | None:
         """Compute average of metrics."""
+        if not metrics:
+            return None
         return sum(metrics) / len(metrics)
 
     @property
@@ -176,7 +223,7 @@ def main():
     args = parser.parse_args()
 
     if args.size == "s":
-        mp = MetricParse("https://github.com/daimajia/bleed-baidu-white")
+        mp = MetricParse("https://github.com/teerapongchaemchamrat/portfolio-API")
     elif args.size == "m":
         mp = MetricParse("https://github.com/areski/python-nvd3")
     else:
