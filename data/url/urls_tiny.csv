@@ -1,5 +1,5 @@
-id,name,pagerank,repo_url
-0,bleed-baidu-white,,https://github.com/daimajia/bleed-baidu-white
-1,irc_bot,,https://github.com/coreyleveen/irc_bot
-2,libpebble,,https://github.com/Hexxeh/libpebble
-3,django-speedbar,,https://github.com/mixcloud/django-speedbar
+id,name,pagerank,repo_url,computed
+0,bleed-baidu-white,,https://github.com/daimajia/bleed-baidu-white,True
+1,irc_bot,,https://github.com/coreyleveen/irc_bot,True
+2,libpebble,,https://github.com/Hexxeh/libpebble,True
+3,django-speedbar,,https://github.com/mixcloud/django-speedbar,True

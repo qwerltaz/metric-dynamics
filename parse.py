@@ -88,8 +88,12 @@ class MetricParse:
             sw_metrics = self.get_metrics(commit)
             if sw_metrics is None:
                 commit_msg_short = commit.msg[:100].replace("\n", " ")
+                if len(commit.msg) > 100:
+                    commit_msg_short += "..."
+
                 logger.info(
-                    f"Error computing metrics for {self.repo_name}. Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
+                    f"Error computing metrics for {self.repo_name}. "
+                    + f"Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
                 continue
 
             # Add software metrics to commit metrics.
