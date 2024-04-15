@@ -41,11 +41,13 @@ class MetricParse:
 
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
-        try:
-            self._save_metrics_for_each_commit(save_path)
-        finally:
-            self.repo.git.checkout(self.main_branch)
-            logger.info(f" Checked out {self.repo_name} at {self.main_branch}.")
+        # try:
+        self._save_metrics_for_each_commit(save_path)
+        # except Exception as e:
+        #     logger.error(f"Error parsing metrics for {self.repo_name}. {e}")
+        # finally:
+        #     self.repo.git.checkout(self.main_branch)
+        #     logger.info(f" Checked out {self.repo_name} at {self.main_branch}.")
 
     def _save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
@@ -85,15 +87,14 @@ class MetricParse:
 
             sw_metrics = self.get_metrics(commit)
             if sw_metrics is None:
-                # print("Error computing metrics, skipping repository: ", self.repo_name)
+                commit_msg_short = commit.msg[:100].replace("\n", " ")
                 logger.info(
-                    f"Error computing metrics for {self.repo_name}. Skipped commit \"{commit.msg}\" ({commit.hash}).")
+                    f"Error computing metrics for {self.repo_name}. Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
                 continue
 
             # Add software metrics to commit metrics.
             commit_metric_dict |= sw_metrics
             commit_metrics_list.append(commit_metric_dict)
-            sw_metrics = None
 
         if not commit_metrics_list:
             logger.warning(f"Found zero computable commits for {self.repo_name}.")
@@ -105,10 +106,10 @@ class MetricParse:
         if save_path:
             result_path = save_path
         else:
-            result_path: str = save_path or os.path.join(DATA_DIR, "results")
+            result_path = os.path.join(DATA_DIR, "results")
             result_path = os.path.join(result_path, self.repo_name + ".csv")
 
-        commit_metrics_df.to_csv(result_path)
+        commit_metrics_df.to_csv(result_path, encoding="utf-8")
 
     def get_metrics(self, commit: Commit) -> dict[str, float] | None:
         """
