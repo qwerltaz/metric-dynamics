@@ -27,7 +27,8 @@ def get_logger() -> logging.Logger:
                 "level": "DEBUG",
                 "formatter": "verbose",
                 "filename": ".log",
-                "mode": "w"
+                "mode": "w",
+                "encoding": "utf-8"
             }
         },
         "loggers": {

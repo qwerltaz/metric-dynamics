@@ -14,7 +14,7 @@ def schedule_repositories(repo_urls_csv_path: str, custom_save_path: str = None)
     :param repo_urls_csv_path: path to csv file with columns `name` and `repo_url`
     :param custom_save_path: custom path to save metrics. Default is `data/results`
     """
-    repo_urls = pd.read_csv(repo_urls_csv_path)
+    repo_urls = pd.read_csv(repo_urls_csv_path, encoding="utf-8")
 
     # TODO: try saving progress to continue from where it stopped
 
@@ -23,8 +23,12 @@ def schedule_repositories(repo_urls_csv_path: str, custom_save_path: str = None)
         repo_url = row["repo_url"]
         metric_parse = MetricParse(repo_url)
 
-        metric_save_path = custom_save_path or os.path.join("data", "results", repo_name)
-        metric_parse.save_metrics_for_each_commit()  # TODO manually set results path
+        metric_parse.save_metrics_for_each_commit()
 
 
-os.path.join("data", "results", "tiny")
+def main():
+    schedule_repositories("data/url/urls_tiny.csv")
+
+
+if __name__ == "__main__":
+    main()
