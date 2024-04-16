@@ -22,7 +22,7 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
             continue
 
         repo_url = row["repo_url"]
-        if repo_url:
+        if repo_url and isinstance(repo_url, str):
             metric_parse = MetricParse(repo_url)
             metric_parse.save_metrics_for_each_commit()
 
