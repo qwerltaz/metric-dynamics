@@ -3,8 +3,8 @@ id,name,pagerank,repo_url,computed
 16704,six,582.9226495384368,https://github.com/benjaminp/six,False
 141233,numpy,288.0084032690924,https://github.com/numpy/numpy,False
 15261,setuptools,237.71861571494665,https://github.com/pypa/setuptools,False
-23927,certifi,226.6195047918928,,False
-17819,beautifulsoup4,205.86618602732997,,False
+23927,certifi,226.6195047918928,https://github.com/certifi/python-certifi,False
+17819,beautifulsoup4,205.86618602732997,https://git.launchpad.net/beautifulsoup,False
 1910748,soupsieve,174.71903776612885,https://github.com/facelessuser/soupsieve,False
 26522,click,169.79750970163164,https://github.com/mitsuhiko/click,False
 9172,PyYAML,151.91716930830682,https://github.com/yaml/pyyaml,False
@@ -21,8 +21,8 @@ id,name,pagerank,repo_url,computed
 130369,MarkupSafe,69.05499097251759,https://github.com/pallets/markupsafe,False
 24004,chardet2,63.48744590112944,https://github.com/byroot/chardet,False
 129155,lxml,59.747031040694246,https://github.com/lxml/lxml,False
-33595,typing,57.71615274068358,,False
-86248,future,56.784626648772985,,False
+33595,typing,57.71615274068358,https://github.com/python/typing,False
+86248,future,56.784626648772985,https://github.com/PythonCharmers/python-future,False
 22697,boto3,51.78322805060701,https://github.com/boto/boto3,False
 147503,Pillow,51.56812746750748,https://github.com/python-pillow/Pillow,False
 5569,pytest,50.69898255224763,https://github.com/pytest-dev/pytest,False
