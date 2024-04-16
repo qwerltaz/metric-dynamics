@@ -32,10 +32,10 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
 
 def main():
     # Tiny test table.
-    schedule_repositories("data/url/urls_tiny.csv")
+    # schedule_repositories("data/url/urls_tiny.csv")
 
     # Full table.
-    # schedule_repositories("data/url/pypi_top_1000.csv")
+    schedule_repositories("data/url/pypi_top_1000.csv")
 
 
 if __name__ == "__main__":

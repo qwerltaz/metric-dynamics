@@ -1,4 +1,4 @@
-import argparse
+"""Contains a class to parse metrics for each commit in a git repository."""
 import json
 import os
 
@@ -41,13 +41,7 @@ class MetricParse:
 
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
-        # try:
         self._save_metrics_for_each_commit(save_path)
-        # except Exception as e:
-        #     logger.error(f"Error parsing metrics for {self.repo_name}. {e}")
-        # finally:
-        #     self.repo.git.checkout(self.main_branch)
-        #     logger.info(f" Checked out {self.repo_name} at {self.main_branch}.")
 
     def _save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
@@ -220,22 +214,3 @@ class MetricParse:
             if candidate in refs:
                 return candidate
         raise Exception(f"Main branch not in {self.repo_url}.")
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--size", dest="size", choices=['s', 'm', 'l'], default='s', help="Repo size.")
-    args = parser.parse_args()
-
-    if args.size == "s":
-        mp = MetricParse("https://github.com/teerapongchaemchamrat/portfolio-API")
-    elif args.size == "m":
-        mp = MetricParse("https://github.com/areski/python-nvd3")
-    else:
-        mp = MetricParse("https://github.com/Hexxeh/libpebble")
-
-    mp.save_metrics_for_each_commit(save_path=os.path.join(DATA_DIR, "results", "tiny", mp.repo_name + ".csv"))
-
-
-if __name__ == "__main__":
-    main()
