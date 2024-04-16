@@ -1,5 +1,7 @@
 """Schedule metrics collection for a number of repositories."""
 
+import argparse
+
 import pandas as pd
 
 from parse import MetricParse
@@ -32,11 +34,15 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
 
 
 def main():
-    # Tiny test table.
-    # schedule_repositories("data/url/urls_tiny.csv")
+    parser = argparse.ArgumentParser(description="Schedule metrics collection for a number of repositories.")
+    parser.add_argument("--mode", "-m", choices=["tiny", "full"], help="Mode to run the script in.",
+                        default="tiny", required=False)
+    args = parser.parse_args()
 
-    # Full table.
-    schedule_repositories("data/url/pypi_top_1000.csv")
+    if args.mode == "tiny":
+        schedule_repositories("data/url/urls_tiny.csv")
+    elif args.mode == "full":
+        schedule_repositories("data/url/pypi_top_1000.csv")
 
 
 if __name__ == "__main__":
