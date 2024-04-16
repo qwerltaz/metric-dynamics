@@ -22,9 +22,10 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
             continue
 
         repo_url = row["repo_url"]
-        metric_parse = MetricParse(repo_url)
+        if repo_url:
+            metric_parse = MetricParse(repo_url)
+            metric_parse.save_metrics_for_each_commit()
 
-        metric_parse.save_metrics_for_each_commit()
         repo_urls.loc[i, "computed"] = True
 
         repo_urls.to_csv(repo_urls_csv_path, index=False, encoding="utf-8")

@@ -28,6 +28,9 @@ class MetricParse:
         """
         self.repo_url = repo_url
 
+        if not self.repo_url:
+            raise ValueError("Received repository URL was empty or None.")
+
         self.repo_name = self.repo_url.split("/")[-1]
         self.repo_dir = os.path.join(DATA_DIR, "repos", self.repo_name)
 
