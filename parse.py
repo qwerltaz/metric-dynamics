@@ -1,4 +1,6 @@
 """Contains a class to parse metrics for each commit in a git repository."""
+
+from enum import Enum
 import json
 import os
 
@@ -17,6 +19,13 @@ DATA_DIR = "data"
 logger = get_logger()
 
 
+class HarvesterOutcome(Enum):
+    """Errors that can occur during metrics harvesting."""
+    SUCCESS = 0
+    PYTHON_VERSION_2 = 1
+    INVALID_CODE = 2
+
+
 class MetricParse:
     """Parse metrics from a git repository."""
 
@@ -26,10 +35,11 @@ class MetricParse:
 
         :param repo_url: repository url
         """
+        if not isinstance(repo_url, str) or not repo_url:
+            raise ValueError("Received repository URL was empty or None.")
+
         self.repo_url = repo_url
 
-        if not self.repo_url:
-            raise ValueError("Received repository URL was empty or None.")
 
         self.repo_name = self.repo_url.split("/")[-1]
         self.repo_dir = os.path.join(DATA_DIR, "repos", self.repo_name)
@@ -57,6 +67,7 @@ class MetricParse:
             only_in_branch=branch,
             only_modifications_with_file_types=[".py"],
             num_workers=4,
+            order="reverse"
         ).traverse_commits()
 
         for i, commit in enumerate(traverser):
@@ -82,16 +93,22 @@ class MetricParse:
                 "dmm_unit_interfacing": commit.dmm_unit_interfacing,
             }
 
-            sw_metrics = self.get_metrics(commit)
+            sw_metrics, outcome = self.get_metrics(commit)
             if sw_metrics is None:
                 commit_msg_short = commit.msg[:100].replace("\n", " ")
                 if len(commit.msg) > 100:
                     commit_msg_short += "..."
 
-                logger.info(
-                    f"Error computing metrics for {self.repo_name}. "
-                    + f"Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
-                continue
+                if outcome == HarvesterOutcome.PYTHON_VERSION_2:
+                    logger.info(
+                        f"Error computing metrics for {self.repo_name}. "
+                        + f"Invalid python version, stopped for repository at: \"{commit_msg_short}\" ({commit.hash}).")
+                    break
+                elif outcome == HarvesterOutcome.INVALID_CODE:
+                    logger.info(
+                        f"Error computing metrics for {self.repo_name}. "
+                        + f"Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
+                    continue
 
             # Add software metrics to commit metrics.
             commit_metric_dict |= sw_metrics
@@ -112,7 +129,7 @@ class MetricParse:
 
         commit_metrics_df.to_csv(result_path, encoding="utf-8")
 
-    def get_metrics(self, commit: Commit) -> dict[str, float] | None:
+    def get_metrics(self, commit: Commit) -> tuple[dict[str, float] | None, HarvesterOutcome]:
         """
         Checkout parser's repo at given commit and compute software metrics for that commit.
         Computes total raw metrics (LOC, LLOC, SLOC, comments), and average of other metrics.
@@ -139,6 +156,9 @@ class MetricParse:
         # Dict to store lists of unit complexity metrics.
         unit_complexity_lists = dict()
 
+        # List to store errors from harvester. Contains lists of [str, dict].
+        harvester_errors: list[list] = []
+
         # Raw metrics. Summed across the commit.
         raw_harvester = RawHarvester([self.repo_dir], config)
         raw_results = json.loads(raw_harvester.as_json())
@@ -149,11 +169,10 @@ class MetricParse:
         for key in keys:
             metric_dict["radon_" + key] = 0
         for file_path, file in raw_results.items():
+            if "error" in file:
+                harvester_errors.append([file_path, file])
+                break
             for key in keys:
-                if "error" in file:
-                    # print("harvester error: ", file)
-                    logger.info(f"Harvester error at file{file_path}: {file}")
-                    return
                 metric_dict["radon_" + key] += file[key.lower()]
 
         # Cyclomatic complexity. Per function.
@@ -161,11 +180,10 @@ class MetricParse:
         cc_results = json.loads(cc_harvester.as_json())
         unit_complexity_lists["cc"] = []  # Cyclomatic complexity.
         for file_path, file in cc_results.items():
+            if "error" in file:
+                harvester_errors.append([file_path, file])
+                break
             for unit in file:
-                if isinstance(unit, str):
-                    # print("harvester error: ", file)
-                    logger.info(f"Harvester error at file{file_path}: {file}")
-                    return
                 unit_complexity_lists["cc"].append(unit["complexity"])
 
         # Maintainability index. Per file.
@@ -174,9 +192,8 @@ class MetricParse:
         unit_complexity_lists["MI"] = []
         for file_path, file in mi_results.items():
             if "error" in file:
-                # print("harvester error: ", file)
-                logger.info(f"Harvester error at file{file_path}: {file}")
-                return
+                harvester_errors.append([file_path, file])
+                break
             unit_complexity_lists["MI"].append(file["mi"])
 
         # Halstead's complexity. Per file.
@@ -188,17 +205,24 @@ class MetricParse:
             unit_complexity_lists[key] = []
         for file_path, file in hc_results.items():
             if "error" in file:
-                # print("harvester error: ", file)
-                logger.info(f"Harvester error at file{file_path}: {file}")
-                return
+                harvester_errors.append([file_path, file])
+                break
             for key in keys:
                 unit_complexity_lists[key].append(file["total"][key])
+
+        if harvester_errors:
+            for file_path, file in harvester_errors:
+                if file["error"].startswith("Missing parentheses in call to 'print'. Did you mean print(...)?"):
+                    return None, HarvesterOutcome.PYTHON_VERSION_2
+
+                logger.info(f"Error in harvester at {file_path}: {file['error']}")
+                return None, HarvesterOutcome.INVALID_CODE
 
         # Compute average of each metric, across the commit.
         for metric in unit_complexity_lists:
             metric_dict["radon_avg_" + metric] = self.metric_avg(unit_complexity_lists[metric])
 
-        return metric_dict
+        return metric_dict, HarvesterOutcome.SUCCESS
 
     @staticmethod
     def metric_avg(metrics: list) -> float | None:
@@ -217,3 +241,12 @@ class MetricParse:
             if candidate in refs:
                 return candidate
         raise Exception(f"Main branch not in {self.repo_url}.")
+
+
+def trial():
+    metric_parse = MetricParse("https://github.com/coreyleveen/irc_bot")
+    metric_parse.save_metrics_for_each_commit()
+
+
+if __name__ == "__main__":
+    trial()
