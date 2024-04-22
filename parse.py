@@ -39,8 +39,6 @@ class MetricParse:
             raise ValueError("Received repository URL was empty or None.")
 
         self.repo_url = repo_url
-
-
         self.repo_name = self.repo_url.split("/")[-1]
         self.repo_dir = os.path.join(DATA_DIR, "repos", self.repo_name)
 
@@ -70,6 +68,7 @@ class MetricParse:
             order="reverse"
         ).traverse_commits()
 
+        log_msg_max_len = 100
         for i, commit in enumerate(traverser):
             print(
                 'repo', self.repo_name,
@@ -95,8 +94,9 @@ class MetricParse:
 
             sw_metrics, outcome = self.get_metrics(commit)
             if sw_metrics is None:
-                commit_msg_short = commit.msg[:100].replace("\n", " ")
-                if len(commit.msg) > 100:
+                # Shortened message for logging.
+                commit_msg_short = commit.msg[:log_msg_max_len].replace("\n", " ")
+                if len(commit.msg) > log_msg_max_len:
                     commit_msg_short += "..."
 
                 if outcome == HarvesterOutcome.PYTHON_VERSION_2:
