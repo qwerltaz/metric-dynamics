@@ -1,5 +1,5 @@
 id,name,pagerank,repo_url,computed
-11615,requests,664.8998056309119,https://github.com/kennethreitz/requests,False
+11615,requests,664.8998056309119,https://github.com/kennethreitz/requests,True
 16704,six,582.9226495384368,https://github.com/benjaminp/six,True
 141233,numpy,288.0084032690924,https://github.com/numpy/numpy,False
 15261,setuptools,237.71861571494665,https://github.com/pypa/setuptools,False

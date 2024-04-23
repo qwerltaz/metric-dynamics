@@ -1,11 +1,9 @@
 """Contains a class to parse metrics for each commit in a git repository."""
 
-from datetime import datetime
 from enum import Enum
 import json
 import os
 from time import perf_counter
-from typing import Literal
 
 import git
 import pandas as pd
@@ -62,41 +60,43 @@ class MetricParse:
             msg += "..."
         return msg
 
-    def _get_unprocessed_commit_hash_range(self) -> tuple[str | None, str | None]:
-        """Get start and end commit hashes not included in the repository's results table."""
+    def _get_unprocessed_commit_hash_range(self) -> tuple[str | None, str | None, int]:
+        """
+        Get start and end commit hashes not included in the repository's results table
+        and number of computed commits.
+        """
         if not os.path.exists(self._default_save_path):
-            return None, None
+            return None, None, 0
 
         results_df = pd.read_csv(self._default_save_path)
         if results_df.empty:
-            return None, None
+            return None, None, 0
 
         # Reverse order: from the very first commit to the first in the results table.
         first_hash = None
         last_hash = results_df["hash"].iloc[0]
 
-        return first_hash, last_hash
+        return first_hash, last_hash, len(results_df)
 
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
         branch_main = self.main_branch
 
-        commit_count = self.repo.git.rev_list('--count', 'HEAD')
         commit_metrics_list = []
-
-        start_hash, end_hash = self._get_unprocessed_commit_hash_range()
+        start_hash, end_hash, num_computed = self._get_unprocessed_commit_hash_range()
+        commit_count = int(self.repo.git.rev_list('--count', 'HEAD')) - num_computed
         traverser = Repository(
             self.repo_dir,
             only_in_branch=branch_main,
             only_modifications_with_file_types=[".py"],
-            num_workers=4,
+            # num_workers=4,
             order="reverse",
             # to=datetime.fromisoformat("2016-11-17"),
             from_commit=start_hash,
             to_commit=end_hash,
         ).traverse_commits()
 
-        save_frequency = 100
+        save_frequency = 10
         commit_start_time = perf_counter()
         for i, commit in enumerate(traverser):
             time_taken = perf_counter() - commit_start_time
