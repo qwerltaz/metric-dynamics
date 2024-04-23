@@ -1,8 +1,11 @@
 """Contains a class to parse metrics for each commit in a git repository."""
 
+from datetime import datetime
 from enum import Enum
 import json
 import os
+from time import perf_counter
+from typing import Literal
 
 import git
 import pandas as pd
@@ -50,32 +53,62 @@ class MetricParse:
 
         self.repo.git.checkout(self.main_branch)
 
+    @staticmethod
+    def shorten_commit_message(commit_message: str, max_len: int = 100) -> str:
+        """Shorten commit message for logging."""
+        msg = commit_message.replace("\n", " ")
+        if len(msg) > max_len:
+            msg = msg[:max_len]
+            msg += "..."
+        return msg
+
+    def _get_unprocessed_commit_hash_range(self) -> tuple[str | None, str | None]:
+        """Get start and end commit hashes not included in the repository's results table."""
+        if not os.path.exists(self._default_save_path):
+            return None, None
+
+        results_df = pd.read_csv(self._default_save_path)
+        if results_df.empty:
+            return None, None
+
+        # Reverse order: from the very first commit to the first in the results table.
+        first_hash = None
+        last_hash = results_df["hash"].iloc[0]
+
+        return first_hash, last_hash
+
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
-        self._save_metrics_for_each_commit(save_path)
-
-    def _save_metrics_for_each_commit(self, save_path: str = None) -> None:
-        """Save info and metrics for each commit in main branch in a csv file."""
-        branch = self.main_branch
+        branch_main = self.main_branch
 
         commit_count = self.repo.git.rev_list('--count', 'HEAD')
         commit_metrics_list = []
+
+        start_hash, end_hash = self._get_unprocessed_commit_hash_range()
         traverser = Repository(
             self.repo_dir,
-            only_in_branch=branch,
+            only_in_branch=branch_main,
             only_modifications_with_file_types=[".py"],
             num_workers=4,
-            order="reverse"
+            order="reverse",
+            # to=datetime.fromisoformat("2016-11-17"),
+            from_commit=start_hash,
+            to_commit=end_hash,
         ).traverse_commits()
 
-        log_msg_max_len = 100
+        save_frequency = 100
+        commit_start_time = perf_counter()
         for i, commit in enumerate(traverser):
+            time_taken = perf_counter() - commit_start_time
+            commit_start_time = perf_counter()
             print(
                 'repo', self.repo_name,
                 '| commit', i + 1, 'of', commit_count,
                 '| author:', commit.author.name,
                 '| date:', commit.committer_date,
                 '| lines_changed: ', f'{commit.lines} (+{commit.insertions} -{commit.deletions})',
+                '| time taken:', f'{time_taken:.2f}s',
+                '\n\tcommit message:', self.shorten_commit_message(commit.msg)
             )
 
             commit_metric_dict = {
@@ -92,12 +125,10 @@ class MetricParse:
                 "dmm_unit_interfacing": commit.dmm_unit_interfacing,
             }
 
-            sw_metrics, outcome = self.get_metrics(commit)
+            sw_metrics, outcome = self._get_metrics(commit)
             if sw_metrics is None:
                 # Shortened message for logging.
-                commit_msg_short = commit.msg[:log_msg_max_len].replace("\n", " ")
-                if len(commit.msg) > log_msg_max_len:
-                    commit_msg_short += "..."
+                commit_msg_short = self.shorten_commit_message(commit.msg)
 
                 if outcome == HarvesterOutcome.PYTHON_VERSION_2:
                     logger.info(
@@ -114,22 +145,39 @@ class MetricParse:
             commit_metric_dict |= sw_metrics
             commit_metrics_list.append(commit_metric_dict)
 
+            if (i + 1) % save_frequency == 0:
+                self._save_to_csv(commit_metrics_list, save_path)
+
         if not commit_metrics_list:
             logger.warning(f"Found zero computable commits for {self.repo_name}.")
             return
 
-        commit_metrics_df = pd.DataFrame(commit_metrics_list)
-        commit_metrics_df["date"] = pd.to_datetime(commit_metrics_df["date"], utc=True)
+        self._save_to_csv(commit_metrics_list, save_path)
+
+    def _save_to_csv(self, metrics_list: list, save_path: str) -> None:
+        """Save DataFrame of metrics to a csv file."""
+        if not metrics_list:
+            return
+
+        metrics_df = pd.DataFrame(metrics_list)
 
         if save_path:
             result_path = save_path
         else:
-            result_path = os.path.join(DATA_DIR, "results")
-            result_path = os.path.join(result_path, self.repo_name + ".csv")
+            result_path = self._default_save_path
 
-        commit_metrics_df.to_csv(result_path, encoding="utf-8")
+        if os.path.exists(result_path):
+            old_df = pd.read_csv(result_path, index_col="ID", encoding="utf-8")
+            metrics_df = pd.concat([old_df, metrics_df], ignore_index=True)
 
-    def get_metrics(self, commit: Commit) -> tuple[dict[str, float] | None, HarvesterOutcome]:
+        metrics_df["date"] = pd.to_datetime(metrics_df["date"], utc=True)
+        metrics_df.sort_values("date", inplace=True)
+        metrics_df.reset_index(drop=True, inplace=True)
+        metrics_df.index.name = "ID"
+
+        metrics_df.to_csv(result_path, encoding="utf-8", mode="w")
+
+    def _get_metrics(self, commit: Commit) -> tuple[dict[str, float] | None, HarvesterOutcome]:
         """
         Checkout parser's repo at given commit and compute software metrics for that commit.
         Computes total raw metrics (LOC, LLOC, SLOC, comments), and average of other metrics.
@@ -220,16 +268,21 @@ class MetricParse:
 
         # Compute average of each metric, across the commit.
         for metric in unit_complexity_lists:
-            metric_dict["radon_avg_" + metric] = self.metric_avg(unit_complexity_lists[metric])
+            metric_dict["radon_avg_" + metric] = self._metric_avg(unit_complexity_lists[metric])
 
         return metric_dict, HarvesterOutcome.SUCCESS
 
     @staticmethod
-    def metric_avg(metrics: list) -> float | None:
+    def _metric_avg(metrics: list) -> float | None:
         """Compute average of metrics."""
         if not metrics:
             return None
         return sum(metrics) / len(metrics)
+
+    @property
+    def _default_save_path(self) -> str:
+        """Default save path for results."""
+        return os.path.join(DATA_DIR, "results", self.repo_name + ".csv")
 
     @property
     def main_branch(self) -> str:
