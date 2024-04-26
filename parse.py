@@ -4,6 +4,8 @@ from enum import Enum
 import json
 import os
 from time import perf_counter
+import re
+import queue
 
 import git
 import pandas as pd
@@ -40,14 +42,18 @@ class MetricParse:
             raise ValueError("Received repository URL was empty or None.")
 
         self.repo_url = repo_url
-        self.repo_name = self.repo_url.split("/")[-1]
+        self.repo_name = self.repo_url.strip('/').split("/")[-1]
         self.repo_dir = os.path.join(DATA_DIR, "repos", self.repo_name)
 
         self.repo: git.Repo
         if os.path.isdir(self.repo_dir) and os.listdir(self.repo_dir):
             self.repo = git.Repo(self.repo_dir)
         else:
-            self.repo = git.Repo.clone_from(self.repo_url, self.repo_dir)
+            try:
+                self.repo = git.Repo.clone_from(self.repo_url, self.repo_dir)
+            except git.GitCommandError as e:
+                self.repo = None
+                return
 
         self.repo.git.checkout(self.main_branch)
 
@@ -80,7 +86,13 @@ class MetricParse:
 
     def save_metrics_for_each_commit(self, save_path: str = None) -> None:
         """Save info and metrics for each commit in main branch in a csv file."""
+        if self.repo is None:
+            return
+
         branch_main = self.main_branch
+        if branch_main is None:
+            logger.info(f"Could not find main branch for {self.repo_name}.")
+            return
 
         commit_metrics_list = []
         start_hash, end_hash, num_computed = self._get_unprocessed_commit_hash_range()
@@ -89,18 +101,17 @@ class MetricParse:
             self.repo_dir,
             only_in_branch=branch_main,
             only_modifications_with_file_types=[".py"],
-            # num_workers=4,
             order="reverse",
-            # to=datetime.fromisoformat("2016-11-17"),
             from_commit=start_hash,
             to_commit=end_hash,
         ).traverse_commits()
 
-        save_frequency = 10
+        recent_outcomes = queue.Queue(maxsize=100)
         commit_start_time = perf_counter()
         for i, commit in enumerate(traverser):
             time_taken = perf_counter() - commit_start_time
             commit_start_time = perf_counter()
+
             print(
                 'repo', self.repo_name,
                 '| commit', i + 1, 'of', commit_count,
@@ -110,6 +121,12 @@ class MetricParse:
                 '| time taken:', f'{time_taken:.2f}s',
                 '\n\tcommit message:', self.shorten_commit_message(commit.msg)
             )
+
+            if time_taken > 60 or (time_taken > 10 and commit_count - i > 1000):
+                logger.info(f"Estimated time too high. Skipped repo {self.repo_name}.")
+                if os.path.exists(self._default_save_path):
+                    os.remove(self._default_save_path)
+                break
 
             commit_metric_dict = {
                 "hash": commit.hash,
@@ -130,29 +147,44 @@ class MetricParse:
                 # Shortened message for logging.
                 commit_msg_short = self.shorten_commit_message(commit.msg)
 
+                if os.path.exists(self._default_save_path):
+                    os.remove(self._default_save_path)
+
                 if outcome == HarvesterOutcome.PYTHON_VERSION_2:
                     logger.info(
                         f"Error computing metrics for {self.repo_name}. "
                         + f"Invalid python version, stopped for repository at: \"{commit_msg_short}\" ({commit.hash}).")
-                    break
                 elif outcome == HarvesterOutcome.INVALID_CODE:
                     logger.info(
                         f"Error computing metrics for {self.repo_name}. "
-                        + f"Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
-                    continue
+                        + f"Skipped repo at commit \"{commit_msg_short}\" ({commit.hash}).")
+                else:
+                    logger.info(
+                        f"Error computing metrics for {self.repo_name}. "
+                        + f"Unknown error at commit \"{commit_msg_short}\" ({commit.hash}).")
+                recent_outcomes.put(1)  # Error occurred.
+                continue
+
+            recent_outcomes.put(0)  # No error occurred.
+
+            # If enough recent commits failed, stop processing.
+            if recent_outcomes.full():
+                if sum(recent_outcomes.queue) > 5:
+                    logger.info(f"Too many recent errors. Stopped processing for {self.repo_name}.")
+                    break
+                recent_outcomes.get()
 
             # Add software metrics to commit metrics.
             commit_metric_dict |= sw_metrics
             commit_metrics_list.append(commit_metric_dict)
 
-            if (i + 1) % save_frequency == 0:
-                self._save_to_csv(commit_metrics_list, save_path)
+        else:  # No break occurred, all commits processed.
+            if not commit_metrics_list:
+                logger.warning(f"Found zero computable commits for {self.repo_name}.")
+                return
 
-        if not commit_metrics_list:
-            logger.warning(f"Found zero computable commits for {self.repo_name}.")
-            return
-
-        self._save_to_csv(commit_metrics_list, save_path)
+            logger.info(f"Successfully processed {self.repo_name}. Saving results.")
+            self._save_to_csv(commit_metrics_list, save_path)
 
     def _save_to_csv(self, metrics_list: list, save_path: str) -> None:
         """Save DataFrame of metrics to a csv file."""
@@ -166,6 +198,7 @@ class MetricParse:
         else:
             result_path = self._default_save_path
 
+        # Merge with existing results if they exist. Only needed if autosave is implemented.
         if os.path.exists(result_path):
             old_df = pd.read_csv(result_path, index_col="ID", encoding="utf-8")
             metrics_df = pd.concat([old_df, metrics_df], ignore_index=True)
@@ -288,12 +321,23 @@ class MetricParse:
     def main_branch(self) -> str:
         """Main or master branch of the parser's repository."""
 
+        # Candidates named main or master.
         candidates = ["main", "master", "origin/main", "origin/master"]
         refs = self.repo.references
         for candidate in candidates:
             if candidate in refs:
                 return candidate
-        raise Exception(f"Main branch not in {self.repo_url}.")
+
+        # Default branch.
+        show_result = self.repo.git.remote("show", "origin")
+
+        matches = re.search(r"\s*HEAD branch:\s*(.*)", show_result)
+        if matches:
+            default_branch = matches.group(1)
+            if default_branch:
+                return default_branch
+
+        raise ValueError(f"Could not find main branch for {self.repo_name}.")
 
 
 def trial():
