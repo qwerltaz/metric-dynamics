@@ -27,11 +27,8 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
         if repo_url and isinstance(repo_url, str):
             metric_parse = MetricParse(repo_url)
             metric_parse.save_metrics_for_each_commit()
-        else:
-            raise ValueError(f"Invalid repository url: {repo_url}")
 
         repo_urls.loc[i, "computed"] = True
-
         repo_urls.to_csv(repo_urls_csv_path, index=False, encoding="utf-8")
 
 
