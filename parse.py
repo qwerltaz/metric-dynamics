@@ -154,6 +154,7 @@ class MetricParse:
                     logger.info(
                         f"Error computing metrics for {self.repo_name}. "
                         + f"Invalid python version, stopped for repository at: \"{commit_msg_short}\" ({commit.hash}).")
+                    break
                 elif outcome == HarvesterOutcome.INVALID_CODE:
                     logger.info(
                         f"Error computing metrics for {self.repo_name}. "
@@ -198,7 +199,7 @@ class MetricParse:
         else:
             result_path = self._default_save_path
 
-        # Merge with existing results if they exist. Only needed if autosave is implemented.
+        # Merge with existing results if they exist. This allows autosave to work if implemented.
         if os.path.exists(result_path):
             old_df = pd.read_csv(result_path, index_col="ID", encoding="utf-8")
             metrics_df = pd.concat([old_df, metrics_df], ignore_index=True)
