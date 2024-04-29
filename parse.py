@@ -143,6 +143,14 @@ class MetricParse:
             }
 
             sw_metrics, outcome = self._get_metrics(commit)
+
+            # If enough recent commits failed, stop processing.
+            if recent_outcomes.full():
+                if sum(recent_outcomes.queue) > 5:
+                    logger.info(f"Too many recent errors. Stopped processing for {self.repo_name}.")
+                    break
+                recent_outcomes.get()
+
             if sw_metrics is None:
                 # Shortened message for logging.
                 commit_msg_short = self.shorten_commit_message(commit.msg)
@@ -167,13 +175,6 @@ class MetricParse:
                 continue
 
             recent_outcomes.put(0)  # No error occurred.
-
-            # If enough recent commits failed, stop processing.
-            if recent_outcomes.full():
-                if sum(recent_outcomes.queue) > 5:
-                    logger.info(f"Too many recent errors. Stopped processing for {self.repo_name}.")
-                    break
-                recent_outcomes.get()
 
             # Add software metrics to commit metrics.
             commit_metric_dict |= sw_metrics
