@@ -153,7 +153,7 @@ id,name,pagerank,repo_url,computed
 1641381,adafruit-circuitpython-busdevice,6.719330702582374,https://github.com/adafruit/Adafruit_CircuitPython_BusDevice,True
 487083,pluggy,6.678013610964551,https://github.com/pytest-dev/pluggy,True
 108351,jsonpickle,6.674035480380255,,True
-130121,Mako,6.67295462796851,https://github.com/sqlalchemy/mako,False
+130121,Mako,6.67295462796851,https://github.com/sqlalchemy/mako,True
 2423101,mypy-boto3,6.654136205240482,https://github.com/vemel/mypy_boto3,False
 1089644,torch,6.566323610872495,,False
 95047,gitdb,6.560317869706791,https://github.com/gitpython-developers/gitdb,False
