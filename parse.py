@@ -51,7 +51,7 @@ class MetricParse:
         else:
             try:
                 self.repo = git.Repo.clone_from(self.repo_url, self.repo_dir)
-            except git.GitCommandError as e:
+            except git.GitCommandError:
                 self.repo = None
                 return
 
@@ -95,15 +95,16 @@ class MetricParse:
             return
 
         commit_metrics_list = []
+        # Unprocessed commit range. For when autosave is used.
         start_hash, end_hash, num_computed = self._get_unprocessed_commit_hash_range()
         commit_count = int(self.repo.git.rev_list('--count', 'HEAD')) - num_computed
         traverser = Repository(
             self.repo_dir,
             only_in_branch=branch_main,
             only_modifications_with_file_types=[".py"],
-            order="reverse",
-            from_commit=start_hash,
-            to_commit=end_hash,
+            # order="reverse",
+            # from_commit=start_hash,
+            # to_commit=end_hash,
         ).traverse_commits()
 
         recent_outcomes = queue.Queue(maxsize=100)
