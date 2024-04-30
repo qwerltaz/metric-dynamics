@@ -18,7 +18,15 @@ def merge_results():
     for file in os.listdir(merge_dir):
         if file.endswith(".csv"):
             results = pd.read_csv(os.path.join(merge_dir, file), encoding="utf-8")
+
+            # Add repo name column to the results.
+            repo_name = file.split(".")[0]
+            results["repo_name"] = repo_name
+
             all_results_dataframes_list.append(results)
+
+
+
 
     # Concatenate, reset index, drop duplicates.
     all_results = pd.concat(all_results_dataframes_list, ignore_index=True)
@@ -36,6 +44,7 @@ def main():
 
     if args.merge_results:
         merge_results()
+        print("Merged results.")
 
 
 if __name__ == "__main__":
