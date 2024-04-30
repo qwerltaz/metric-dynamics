@@ -1,0 +1,131 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,cd08d8e91cd4fc94eb3a27fdc346a25b62d412ce,Prasanth Nair,2011-10-08 05:46:39+00:00,"Initial commit: moving Gist to full repo.
+
+Github repos are more visible than Gists. Hence it is more likely
+to get error reports and comments.
+
+It makes it easier to submit to pypi.",False,548,548,0,0.32867132867132864,0.5804195804195804,0.8321678321678322,548,160,169,14,4.5,65.8625632573147,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+1,b42ca54542b53aa8377b7f0b78743c6e94f873ab,Prasanth Nair,2011-10-08 05:52:24+00:00,Note about SOFA C in module docstring.,False,4,3,1,,,,550,160,169,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+2,9658e10af7c5d864f29094f076b0664c3e0a69f3,Prasanth Nair,2011-10-08 06:12:10+00:00,"README file.
+
+README.rst.
+Added long_description to setup.py.",False,79,79,0,,,,551,160,170,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+3,3a26278a2b03edfb6106c0d61bd5d38ad1b237a9,Prasanth Nair,2011-10-08 06:49:51+00:00,"long_description from README.rst; add README.rst to MANIFEST.
+
+README.rst must be specified in MANIFEST, so that README.rst gets
+copied into the source distribution. Loading long_description at
+install time will fail if README.rst is not present in the
+source distribution.
+
+Added .gitignore.",False,11,9,2,,,,554,161,172,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+4,c66bda492743422649c30d41a345ead680ffa17a,Prasanth Nair,2015-11-09 07:44:15+00:00,"Fix MANIFEST.in; add *.pyc to gitignore; minor formatting in setup.py.
+
+MANIFEST.in should have instruction to build MANIFEST and not a
+list of files. Tested with python setup.py sdist and all files
+are there in the tar ball.",False,15,7,8,,,,554,161,172,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+5,cccc2705ab5db79898806a119e43b722c4d07c72,Prasanth Nair,2015-11-09 07:55:35+00:00,Incremented version number to fix issue on pypi server.,False,2,1,1,,,,554,161,172,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+6,f5708341674a8bc3566618d84e541a30083346e5,Prasanth Nair,2015-11-09 08:00:54+00:00,Update version info to fix issue on pypi,False,2,1,1,,,,554,161,172,14,4.5,65.72080573505971,101.0,204.5,1566.1042482227422,4.625661375661376,14488.535862526269,804.9186590292371,0.5220347494075808
+7,f07686ab84b84a9f19ec01ff1a90a3689f3d6b6d,Prasanth Nair,2015-11-10 12:25:41+00:00,"Tests in test_jdcal.py.
+
+Removed tests from jdcal.py.
+tox.in
+Updated .gitignore
+README.rst: remove link; point to LICENSE.txt.",False,232,150,82,1.0,1.0,1.0,614,202,213,14,2.3684210526315788,51.27573477625919,88.33333333333333,173.66666666666666,1236.1266954741996,4.303650914458359,8867.556576958308,492.64203205323935,0.4120422318247332
+8,8efe5b91aea8a6c2e7f70c3784f36e9b20ea4527,Prasanth Nair,2015-11-11 03:04:58+00:00,Changed version to 1.2. See CHANGELOG.txt.,False,2,1,1,,,,614,202,213,14,2.3684210526315788,51.27573477625919,88.33333333333333,173.66666666666666,1236.1266954741996,4.303650914458359,8867.556576958308,492.64203205323935,0.4120422318247332
+9,696242dbd38837cd0680253f44987fb6ce207752,James Dengel,2016-09-06 13:48:27+00:00,change to use setuptools so that we can create a wheel,False,2,1,1,,,,614,202,213,14,2.3684210526315788,51.27573477625919,88.33333333333333,173.66666666666666,1236.1266954741996,4.303650914458359,8867.556576958308,492.64203205323935,0.4120422318247332
+10,10e977b911a41c1c436f82d41fab43523f63ad50,Prasanth Nair,2016-09-19 05:16:27+00:00,"New version 1.3.
+
+1) Use setuptools instead of distutils.
+   I will continue non-wheel on pypi since I am not familiar with
+   wheels, and can't spend time on it if this breaks someone's
+   setup.
+2) Made entry in changelog.",False,9,8,1,,,,614,202,213,14,2.3684210526315788,51.27573477625919,88.33333333333333,173.66666666666666,1236.1266954741996,4.303650914458359,8867.556576958308,492.64203205323935,0.4120422318247332
+11,6c6fe667c0a6437805592908dff7d61013b4ae6e,Hugo,2018-02-05 03:20:27+00:00,"Update Python versions (#10)
+
++ Add Python 3.6.
++ Change http to https.",False,27,18,9,,,,622,202,221,14,2.3684210526315788,51.27573477625919,88.33333333333333,173.66666666666666,1236.1266954741996,4.303650914458359,8867.556576958308,492.64203205323935,0.4120422318247332
+12,c4d426101178d29fee6bdd08e41763e915c97c0a,Prasanth Nair,2018-04-14 14:36:15+00:00,"Version 1.4.
+
+Wheel support.
+Test more Python versions on travis.
+Add more Python versions in classifiers in setup.py.
+Change version number in jdcal.py.
+Add test to compare gcal2jd with astropy._erfa.cal2jd.",False,151,126,25,1.0,1.0,0.0,619,197,217,14,2.210526315789474,51.85066878740855,85.66666666666667,169.66666666666666,1203.057638035843,4.114628386776038,8515.568527654808,473.08714042526714,0.40101921267861435
+13,d9388dc0e18ecb955f06590173adc9ff08472edb,Prasanth Nair,2018-04-14 14:43:18+00:00,"Remove Py3.2 from travis and setup.py classifier list.
+
+The code does work on Py3.2 but attr (dependency of py.test)
+doesn't work on Py3.2. So removing 3.2 from .travis.yml and
+setup.py trove classifier.",False,2,0,2,,,,618,197,216,14,2.210526315789474,51.85066878740855,85.66666666666667,169.66666666666666,1203.057638035843,4.114628386776038,8515.568527654808,473.08714042526714,0.40101921267861435
+14,f7d36a6f518c912656cba882b15d563a8e0dc52b,Jeremiah Cooper,2019-04-24 10:00:25+00:00,"Update Travis CI tests to remove Python 2.6 and 3.3 and add Python 3.7 (#17)
+
+* Update Travis CI tests to remove Python 2.6 and 3.3 and add Python 3.7
+
+* Install latest setuptools to avoid race condition https://github.com/pypa/setuptools/issues/951\#issuecomment-299653469
+
+* Remove sudo: true as it's no longer necessary
+
+* Simplify Travis CI builds for Python 3.7
+
+* Fix PyPy versions and add Python 3.7 to the Python list.",False,17,8,9,,,,617,197,215,14,2.210526315789474,51.85066878740855,85.66666666666667,169.66666666666666,1203.057638035843,4.114628386776038,8515.568527654808,473.08714042526714,0.40101921267861435
+15,c49e66c125b7f811613b5f96c7d0a1579baa42f2,Jon Dufresne,2019-04-24 10:01:58+00:00,"Remove unused and undocumented function fpart() (#18)
+
+Remove fpart() from module and tests.",False,14,1,13,0.0,0.0,0.0,605,189,208,14,2.3529411764705883,52.17920480549244,82.33333333333333,163.0,1151.5760135791318,4.103285794183445,8302.909752456455,461.27276402535864,0.3838586711930439
+16,1e65e9be80a9d38b5f9001161b49c52a0a6f05e6,Prasanth Nair,2019-04-24 10:13:12+00:00,Update to version 1.4.1 and changes noted in CHANGELOG.txt.,False,10,9,1,,,,605,189,208,14,2.3529411764705883,52.17920480549244,82.33333333333333,163.0,1151.5760135791318,4.103285794183445,8302.909752456455,461.27276402535864,0.3838586711930439
+17,9e59961cf6659f39e1cd8532931da14ed52c5820,Jon Dufresne,2020-01-19 12:20:49+00:00,"Reuse math import (#21)
+
+Don't try to import a 2nd time, the module is already available.",False,12,4,8,1.0,0.0,0.0,601,187,206,14,2.3529411764705883,51.88736187956928,82.33333333333333,163.0,1151.5760135791318,4.103285794183445,8302.909752456455,461.27276402535864,0.3838586711930439
+18,9f5e2ab3cca8abcb7cb09ea7201601069fa7667c,Jon Dufresne,2020-01-19 12:25:19+00:00,"Simplify: Replace ipart() builtin function int() (#20)
+
+The function's docstring was: ""Return integer part of given number.""
+
+Python has a builtin function for this: int(). From the docs:
+
+https://docs.python.org/3/library/functions.html#int
+
+> If x defines __int__(), int(x) returns x.__int__(). If x defines
+> __trunc__(), it returns x.__trunc__(). For floating point numbers,
+> this truncates towards zero.",False,55,21,34,0.0,0.0,0.0,588,179,198,14,2.533333333333333,52.291560919043,78.66666666666667,155.66666666666666,1096.462116652567,4.09039328210615,8078.563287106702,448.80907150592793,0.3654873722175223
+19,cf8674a3d9cca0ba8e306667e093126ca58c154d,Jon Dufresne,2020-01-19 13:00:49+00:00,"Use builtin mod operator (#23)
+
+The Python docs recommend using the builtin mod operator (%) for
+integers.
+
+https://docs.python.org/3/library/math.html#math.fmod
+
+> For this reason, function fmod() is generally preferred when working
+> with floats, while Python’s x % y is preferred when working with
+> integers.",False,6,3,3,,,,588,179,198,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+20,13eabd664c46bc0188c2c3dee0cef93d9ad0f081,Jon Dufresne,2020-01-20 10:07:30+00:00,"Simplify Travis CI configuration and add testing for Python 3.8 (#24)
+
+Can drop deprecated sudo option:
+
+https://blog.travis-ci.com/2018-11-19-required-linux-infrastructure-migration
+
+Xenial is now the default, can drop the dist option:
+
+https://blog.travis-ci.com/2019-04-15-xenial-default-build-environment
+
+Use tox as the single entry point to run tests. This unifies Travis
+testing with local testing.
+
+Use the shorter alias pypy3 & pypy to test against the most recently
+supported PyPy versions.
+
+Test against Python 3.8 and add the trove classifier.",False,59,19,40,,,,589,179,199,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+21,64a659c6ea374ec3053f84a0b22a7ed661b02427,Prasanth Nair,2020-01-20 13:47:04+00:00,"Fixed E741 ambiguous variable name 'l' in jdcal.py.
+
+Ignore E722 (bare except) and E501 (line too long) in test_jdcal.py.",False,28,14,14,,,,589,179,199,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+22,559526eb8663ecffcfcd638a0326f660a932fb2d,Antonio Valentino,2020-05-28 06:13:03+00:00,"Fix the data type for jd1 and jd2 in docstrings (#25)
+
+jd1 and jd2 were marked as int but they could be floats, especially jd2 usually is.",False,4,2,2,,,,589,179,199,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+23,bf09b5f22280574e772c8411018894d87cf463c3,Jon Dufresne,2021-02-19 03:56:20+00:00,Add testing and document support for Python 3.9 (#29),False,5,3,2,,,,590,179,200,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+24,6aa062218843a8aebf7d8a7dbd3bb0ab5bd86189,Jon Dufresne,2021-02-19 13:31:09+00:00,"Move to a declarative setuptools config (#31)
+
+Avoids mixing code with configuration. For example, setuptools no longer
+runs custom logic such as `open()` or `import`.
+
+This simplifies the declaration to a list of properties and values.
+
+For more details, see seutptools documentation:
+https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html?highlight=declarative",False,68,32,36,,,,555,176,168,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
+25,3147fdbf3597ef3574d7e9e293886b75ee90ac92,Nordine,2022-02-26 09:11:50+00:00,fix MJD_0 value in comment (#32),False,2,1,1,,,,555,176,168,14,2.533333333333333,52.259404158876485,80.33333333333333,158.66666666666666,1123.6812050613128,4.343847684001136,8970.436568806823,498.35758715593465,0.37456040168710425
