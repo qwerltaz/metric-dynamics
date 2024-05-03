@@ -146,10 +146,10 @@ class MetricParse:
             sw_metrics, outcome = self._get_metrics(commit)
 
             # If enough recent commits failed, stop processing.
+            if sum(recent_outcomes.queue) > 5:
+                logger.info(f"Too many recent errors. Stopped processing for {self.repo_name}.")
+                break
             if recent_outcomes.full():
-                if sum(recent_outcomes.queue) > 5:
-                    logger.info(f"Too many recent errors. Stopped processing for {self.repo_name}.")
-                    break
                 recent_outcomes.get()
 
             if sw_metrics is None:
@@ -166,8 +166,8 @@ class MetricParse:
                     break
                 elif outcome == HarvesterOutcome.INVALID_CODE:
                     logger.info(
-                        f"Error computing metrics for {self.repo_name}. "
-                        + f"Skipped repo at commit \"{commit_msg_short}\" ({commit.hash}).")
+                        f"Error computing metrics for {self.repo_name}. Source code could not be analyzed."
+                        + f"Skipped commit \"{commit_msg_short}\" ({commit.hash}).")
                 else:
                     logger.info(
                         f"Error computing metrics for {self.repo_name}. "
