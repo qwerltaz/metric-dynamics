@@ -1,0 +1,150 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,7cf7e5b891cbe31dcd1f40fdc2f8ea393571cd0a,Jon Wayne Parrott,2017-04-12 22:55:51+00:00,Initial commit,False,966,966,0,0.7073170731707317,0.8682926829268293,0.6780487804878049,612,239,325,86,1.5476190476190477,82.3717563437486,13.666666666666666,20.333333333333332,97.83943139039745,1.2326007326007327,216.31593211451636,12.017551784139798,0.032613143796799145
+1,587e34ea4c9d331422e40ba8a55e9a8b8c946778,Tim Swast,2017-05-17 20:20:36+00:00,"Update docstring for Request after move. (#2)
+
+The Request class is now in google_auth_httplib2 after this was pulled out of the root google-auth package.",False,4,2,2,,,,612,239,325,86,1.5476190476190477,82.3717563437486,13.666666666666666,20.333333333333332,97.83943139039745,1.2326007326007327,216.31593211451636,12.017551784139798,0.032613143796799145
+2,136da2cd50aa7deb769062cf1d77259d64743a7f,Danny Hermes,2017-06-13 17:44:31+00:00,"Updating README/setup.py for new location. (#3)
+
+- Based on https://github.com/GoogleCloudPlatform/google-auth-library-python/issues/167
+- Fixed ""and and"" typo
+- Fixed URL for project
+- Updated the package description to explain it was for `httplib2` transport
+- Added `httplib2` as a dependency",False,11,6,5,,,,613,239,326,86,1.5476190476190477,82.3717563437486,13.666666666666666,20.333333333333332,97.83943139039745,1.2326007326007327,216.31593211451636,12.017551784139798,0.032613143796799145
+3,73ca3ddd2a340128eb3a4109a8e7130fc1a07aef,Jon Wayne Parrott,2017-11-14 17:35:04+00:00,Release v0.0.3 (#5),False,2,1,1,,,,613,239,326,86,1.5476190476190477,82.3717563437486,13.666666666666666,20.333333333333332,97.83943139039745,1.2326007326007327,216.31593211451636,12.017551784139798,0.032613143796799145
+4,e7cd722281d1d897fa9ae6e3b6b78ae142778e6e,Sam Pegler,2017-12-04 17:47:24+00:00,"Bug: Catch any underlying exceptions from http.HTTPException (#7)
+
+* Bug: Catch any underlying exceptions from http.HTTPException
+
+Resolves https://github.com/GoogleCloudPlatform/google-auth-library-
+         python-httplib2/issues/6
+
+* PR: Fix build.
+
+* Remove unneeded comment.",False,6,5,1,,,,617,240,328,88,1.5476190476190477,82.3220463149995,13.666666666666666,20.333333333333332,97.83943139039745,1.2326007326007327,216.31593211451636,12.017551784139798,0.032613143796799145
+5,e3aa44e01e2987989671467c7a022ea33829eb2f,arithmetic1728,2020-07-07 18:59:27+00:00,feat: expose a few httplib2 properties and a method (#9),False,61,61,0,1.0,1.0,0.918918918918919,678,275,371,88,1.42,81.4237772117239,14.166666666666666,22.333333333333332,109.07408232703047,1.2807881773399015,259.905402113089,14.439189006282723,0.03635802744234349
+6,2d92e1992859acc06b0ea1d3bd2d4f0417c474dd,Bu Sun Kim,2020-07-07 19:04:06+00:00,Release 0.0.4 (#11),False,2,1,1,,,,678,275,371,88,1.42,81.4237772117239,14.166666666666666,22.333333333333332,109.07408232703047,1.2807881773399015,259.905402113089,14.439189006282723,0.03635802744234349
+7,09fa5a98184d9cb6903523d440862d3b39589237,Craig Citro,2020-07-25 03:07:16+00:00,"Expose redirect_codes on AuthorizedHttp. (#12)
+
+Similar to #9, this exposes the `redirect_codes` attribute of the underlying
+httplib2.Http instance on AuthorizedHttp, letting users modify the set of HTTP
+status codes interpreted as redirects (as in
+https://github.com/googleapis/google-api-python-client/issues/803).",False,20,20,0,1.0,1.0,1.0,698,288,384,88,1.3962264150943395,81.11482948319981,14.333333333333334,23.333333333333332,114.60658862783032,1.3095238095238095,285.4900599637708,15.860558886876158,0.03820219620927677
+8,2edc00be6dfc239802a521b1cf66bc516a20d4e6,Chaoren,2020-09-14 18:09:18+00:00,"Fix the signature of AuthorizedHttp.request to match the signature of the request in httplib2 (#13)
+
+* Fix the signature of AuthorizedHttp.request to match the signature of request in httplib2",False,52,43,9,0.13793103448275862,0.8275862068965517,0.7241379310344828,732,301,413,88,1.3888888888888888,80.58368045639388,15.333333333333334,25.166666666666668,127.02072967634341,1.2910052910052912,314.94669941493777,17.497038856385434,0.0423402432254478
+9,7ae9430276b55eb1027a9167e6b6dc9b84293ffe,Bu Sun Kim,2020-10-01 19:26:15+00:00,"chore: use nox and kokoro (#16)
+
+- Adds `.github`. `.kokoro` templates.
+- Moves repo tests from tox to nox
+- Adds newer 3.x versions to the unit test list and removes pypy
+- Updates `setup.py` to declare `version` as a variable (for release please) and have up to date author and classifiers
+- Runs black over the code.",False,1974,1808,166,0.07216494845360824,0.8247422680412371,0.6907216494845361,895,338,532,104,1.3620689655172413,85.36278104305538,11.5,18.875,95.26554725725755,0.9682539682539684,236.21002456120334,13.122779142289074,0.03175518241908585
+10,feda187133beeb656fdd7f30ed124ed1e428a74a,Bu Sun Kim,2021-03-01 17:08:01+00:00,"feat: add close method (#14)
+
+Add `close` so `AuthorizedHttp`'s interface matches `httplib2.Http`. For https://github.com/googleapis/google-api-python-client/issues/1046
+
+https://github.com/httplib2/httplib2/blob/595e248d0958c00e83cb28f136a2a54772772b50/python3/httplib2/__init__.py#L1498",False,14,12,2,1.0,1.0,1.0,905,346,539,104,1.35,85.23644709702538,11.5,18.875,95.26554725725755,0.9682539682539684,236.21002456120334,13.122779142289074,0.03175518241908585
+11,5905be5ef4011f9723c70d7edf1f2e83ddf1df53,release-please[bot],2021-03-01 17:14:01+00:00,"chore: release 0.1.0 (#22)
+
+:robot: I have created a release \*beep\* \*boop\* 
+---
+## [0.1.0](https://www.github.com/googleapis/google-auth-library-python-httplib2/compare/v0.0.3...v0.1.0) (2021-03-01)
+
+
+### Features
+
+* add close method ([#14](https://www.github.com/googleapis/google-auth-library-python-httplib2/issues/14)) ([feda187](https://www.github.com/googleapis/google-auth-library-python-httplib2/commit/feda187133beeb656fdd7f30ed124ed1e428a74a))
+* expose a few httplib2 properties and a method ([#9](https://www.github.com/googleapis/google-auth-library-python-httplib2/issues/9)) ([e3aa44e](https://www.github.com/googleapis/google-auth-library-python-httplib2/commit/e3aa44e01e2987989671467c7a022ea33829eb2f))
+---
+
+
+This PR was generated with [Release Please](https://github.com/googleapis/release-please). See [documentation](https://github.com/googleapis/release-please#release-please).",False,11,10,1,,,,905,346,539,104,1.35,85.23644709702538,11.5,18.875,95.26554725725755,0.9682539682539684,236.21002456120334,13.122779142289074,0.03175518241908585
+12,b550dbd7eb4a2b7d70d65ab324ef10b2034c3434,Dan Lee,2021-04-16 21:24:20+00:00,"chore: prevent normalization of semver versioning (#26)
+
+* chore: prevent normalization of semver versioning
+
+* chore: update workaround to make sic work",False,21,18,3,,,,920,356,548,109,1.35,85.23644709702538,11.5,18.875,95.26554725725755,0.9682539682539684,236.21002456120334,13.122779142289074,0.03175518241908585
+13,d1003a193d1f0643b968acb3b83ac4a38c5a9ac8,Dan Lee,2021-04-27 00:49:55+00:00,chore(revert): revert preventing normalization (#27),False,21,3,18,,,,905,346,539,104,1.35,85.23644709702538,11.5,18.875,95.26554725725755,0.9682539682539684,236.21002456120334,13.122779142289074,0.03175518241908585
+14,da87e429484405f517b91cdc015d49ed783c1175,Anthonios Partheniou,2021-06-01 18:56:07+00:00,"chore: migrate to owl bot  (#31)
+
+This PR migrates from autosynth to [owl-bot](https://github.com/googleapis/repo-automation-bots/blob/master/packages/owl-bot/README.md).",False,405,291,114,,,,905,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+15,0dbb6e7689e6908cc553d72f4aa9934d75ad9faa,Anthonios Partheniou,2021-08-25 17:33:13+00:00,chore: migrate default branch from master to main (#42),False,11,8,3,,,,910,347,540,106,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+16,6d147b1b6ff43fe491a7ed3d62e05b2ebd262e74,nicain,2021-09-02 00:16:25+00:00,"chore: removing owlbot directives for conversion to main (#43)
+
+* chore: removing owlbot directives for conversion to main
+
+* clean up
+
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,6,1,5,,,,906,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+17,daade15eb751121a52229aaf72a9d072e567190c,gcf-owl-bot[bot],2022-01-22 11:22:53+00:00,"chore(python): exclude templated GH action workflows (#59)
+
+* ci(python): run lint / unit tests / docs as GH actions
+
+Source-Link: https://github.com/googleapis/synthtool/commit/57be0cdb0b94e1669cee0ca38d790de1dfdbcd44
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:ed1f9983d5a935a89fe8085e8bb97d94e41015252c5b6c9771257cf8624367e6
+
+* exclude templated github workflows
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,17,15,2,,,,906,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+18,20544fb45bcb41c8c34cb58fedfe3caebe086319,gcf-owl-bot[bot],2022-04-01 02:31:30+00:00,"ci: use click<8.1.0 for lint/blacken session (#61)
+
+* chore(python): add E231 to .flake8 ignore list
+
+Source-Link: https://github.com/googleapis/synthtool/commit/7ff4aad2ec5af0380e8bd6da1fa06eaadf24ec81
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:462782b0b492346b2d9099aaff52206dd30bc8e031ea97082e6facecc2373244
+
+* ci: use click<8.1.0 for lint/blacken session
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,8,4,4,,,,906,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+19,e1baa9d3496d039ad6ec0a15da6bda6855d47e26,Anthonios Partheniou,2022-10-06 13:51:42+00:00,"chore: use templated renovate config (#91)
+
+* chore: use templated renovate config
+
+* 🦉 Updates from OwlBot post-processor
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+* 🦉 Updates from OwlBot post-processor
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,13,10,3,,,,906,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+20,e4261824094388ba401b834859559344cb1049be,gcf-owl-bot[bot],2023-01-06 19:02:22+00:00,"chore(python): add support for python 3.11 [autoapprove] (#100)
+
+* chore(python): add support for python 3.11
+
+Source-Link: https://github.com/googleapis/synthtool/commit/7197a001ffb6d8ce7b0b9b11c280f0c536c1033a
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:c43f1d918bcf817d337aa29ff833439494a158a0831508fda4ec75dc4c0d0320
+
+* update unit test python versions in noxfile
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,75,72,3,,,,906,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+21,be6c2b7ea5537f676b04865c8eddec0bffa15816,Jay Lee,2023-08-21 15:57:15+00:00,"chore: Update Python versions, remove six (#111)
+
+* Update Python versions, remove six",False,46,24,22,,,,908,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+22,d6a0e3d1afb43f95d9de18f25100d32c7303c1fd,Sabuhi Gurbani,2023-08-21 18:35:47+00:00,"fix: update setup.py (#114)
+
+
+google-auth-httplib2:0.1.0 | Reference: CVE-2021-21240 | CVSS Score: 7.5 | Category: CWE-400 | httplib2 is a comprehensive HTTP client library for Python. In httplib2 before version 0.19.0, a malicious server which responds with long series of ""\xa0"" characters in the ""www-authenticate"" header may cause Denial of Service (CPU burn while parsing header) of the httplib2 client accessing said server. This is fixed in version 0.19.0 which contains a new implementation of auth headers parsing using the pyparsing library.",False,2,1,1,,,,908,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+23,7b27f8e17cca024a975cdb63c2cce27d06ac4f8c,release-please[bot],2023-09-11 19:13:10+00:00,chore(main): release 0.1.1 (#115),False,9,8,1,,,,908,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+24,ea0c7c699f45846346fa11597e353d6afed7c829,Felix Yan,2023-11-13 18:14:51+00:00,"deps: remove third-party mock library (#124)
+
+`unittest.mock` is present since Python 3.3+, we don't need to depend on
+the external library for compatibility.",False,4,1,3,,,,907,346,538,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+25,9a110a6b509f44cfd359211094a6f609f47bd6ce,gcf-owl-bot[bot],2023-11-24 15:53:13+00:00,"feat: Add support for Python 3.12 (#126)
+
+* chore(python): Add Python 3.12
+
+Source-Link: https://github.com/googleapis/synthtool/commit/af16e6d4672cc7b400f144de2fc3068b54ff47d2
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:bacc3af03bff793a03add584537b36b5644342931ad989e3ba1171d3bd5399f5
+
+* Add python 3.12 to noxfile.py and setup.py
+
+---------
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,76,73,3,,,,908,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
+26,932ac88800dd6de004c1bd59867831ccf033f031,release-please[bot],2023-12-12 17:35:50+00:00,chore(main): release 0.2.0 (#125),False,14,13,1,,,,908,346,539,104,1.35,85.23644709702538,11.875,19.25,95.85990819502798,1.0307539682539684,236.50720503008856,13.139289168338252,0.031953302731675993
