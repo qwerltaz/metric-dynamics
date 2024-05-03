@@ -1,0 +1,19 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,1b5a3eedbb7475ec16ff533c2982c2311257710c,Gora Khargosh,2010-12-29 05:15:22+00:00,"Adds basic package
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,112,112,0,1.0,1.0,1.0,85,9,29,43,1.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1,9e3f74a528a18fef926db8c0b75891fdc4680fa4,Gora Khargosh,2010-12-29 05:15:37+00:00,"Adds version module
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,31,31,0,,,,116,15,35,66,1.0,84.98990911191645,1.0,1.0,1.5849625007211563,0.16666666666666666,0.7924812503605781,0.04402673613114324,0.0005283208335737188
+2,98e44777ab49b20c3f615eebf879b0192b2f2760,Gora Khargosh,2010-12-29 05:15:55+00:00,"Adds path module
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,146,146,0,1.0,0.7931034482758621,0.10344827586206896,262,65,105,90,2.4444444444444446,83.66496208537981,2.5,3.0,7.505270450170477,0.6875,14.806595230687055,0.8225886239270587,0.002501756816723492
+3,20061dd40db72ce4ac1c31b7dfbb3eacf6f89f23,Gora Khargosh,2010-12-29 05:16:06+00:00,"Adds patterns module
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,112,112,0,1.0,1.0,0.0,374,89,136,116,2.769230769230769,78.80436818981867,4.4,5.8,18.193088862588315,0.9166666666666666,34.19154243904485,1.8995301355024918,0.006064362954196105
+4,f4df776a0c1337bc45b866821796847b811e49d9,Gora Khargosh,2010-12-29 05:35:02+00:00,"Renames the match_patterns function to match_against
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,15,8,7,,,,375,89,136,116,2.769230769230769,78.80436818981867,4.4,5.8,18.193088862588315,0.9166666666666666,34.19154243904485,1.8995301355024918,0.006064362954196105
+5,a7ba424cf6b95263098bf03ae1363e1c45636efb,Gora Khargosh,2010-12-29 05:59:54+00:00,"Removes depth as function argument
+
+Signed-off-by: Gora Khargosh <gora.khargosh@gmail.com>",False,43,15,28,0.0,1.0,1.0,362,81,125,116,2.4615384615384617,82.8663439886647,3.0,4.0,13.139850002884625,0.4666666666666666,22.821755004711555,1.2678752780395308,0.004379950000961542

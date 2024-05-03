@@ -1,0 +1,8 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,f6e0d4d9fc354c902221400e832a4df77433d0ee,Jakub Stasiak,2015-07-11 19:53:13+00:00,Push the initial version,False,48,48,0,,,,45,7,37,1,,82.59385274159102,6.0,6.0,15.509775004326936,1.0,15.509775004326936,0.861654166907052,0.005169925001442312
+1,fdc5e9cc77cdf6aa4871afc08993a6a8ab057bf0,Jakub Stasiak,2015-07-11 19:53:58+00:00,Add author e-mail to package's metadata,False,1,1,0,,,,46,7,38,1,,82.46940234729112,6.0,6.0,15.509775004326936,1.0,15.509775004326936,0.861654166907052,0.005169925001442312
+2,29045a8b4be738b2064c4a3224bf03a5cfdefc03,Jakub Stasiak,2015-07-12 21:04:49+00:00,"Fix a typo in setup() argument name
+
+Closes GH #1 https://github.com/jstasiak/enum-compat/issues/1",False,4,2,2,,,,46,7,38,1,,82.46940234729112,6.0,6.0,15.509775004326936,1.0,15.509775004326936,0.861654166907052,0.005169925001442312
+3,f246898889cfe49bddce72e6cca07c1b00757843,Daniel Severo,2019-10-14 18:38:37+00:00,Update setup.py (#4),False,4,1,3,,,,44,6,37,1,,87.7840209688286,3.0,3.0,4.754887502163469,0.5,2.3774437510817346,0.1320802083934297,0.0015849625007211565
+4,ae41cfa712e837596f7d26a5283be40ec5b84084,Jakub Stasiak,2019-10-14 18:47:55+00:00,Bump version to 0.0.3,False,2,1,1,,,,44,6,37,1,,87.7840209688286,3.0,3.0,4.754887502163469,0.5,2.3774437510817346,0.1320802083934297,0.0015849625007211565

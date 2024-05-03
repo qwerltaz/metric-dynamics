@@ -1,0 +1,334 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,7dd913862677be095404d36da7e5aa43246c315f,Chris Griffith,2017-03-11 06:41:38+00:00,"Version 1.0 (#1)
+
+* Inital commit
+
+* fixing test data
+
+* fixing test data for real, and more readme
+
+* fixing test data for real real
+
+* adding tests
+
+* [ci skip] On PyPy",False,613,612,1,0.8130081300813008,0.8373983739837398,0.6666666666666666,450,273,317,10,2.676470588235294,63.92999281345957,33.666666666666664,49.333333333333336,284.14180048443427,2.9745484400656816,1309.2025241720432,72.73347356511351,0.09471393349481143
+1,bff677f62a4fd05cd1961e65eb87259cd3c479c1,Chris Griffith,2017-03-11 21:23:42+00:00,Changing pypi name to python-box,False,4,2,2,,,,450,273,317,10,2.676470588235294,63.92999281345957,33.666666666666664,49.333333333333336,284.14180048443427,2.9745484400656816,1309.2025241720432,72.73347356511351,0.09471393349481143
+2,a264b40ebdcd7ca920f5752a6adf5d150f1154ff,Chris Griffith,2017-03-11 21:39:25+00:00,MD to RST,False,251,132,119,,,,450,273,317,10,2.676470588235294,63.92999281345957,33.666666666666664,49.333333333333336,284.14180048443427,2.9745484400656816,1309.2025241720432,72.73347356511351,0.09471393349481143
+3,8340399c659b274d9bdec452684f4ace0d844164,Chris Griffith,2017-03-16 04:25:18+00:00,"Version 2.0 (#2)
+
+* Adding `BoxList` to allow for `Box`es to be recursively added to lists as well
+* Adding `to_json` and `to_yaml` functions
+* Changing `Box` original functionality to `LightBox`, `Box` now searches lists
+* Changing `Box` callable to return keys, not values, and they are sorted
+* Removing `tree_view` as near same can be seen with YAML",False,690,599,91,0.5748792270531401,0.8357487922705314,0.7198067632850241,742,498,537,10,2.8620689655172415,54.35097460985245,42.0,67.0,413.8033079358904,2.650810137100125,1673.721016896605,92.98450093870026,0.13793443597863012
+4,a948c692486d4644804423f96dd045c06846ee54,Chris Griffith,2017-03-22 23:03:19+00:00,"Version 2.1.0 (#3)
+
+* Adding update, set_default and dir support
+
+* Adding tests, fixing up readme
+
+* Python2.x compatibility",False,171,161,10,0.4715447154471545,0.6585365853658537,0.6747967479674797,891,620,661,11,3.029850746268657,47.94794541606356,62.666666666666664,109.33333333333333,729.1550504629937,3.2485107485107485,3402.827876875011,189.04599315972283,0.2430516834876646
+5,52515efd41ddac91d52e9fb4b0bf64cbe8475ef2,Chris Griffith,2017-04-02 18:37:22+00:00,"Version 2.2.0 (#12)
+
+* Adding update, set_default and dir support
+
+* Adding tests, fixing up readme
+
+* Python2.x compatibility
+
+* Support for ruamel.yaml (#8)
+
+* [ci skip] adding Authors and Contributing files.
+
+* [ci skip] Updating Authors
+
+* [ci skip] Updating Changes
+
+* Fixing tests when using ruamel.yaml instead of pyyaml
+
+* [ci skip] Update changes.rst
+
+* Fixing PEP8 issues",False,98,82,16,0.0,0.0,0.0,895,627,667,11,3.029850746268657,47.749177187963426,62.666666666666664,109.33333333333333,729.1550504629937,3.2485107485107485,3402.827876875011,189.04599315972283,0.2430516834876646
+6,6d90e4213365b66585de60676d317a80fe2607bc,Chris Griffith,2017-05-05 02:10:43+00:00,"Version 3.0.0 (#18)
+
+* Adding default object abilities with `default_box` and `default_box_attr` kwargs
+* Adding `from_json` and `from_yaml` functions to both `Box` and `BoxList`
+* Adding `frozen_box` option
+* Adding `BoxError` exception for custom errors
+* Adding `conversion_box` to automatically try to find matching attributes
+* Adding `camel_killer_box` that converts CamelCaseKeys to camel_case_keys
+* Adding `SBox` that has `json` and `yaml` properties that map to default `to_json()` and `to_yaml()`
+* Adding `box_it_up` property that will make sure all boxes are created and populated like previous version
+* Adding `modify_tuples_box` option to recreate tuples with Boxes instead of dicts
+* Adding `to_json` and `to_yaml` for `BoxList`
+* Changing how the Box object works, to conversion on extraction
+* Removing `__call__` for compatibly with django and to make more like dict object
+* Removing support for python 2.6
+* Removing `LightBox`
+* Removing default indent for `to_json`",False,123450,122714,736,0.8155844155844156,0.6805194805194805,0.6597402597402597,1910,1117,1277,104,2.4453125,63.73345690135342,52.0,84.57142857142857,604.6722944945889,1.7835750089509488,2830.5237795842195,157.25132108801222,0.2015574314981963
+7,a537f46b5b85f0f920fac6282e0113df13e4caa4,Chris Griffith,2017-05-07 01:22:31+00:00,"Version 3.0.1 (#27)
+
+* Fixing first level recursion errors
+* Fixing spelling mistakes (thanks to John Benediktsson)
+* Fixing that list insert of lists did not use the original list but create an empty one",False,150,98,52,0.11538461538461539,0.8461538461538461,0.7692307692307693,1940,1141,1303,104,2.5193798449612403,63.22389577084363,55.42857142857143,90.14285714285714,653.6092069141843,1.8596990311276025,3233.175419552318,179.62085664179546,0.21786973563806142
+8,252e2f574213708cbbcd42bdec442434384127fe,Chris Griffith,2017-09-03 16:12:17+00:00,"Version 3.1.0 (#39)
+
+* Adding copy and deepcopy support that with return a Box object
+* Adding support for customizable safe attr replacement
+* Adding custom error for missing keys
+* Changing that for this 3.x release, 2.6 support exists
+* Fixing that a recursion loop could occur if `_box_config` was somehow removed
+* Fixing pickling",False,442,354,88,0.7747252747252747,0.7912087912087912,0.6868131868131868,2186,1315,1489,106,2.4934210526315788,62.0672506880016,64.0,103.57142857142857,774.9194206017094,1.9981808107858527,4234.474613803294,235.24858965573858,0.2583064735339032
+9,37ad92655da7dc31d3cd55ffab304ea2a0d68a72,Chris Griffith,2017-09-05 14:20:47+00:00,"Version 3.1.1 (#44)
+
+* Fixing `__contains__` (thanks to Jiang Chen)
+* Fixing `get` could return non box objects",False,81,74,7,0.9583333333333334,0.8125,0.8125,2246,1366,1539,106,2.5064102564102564,62.17851917517315,58.5,95.5,718.8774277121681,1.814447286430045,3909.066927194281,217.17038484412672,0.23962580923738938
+10,d6dae6c2c3130802436469631fd07b95784fed8e,Chris Griffith,2018-05-11 14:59:17+00:00,"Version 3.2.0 (#53)
+
+* Adding `ordered_box` option to keep key order based on insertion (thanks to pwwang)
+* Adding custom `__iter__`, `__revered__`, `pop`, `popitems`
+* Fixing ordering of camel_case_killer vs default_box (thanks to Matan Rosenberg)
+* Fixing non string keys not being supported correctly (thanks to Matt Wisniewski)",False,308,232,76,0.5932203389830508,1.0,0.6864406779661016,2371,1484,1657,106,2.461988304093567,61.68987170234148,64.75,104.5,804.9175291421973,1.8648147337318222,4548.578744932042,252.69881916289128,0.2683058430473991
+11,ae49ac284e993aae9f195b1e6a10029f63e7238e,Chris Griffith,2018-09-20 18:15:07+00:00,"Version 3.2.1 (#58)
+
+* Fixing pickle issue
+* Fixing yaml warning
+* Adding Frozen BoxList support",False,156,116,40,0.5490196078431373,0.7058823529411765,0.7647058823529411,2432,1531,1710,106,2.4827586206896552,61.68987170234148,65.375,106.0,818.2345171714846,1.87406015037594,4654.41807407457,258.57878189303165,0.27274483905716157
+12,f3ec16ea8698ae212c2af8999d80a9e65e297764,Chris Griffith,2018-10-31 05:47:34+00:00,"Version 3.2.2 (#63)
+
+* Adding hash abilities to new frozen BoxList
+* Fixing hashing returned unpredictable values (thanks to cebaa)
+* Fixing update to not handle protected words correctly (thanks to deluxghost)
+* Removing non-collection support for mapping and callable identification",False,81,51,30,1.0,1.0,1.0,2443,1542,1720,106,2.465909090909091,61.67580864680037,66.5,107.625,834.1146441316025,1.9469689849624061,5007.68837517404,278.2049097318911,0.2780382147105342
+13,4291d6fb29d85f1faead57ef4d7061bcd96c6e54,Chris Griffith,2018-11-13 00:08:56+00:00,"Version 3.2.3 (#66)
+
+Fixing pickling with default box (thanks to sdementen)",False,18,16,2,0.6666666666666666,0.6666666666666666,1.0,2451,1548,1727,106,2.463276836158192,61.67580864680037,66.875,108.375,840.9483965354459,1.9504388198411815,5059.578157849579,281.0876754360878,0.28031613217848195
+14,95017e37bffa0c207409fd3fcb6b634e0f03fa6a,Chris Griffith,2019-02-01 03:22:51+00:00,"Version 3.2.4 (#72)
+
+* Fixing recursion issue #68 when using setdefault (thanks to sdementen)
+* Fixing ordered_box would make 'ordered_box_values' internal helper as key in sub boxes",False,58,30,28,0.0,0.0,1.0,2458,1553,1733,106,2.460674157303371,61.67580864680037,67.125,108.75,844.6155562356313,1.9499612202007859,5076.175720242878,282.00976223571547,0.2815385187452104
+15,86a11e162e63690a014235d07de04807dfa05b6c,Chris Griffith,2019-04-19 14:09:16+00:00,"Version 3.3.0 (#77)
+
+* Adding `BoxObject` (thanks to Brandon Gomes)",False,227,226,1,0.6826923076923077,1.0,0.7884615384615384,2636,1671,1862,106,2.4479166666666665,61.67580864680037,71.75,117.75,929.4834392794892,2.030922492990859,5911.134265320639,328.3963480733689,0.30982781309316304
+16,5f09df824022127e7e335e3d993f7ddc1ed97fce,Chris Griffith,2019-04-26 20:31:27+00:00,"Version 3.4.0 (#84)
+
+* Adding `box_intact_types` that allows preservation of selected object types (thanks to pwwang)
+* Adding limitations section to readme",False,382,212,170,1.0,1.0,1.0,2658,1682,1881,106,2.4564102564102566,60.902268586695605,74.125,121.5,961.786772047721,2.0083500399683656,5791.996605188893,321.77758917716073,0.32059559068257365
+17,3d221d7b33c1138a6c732a45ac943b201bd7fea2,Chris Griffith,2019-06-06 16:11:03+00:00,"Version 3.4.1 (#91)
+
+* Fixing copy of inherited classes (thanks to pwwang)
+* Fixing `get` when used with default_box",False,75,67,8,0.3170731707317073,0.975609756097561,0.975609756097561,2711,1723,1922,106,2.4228855721393034,60.902268586695605,75.875,125.25,996.750986980963,2.013929277244495,6032.29377837398,335.12743213188776,0.3322503289936543
+18,d172bdbe8492e19d800ad2608eeeaf1852a010e4,Chris Griffith,2019-07-05 15:23:01+00:00,"Version 3.4.2 (#93)
+
+* Adding license to source distribution",False,18,9,9,0.0,0.0,0.0,2703,1718,1917,106,2.4228855721393034,60.902268586695605,74.625,123.375,977.9910871550192,2.016784777722278,5947.675403341165,330.42641129673143,0.325997029051673
+19,cd9ba15ddc0c51a9e1e4756cdf288f1de39b7af7,Chris Griffith,2019-08-19 20:11:58+00:00,"Version 3.4.3 (#99)
+
+* Fixing propagation of box options when adding a new list via setdefault (thanks to Stretch)
+* Fixing update does not keep box_intact_types (thanks to pwwang)
+* Fixing update to operate the same way as a normal dictionary
+* Fixing deepcopy not copying box options (thanks to Nikolay Stanishev)",False,95,69,26,0.0,1.0,1.0,2733,1741,1940,106,2.4079601990049753,60.902268586695605,75.0,124.5,988.9158144541918,2.0221643999169436,6001.901225775997,333.43895698755534,0.32963860481806395
+20,1a63d7b498e6a3930b6a65a7f0eb2c66bdb8f595,Chris Griffith,2019-09-23 02:27:36+00:00,"Version 3.4.4 (#103)
+
+* Fixing issue with pop not resetting heritage properly (Thanks to Jeremiah Lowin)",False,41,34,7,0.0,0.0,0.5555555555555556,2754,1759,1958,106,2.417910447761194,60.597646256772556,75.25,124.875,992.678899042257,2.02157482305359,6018.859914860359,334.3811063811311,0.33089296634741894
+21,f113d155631c8ade1dd98e1413dc82611c82e544,Chris Griffith,2019-09-28 14:18:59+00:00,"Version 3.4.5 (#106)
+
+* Fixing issue with update not converting properly (thanks to Michael Stella)
+* Changing back to old update merge method",False,47,35,12,0.0,0.42857142857142855,0.42857142857142855,2770,1773,1972,109,2.4477611940298507,60.597646256772556,77.0,128.25,1023.7478789382282,2.0227256835186354,6253.430328202841,347.412796011269,0.34124929297940937
+22,6d8790e35b6d2f20eb3bb0f4b450b0413daa94c1,Chris Griffith,2019-11-21 16:24:49+00:00,"Version 3.4.6 (#114)
+
+* Fixing allowing frozen boxes to be deep copyable (thanks to jandelgado)",False,33,25,8,1.0,1.0,1.0,2779,1784,1984,109,2.4405940594059405,60.597646256772556,77.5,129.0,1031.2942475471327,2.021540046662267,6287.424564829038,349.3013647127243,0.3437647491823776
+23,d10fb33c66c2ba8754b8798c0d17f54c82d2d6ea,Chris Griffith,2019-12-25 13:26:49+00:00,"Version 4.0.0 (#116)
+
+* Adding support for retrieving items via dot notation in keys
+* Adding `box_from_file` helper function
+* Adding merge_update that acts like previous Box magic update
+* Adding support to `+` boxes together
+* Adding default_box now can support expanding on `None` placeholders (thanks to Harun Tuncay and Jeremiah Lowin)
+* Adding ability to recast specified fields (thanks to Steven McGrath)
+* Adding to_csv and from_csv capability for BoxList objects (thanks to Jiuli Gao)
+* Changing layout of project to be more object specific
+* Changing update to act like normal dict update
+* Changing to 120 line character limit
+* Changing how `safe_attr` handles unsafe characters
+* Changing all exceptions to be bases of BoxError so can always be caught with that base exception
+* Changing delete to also access converted keys (thanks to iordanivanov)
+* Removing `ordered_box` as Python 3.6+ is ordered by default
+* Removing `BoxObject` in favor of it being another module",False,125194,2405,122789,1.0,0.0,0.47619047619047616,2837,1907,2054,130,2.4794520547945207,67.86061349724712,39.44444444444444,62.166666666666664,451.61027202191264,1.6999621981691655,2379.513775212686,132.19520973403812,0.15053675734063748
+24,6830d788e41824eb87dc4128ea9581419324fcef,Chris Griffith,2019-12-25 13:47:23+00:00,"Version 4.0.1 (#117)
+
+* Fixing build for release
+* Fixing documentation link",False,29,14,15,,,,2830,1903,2047,130,2.4794520547945207,67.86061349724712,39.44444444444444,62.166666666666664,451.61027202191264,1.6999621981691655,2379.513775212686,132.19520973403812,0.15053675734063748
+25,83865d49cffd31fe48089f471c8352fb6e05d910,Chris Griffith,2019-12-26 15:50:07+00:00,"Version 4.0.2
+
+* Fixing converters to properly pass through new box arguments (thanks to Marcelo Huerta) (#120)",False,23,19,4,1.0,1.0,1.0,2839,1906,2056,130,2.4727272727272727,67.85790362323577,39.55555555555556,62.333333333333336,453.2619110146178,1.699737923058363,2386.9844520515926,132.6102473361996,0.15108730367153925
+26,3edc56ab50c8c4687d476ca21c5d451453abcfdd,Chris Griffith,2019-12-26 22:36:53+00:00,"Version 4.0.3 (#122)
+
+* Fixing non-string keys breaking when box_dots is enabled (thanks to Marcelo Huerta)",False,18,14,4,1.0,1.0,1.0,2844,1911,2061,130,2.4863636363636363,67.83352507768703,39.94444444444444,62.833333333333336,458.24126485839145,1.6986505258912816,2411.575075998153,133.9763931110085,0.15274708828613046
+27,561548983c8956eac486c8cf99f5801e1155972a,Chris Griffith,2019-12-29 05:31:39+00:00,"Version 4.0.4 (#125)
+
+* Fixing `get` to return None when not using default box (thanks to Jeremiah Lowin)
+* Updating outdated docs",False,51,18,33,1.0,0.4,0.4,2849,1916,2066,130,2.4863636363636363,67.82829897238477,40.111111111111114,63.111111111111114,460.9963961548331,1.6984354436924236,2423.348280469173,134.63046002606518,0.15366546538494436
+28,511500157824443866ceb1bfbb012b30aab3e5cb,Chris Griffith,2020-02-22 02:11:08+00:00,"Version 4.1.0 (#132)
+
+* Adding support for list traversal with `box_dots` (thanks to Lei)
+* Adding `BoxWarning` class to allow for the clean suppression of warnings
+* Fixing default_box_attr to accept items that evaluate to `None` (thanks to Wenbo Zhao and Yordan Ivanov)
+* Fixing `BoxList` to properly send internal box options down into new lists
+* Fixing issues with conversion and camel killer boxes not being set properly on insert
+* Changing default_box to set objects in box on lookup
+* Changing `camel_killer` to convert items on insert, which will change the keys when converted back to dict unlike before
+* Fallback to `PyYAML` if `ruamel.yaml` is not detected (thanks to wim glenn)
+* Removing official support for `pypy` as it's pickling behavior is not the same as CPython
+* Removing internal __box_heritage as it was no longer needed due to behavior update",False,475,325,150,0.0,1.0,1.0,2942,1996,2133,132,2.4618834080717487,67.34051849112782,43.94444444444444,70.88888888888889,526.5722542651507,1.7121352439353632,2764.5313053903033,153.58507252168351,0.1755240847550502
+29,ec6cc77390a2b6dbdbc11d5c482f06626c8cd4cb,Chris Griffith,2020-02-26 04:12:24+00:00,"Version 4.2.0 (#136)
+
+* Adding optimizations for speed ups to creation and inserts
+* Adding internal record of safe attributes for faster lookups, increases memory footprint for speed (thanks to Jonas Irgens Kylling)
+* Adding all additional methods specific to `Box` as protected keys
+* Fixing `merge_update` from incorrectly calling `__setattr__` which was causing a huge slowdown (thanks to Jonas Irgens Kylling)
+* Fixing `copy` and `__copy__` not copying box options",False,323,161,162,1.0,1.0,1.0,2930,2002,2131,130,2.4260089686098656,67.36808592422162,43.22222222222222,69.61111111111111,515.0554019890955,1.6785800534611786,2604.1840541762654,144.67689189868142,0.1716851339963651
+30,ba48dc79d913771813ea10d20c1b658572e5915b,Chris Griffith,2020-02-29 03:50:28+00:00,"Version 4.2.1 (#140)
+
+* Fixing uncaught print statement (thanks to Bruno Rocha)
+* Fixing old references to `box_it_up` in the documentation
+
+Co-authored-by: Bruno Rocha <rochacbruno@users.noreply.github.com>",False,20,14,6,1.0,1.0,0.0,2929,2001,2130,130,2.4260089686098656,67.37013582549689,43.22222222222222,69.61111111111111,515.0554019890955,1.6785800534611786,2604.1840541762654,144.67689189868142,0.1716851339963651
+31,572c1b50467329b7440d76b5def273371d5b3174,Chris Griffith,2020-03-11 14:01:54+00:00,"Version 4.2.2 (#143)
+
+* Fixing `default_box` doesn't first look for safe attributes before falling back to default (thanks to Pymancer)
+* Changing from TravisCI to Github Actions",False,227,155,72,0.0,1.0,1.0,2938,2007,2134,130,2.4260089686098656,67.04249846552176,43.5,70.11111111111111,514.9277217016476,1.717560455463915,2590.834370639318,143.93524281329545,0.1716425739005492
+32,cb450cc06faf07fd0de024599130a5239203860e,Chris Griffith,2020-04-27 00:12:08+00:00,"Version 4.2.3
+
+* Fixing README.md example #149 (thanks to J Alan Brogan) (#151)
+* Changing `protected_keys` to remove magic methods from dict #146 (thanks to Krishna Penukonda)",False,32,24,8,,,,2946,2007,2141,130,2.4260089686098656,67.01998871881291,43.55555555555556,70.22222222222223,515.9075909728964,1.7173890792909896,2596.382324110488,144.24346245058268,0.17196919699096547
+33,1289508a853fb84ef645bc16b706729d6d649e31,Chris Griffith,2020-07-12 19:39:31+00:00,"Version 5.0.0 (#145)
+
+* Adding support for msgpack converters `to_msgpack` and `from_msgpack`
+* Adding support for comparision of `Box` to other boxes or dicts via the `-` sub operator #144 (thanks to Hitz)
+* Adding support to `|` union boxes like will come default in Python 3.9 from PEP 0584
+* Adding `mypy` type checking, `black` formatting and other checks on commit
+* Adding new parameter `box_class` for cleaner inheritance #148 (thanks to David Aronchick)
+* Adding `dotted` option for `keys` method to return box_dots style keys (thanks to ipcoder)
+* Fixing box_dots to properly delete items from lists
+* Fixing box_dots to properly find items with dots in their key
+* Fixing that recast of subclassses of `Box` or `BoxList` were not fed box properties (thanks to Alexander Kapustin)
+* Changing that sub boxes are always created to properly propagate settings and copy objects #150 (thanks to ipcoder)
+* Changing that default_box will not raise key errors on `pop` #67 (thanks to Patrock)
+* Changing `to_csv` and `from_csv` to have same string and filename options as all other transforms
+* Changing back to no required external imports, instead have extra requires like [all] (thanks to wim glenn)
+* Changing from putting all details in README.rst to a github wiki at https://github.com/cdgriffith/Box/wiki
+* Changing `BoxList.box_class` to be stored in `BoxList.box_options` dict as `box_class`
+* Changing `del` will raise `BoxKeyError`, subclass of both `KeyError` and `BoxError`
+* Removing support for single level circular references
+* Removing readthedocs generation
+* Removing overrides for `keys`, `values` and `items` which will return views again",False,3497,1891,1606,0.2916666666666667,0.8204022988505747,0.39655172413793105,3613,2390,2796,72,2.338235294117647,65.5564094260974,53.23529411764706,86.41176470588235,663.645091518587,1.8762727104923345,3893.260138881973,216.2922299378874,0.22121503050619562
+34,3c0197bafc8e7946860a8b3cffeea188da944b78,Chris Griffith,2020-07-13 04:24:06+00:00,"Version 5.0.1 (#156)
+
+* Fixing default box saving internal method calls and restricted options (thanks to Marcelo Huerta)",False,21,16,5,0.8,0.8,0.0,3619,2395,2801,72,2.3443223443223444,65.52445834966954,53.76470588235294,87.29411764705883,672.0120020239765,1.874805605114003,3943.22846675393,219.06824815299615,0.2240040006746588
+35,69db25b68c1f911d2c495d6eb09f186469934795,Chris Griffith,2020-07-23 21:07:29+00:00,"Version 5.1.0 (#159)
+
+* Adding `dotted` option for `items` function (thanks to ipcoder)
+* Fixing bug in box.set_default where value is dictionary, return the internal value and not detached temporary (thanks to Noam Graetz)
+* Removing warnings on import if optional libraries are missing
+
+Co-authored-by: Noam Graetz <43850700+NoamGraetz2@users.noreply.github.com>",False,86,63,23,0.041666666666666664,1.0,1.0,3661,2408,2839,72,2.3454545454545452,65.51572322112366,54.11764705882353,87.88235294117646,677.8293024447574,1.8739931428340721,3976.7036064278964,220.92797813488315,0.22594310081491917
+36,4b66113d193690191d488e45818f80a1f7f85285,Chris Griffith,2020-08-20 18:54:19+00:00,"Version 5.1.1
+
+Bugfix dots default (#166)",False,170,96,74,0.7058823529411765,0.7058823529411765,0.7058823529411765,3678,2428,2856,72,2.351449275362319,65.51572322112366,54.64705882352941,89.05882352941177,689.219088490749,1.8765826004464454,4063.218733696431,225.73437409424625,0.22973969616358295
+37,4a505124686c1f0b79ea84bb292aec331ee70f51,Chris Griffith,2020-10-29 02:53:11+00:00,"Version 5.2.0 (#175)
+
+* Adding checks for frozen boxes to `pop`, `popitem` and `clear` (thanks to Varun Madiath)
+* Fixing requirements-test.txt (thanks to Fabian Affolter)
+* Fixing Flake8 conflicts with black (thanks to Varun Madiath)
+* Fixing coveralls update (thanks to Varun Madiath)
+
+Co-authored-by: Varun Madiath <vamega@gmail.com>
+Co-authored-by: Fabian Affolter <mail@fabian-affolter.ch>",False,88,69,19,0.2608695652173913,0.043478260869565216,0.6086956521739131,3717,2445,2887,73,2.36231884057971,65.51974224246506,54.64705882352941,89.05882352941177,689.219088490749,1.8765826004464454,4063.218733696431,225.73437409424625,0.22973969616358295
+38,9170539f2f41fe800e4074488ec0a6979e40473d,Chris Griffith,2021-02-13 16:13:26+00:00,"Version 5.3.0 (#185)
+
+* Adding support for functions to box_recast (thanks to Jacob Hayes)
+* Adding #181 support for extending or adding new items to list during `merge_update`  (thanks to Marcos Dione)
+* Fixing maintain stacktrace cause for BoxKeyError and BoxValueError (thanks to Jacob Hayes)
+* Fixing #177 that emtpy yaml files raised errors instead of returning empty objects (thanks to Tim Schwenke)
+* Fixing #171 that `popitems` wasn't first checking if box was frozen (thanks to Varun Madiath)
+
+Co-authored-by: Jacob Hayes <jacob.r.hayes@gmail.com>",False,145,108,37,0.48936170212765956,0.574468085106383,0.8936170212765957,3776,2499,2933,73,2.3642857142857143,65.49810320621212,56.1764705882353,92.05882352941177,717.6026052972469,1.8823829870479447,4269.89750082021,237.216527823345,0.23920086843241564
+39,51042b8ed33b1fab652b52f0ca0541b4492005eb,Chris Griffith,2021-08-15 00:58:16+00:00,"Version 5.4.0 (#204)
+
+* Adding py.typed for mypy support (thanks to Dominic)
+* Adding testing for Python 3.10-dev
+* Fixing #189 by adding mappings for mypy
+* Fixing setdefault behavior with box_dots (thanks to ipcoder)
+* Changing #193 how magic methods are handled with default_box (thanks to Rexbard)
+
+Co-authored-by: Dominic <yobmod@gmail.com>",False,437,394,43,0.8571428571428571,0.8571428571428571,0.9285714285714286,3802,2517,2951,78,2.3701067615658364,65.52525117933583,56.35294117647059,92.29411764705883,720.2284864861989,1.8820957775758533,4283.635874188789,237.97977078826605,0.2400761621620664
+40,4f9b3a68a1ed8aff19bcc074408209341457732f,Chris Griffith,2021-08-22 15:06:26+00:00,"Version 5.4.1 (#206)
+
+* Fixing setdefault behavior with box_dots (thanks to Ivan Pepelnjak)
+
+Co-authored-by: Ivan Pepelnjak <ip@ipspace.net>",False,113,103,10,0.7123287671232876,0.7397260273972602,0.9726027397260274,3889,2590,3023,78,2.357894736842105,65.52525117933583,58.11764705882353,95.47058823529412,752.5492671495346,1.8833816897710889,4497.647874013687,249.86932633409373,0.2508497557165115
+41,985df83887c8a72625c8e86cef2b8a3276b93013,Chris Griffith,2022-03-15 14:25:49+00:00,"Version 6.0.0 (#216)
+
+* Adding Cython support to greatly speed up normal Box operations on supported systems
+* Adding #161 support for access box dots with `get` and checking with `in` (thanks to scott-createplay)
+* Adding #183 support for all allowed character sets (thanks to Giulio Malventi)
+* Adding #196 support for sliceable boxes (thanks to Dias)
+* Adding #164 default_box_create_on_get toggle to disable setting box variable on get request (thanks to ipcoder)
+* Changing #208 __repr__ to produce `eval`-able text (thanks to Jeff Robbins)
+* Changing #215 support ruamel.yaml new syntax (thanks to Ivan Pepelnjak)
+* Changing `update` and `merge_update` to not use a keyword that could cause issues in rare circumstances
+* Changing internal `_safe_key` logic to be twice as fast
+* Removing support for ruamel.yaml < 0.17",False,634,516,118,0.3356164383561644,0.22602739726027396,0.541095890410959,4084,2731,3191,78,2.4452054794520546,63.35365281039408,61.470588235294116,100.52941176470588,797.4163004004928,2.0439872412427547,4859.187073504009,269.9548374168894,0.26580543346683094
+42,b1a0fc99c41c14f48dc3568d5f3ff6495ac1b823,Chris Griffith,2022-03-16 22:13:04+00:00,"Version 6.0.1 (#219)
+
+* Fixing #218 Box dots would not raise KeyError on bad key (thanks to Cliff Wells)
+* Fixing #217 wording in readme overview needed updated (thanks to Julie Jones)",False,42,32,10,0.0,0.7272727272727273,1.0,4098,2742,3202,78,2.4486301369863015,63.35365281039408,61.470588235294116,100.52941176470588,797.4163004004928,2.0439872412427547,4859.187073504009,269.9548374168894,0.26580543346683094
+43,f15fa1b6a736b15aafd053d9613edd3c1d2527cc,Chris Griffith,2022-04-02 02:24:21+00:00,"Version 6.0.2 (#221)
+
+* Fixing that the typing `pyi` files were not included in the manifest (thanks to Julian Torres)",False,12,9,3,,,,4098,2742,3202,78,2.4486301369863015,63.35365281039408,61.470588235294116,100.52941176470588,797.4163004004928,2.0439872412427547,4859.187073504009,269.9548374168894,0.26580543346683094
+44,f5c326c9d498cb1bfaabc8f51441ac81f1ec3844,Chris Griffith,2022-10-29 22:23:35+00:00,"Version 6.10.0 (#232)
+
+* Adding Python 3.11 support
+* Adding #195 box_from_string function (thanks to Marcelo Huerta)
+* Changing the deprecated ``toml`` package with modern ``tomllib``, ``tomli`` and ``tomli-w`` usage (thanks to Michał Górny)
+* Fixing mypy __ior__ type (thanks to Jacob Hayes)
+* Fixing line endings with a pre-commit update
+* Fixing BoxList was using old style of `super` in internal code usage
+
+Co-authored-by: Jacob Hayes <jacob.r.hayes@gmail.com>
+Co-authored-by: Michał Górny <mgorny@gentoo.org>",False,327,233,94,0.0,0.1206896551724138,0.6551724137931034,4220,2830,3289,91,2.466442953020134,62.92868659901743,62.411764705882355,102.11764705882354,807.9419271219529,2.160442153371824,4935.832940435977,274.21294113533213,0.26931397570731763
+45,0bfcb2d37ddc4c60f5aa48a8c258f8a324e24d18,Chris Griffith,2023-02-04 03:39:51+00:00,"Version 7.0.0 (#241)
+
+* Adding #169 default functions with the box_instance and key parameter (thanks to Коптев Роман Викторович)
+* Adding #170 Be able to initialize with a flattened dict - by using DDBox (thanks to Ash A.)
+* Adding #192 box_dots treats all keys with periods in them as separate keys (thanks to Rexbard)
+* Adding #211 support for properties and setters in subclasses (thanks to Serge Lu and David Aronchick)
+* Adding #226 namespace to track changes to the box (thanks to Jacob Hayes)
+* Adding #236 iPython detection to prevent adding attribute lookup words (thanks to Nishikant Parmar)
+* Adding #238 allow ``|`` and ``+`` for frozen boxes (thanks to Peter B)
+* Adding new DDBox class (Default Dots Box) that is a subclass of SBox
+* Fixing #235 how ``|`` and ``+`` updates were performed for right operations (thanks to aviveh21)
+* Fixing #234 typos (thanks to Martin Schorfmann)
+* Fixing no implicit optionals with type hinting",False,995,638,357,0.3631578947368421,0.7210526315789474,0.6052631578947368,4397,2972,3424,106,2.511326860841424,63.62508983889511,67.41176470588235,112.41176470588235,911.4255972155397,2.1437634156476135,5723.737572762962,317.9854207090534,0.3038085324051799
+46,9a4b108fed5a18846c8484207467058e5135b4f1,Chris Griffith,2023-02-22 03:50:44+00:00,"Version 7.0.1 (#248)
+
+* Switching off of poetry due to multiple build issues
+
+---------
+
+Co-authored-by: Michał Górny <mgorny@gentoo.org>",False,484,239,245,0.0,0.0,0.0,4445,2983,3471,104,2.514657980456026,62.434339442867625,67.52941176470588,112.52941176470588,911.8288179786146,2.1731751803534958,5724.280643158453,318.01559128658073,0.30394293932620486
+47,e61a7d238f9def9faa81ed05f84ab3e76c95271a,Chris Griffith,2023-08-26 14:19:52+00:00,"Version 7.1.0 (#256)
+
+* Adding #255 defer ipython import for large import speed improvements (thanks to Eric Prestat)
+* Adding testing for Python 3.12
+* Fixing #253 merge_update box list merge types not populated to sub dictionaries (thanks to lei wang)
+* Fixing #257 Two test failures due to arguments having incorrect types (thanks to Michał Górny)
+* Fixing stub files to match latest code signatures
+* Removing #251 support for circular references in lists (thanks to d00m514y3r)
+
+---------
+
+Co-authored-by: Eric Prestat <eric.prestat@gmail.com>",False,481,268,213,0.782608695652174,0.782608695652174,0.782608695652174,4486,3009,3501,106,2.5193548387096776,62.287254045029066,67.88235294117646,112.88235294117646,914.4576220211808,2.2414701331031104,5776.264714620812,320.9035952567118,0.3048192073403936
+48,cc26a46869e0f134d66a88765b7e31a48cc60cc2,Chris Griffith,2023-08-26 14:44:06+00:00,"Version 7.1.1
+
+Fixing Cython optimized build deployments for linux",False,10,8,2,,,,4486,3009,3501,106,2.5193548387096776,62.287254045029066,67.88235294117646,112.88235294117646,914.4576220211808,2.2414701331031104,5776.264714620812,320.9035952567118,0.3048192073403936

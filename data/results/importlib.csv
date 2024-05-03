@@ -1,0 +1,8 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,83ad2bdf5b1bd68482df33209dfe4d7049f39f63,Brett Cannon,2014-01-06 15:21:42+00:00,"Initial commit
+
+Updated in various little ways to lead to 1.0.3 bump, including not
+raising an exception but simply not installing anything under Python
+2.7/3.1 and greater.",False,309,309,0,,,,36,13,29,0,,60.24035244769701,24.0,27.0,123.79398751947124,3.0,371.38196255841376,20.63233125324521,0.04126466250649041
+1,712b1d28d3b963142ad344df1d5d8818877ae290,Brett Cannon,2016-08-31 19:27:13+00:00,Renamed README to README.rst,False,2,1,1,,,,36,13,29,0,,60.24035244769701,24.0,27.0,123.79398751947124,3.0,371.38196255841376,20.63233125324521,0.04126466250649041
+2,5bf8b2c753ef1298d08df566997d3dc8db8b473d,Brett Cannon,2016-08-31 19:36:29+00:00,Bump version number,False,2,1,1,,,,36,13,29,0,,60.24035244769701,24.0,27.0,123.79398751947124,3.0,371.38196255841376,20.63233125324521,0.04126466250649041

@@ -1,0 +1,516 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,83f32bc4f95fc73ac8e7e88502b097fba8313748,Jon Wayne Parrott,2017-04-13 16:47:43+00:00,Initial commit,False,1391,1391,0,0.8606271777003485,1.0,0.5853658536585366,1022,310,434,83,1.3777777777777778,78.45014316082357,10.625,15.875,76.88915211653651,0.5668498168498168,96.58016595959037,5.365564775532799,0.025629717372178833
+1,f290bd8cb9466b5b8d30264c8ae8fe64e0ac1498,Johan Euphrosine,2017-05-11 20:58:16+00:00,"add google-oauthlib-tool (#1)
+
+* add google-oauthlib-tool
+
+Commandline tool to generate credentials using 3LO oauth2 flow.
+
+See:
+https://github.com/GoogleCloudPlatform/google-auth-library-python/issues/152",False,299,299,0,0.4573643410852713,1.0,0.26356589147286824,1319,428,635,112,1.375,78.71449095896152,12.545454545454545,19.636363636363637,98.0097786199147,0.8458208458208457,202.74485520736627,11.263603067075904,0.03266992620663823
+2,e5809d37060767db18fcd03d88b42a1d71335699,Johan Euphrosine,2017-05-11 22:00:47+00:00,Release v0.1.0 (#2),False,7,6,1,,,,1319,428,635,112,1.375,78.71449095896152,12.545454545454545,19.636363636363637,98.0097786199147,0.8458208458208457,202.74485520736627,11.263603067075904,0.03266992620663823
+3,3ee00415e4e8c943e7b32dc57defbaf8a35629c8,Jon Wayne Parrott,2017-05-15 17:02:35+00:00,Add documentation,False,746,746,0,,,,1700,459,716,347,1.375,80.48828337904807,11.5,18.0,89.84229706825515,0.7753357753357752,185.8494506067524,10.32496947815291,0.029947432356085046
+4,f326a3995c0d836e602c3382f927370031d9d239,Jon Wayne Parrott,2017-06-14 20:20:32+00:00,"Update homepage in package metadata
+
+Resolves #8",False,2,1,1,,,,1700,459,716,347,1.375,80.48828337904807,11.5,18.0,89.84229706825515,0.7753357753357752,185.8494506067524,10.32496947815291,0.029947432356085046
+5,a320e5834a9a666e80b96e502559600cb20df141,Mark McDonald,2017-08-14 16:24:32+00:00,"Marks local web server test as a webtest (#11)
+
+* Marks local web server test as a webtest
+
+Once imported internally, we'll use this to control test execution.
+
+* Update test_flow.py",False,1,1,0,,,,1701,460,717,347,1.375,80.4768750718889,11.5,18.0,89.84229706825515,0.7753357753357752,185.8494506067524,10.32496947815291,0.029947432356085046
+6,9d4f08e30f7e9f9450844cf9dda49dac5eed86c8,Mark McDonald,2017-08-15 16:02:36+00:00,"Uses a test port that is less likely to be taken (#12)
+
+After running this in a different CI environment, I had issues with the test being unable to open port 8080 as it was already in use. This doesn't fix the problem perfectly but is less likely to encounter a collision.",False,6,4,2,0.0,1.0,0.0,1703,461,719,347,1.375,80.46143963745955,11.5,18.0,89.84229706825515,0.7753357753357752,185.8494506067524,10.32496947815291,0.029947432356085046
+7,ae4a8c5dda42b7c92cb65f1da2d35042ccf0cb61,Jon Wayne Parrott,2017-09-19 19:26:05+00:00,Allow access_type parameter to be overriden (#16),False,33,27,6,1.0,1.0,0.8,1724,473,734,347,1.368421052631579,80.29214801734217,11.75,18.5,93.13566982095,0.7773962148962149,192.11090792632413,10.67282821812912,0.03104522327365
+8,d4f8fd8dd895c0c3bbb0775e70e9c6433f320737,Jon Wayne Parrott,2017-09-19 19:29:45+00:00,Release v0.1.1,False,9,8,1,,,,1724,473,734,347,1.368421052631579,80.29214801734217,11.75,18.5,93.13566982095,0.7773962148962149,192.11090792632413,10.67282821812912,0.03104522327365
+9,84252c465414fae50970a332f89913c4bb3b7ba7,Michel Sabchuk,2017-10-06 20:52:48+00:00,"Accept redirect_uri as arg to flow creating classmethods. (#17)
+
+* Accept redirect_uri as arg to flow creating classmethods.
+
+* Attend to lint complaints.
+
+* Get the redirect_uri from kwargs.",False,22,21,1,1.0,1.0,0.9444444444444444,1744,482,752,347,1.3559322033898304,80.12962192244291,11.916666666666666,19.333333333333332,98.14090839610247,0.7880834443334445,205.38033796172184,11.410018775651212,0.03271363613203416
+10,f26bcbaf871812e19b3272ee6c4a84d8f17b00fc,Andy Tzeng,2017-11-09 21:26:45+00:00,Carry token expiry from oauth2session into Credentials object (#18) (#19),False,22,17,5,0.0,1.0,1.0,1756,489,764,347,1.3559322033898304,80.24429960539187,12.25,19.833333333333332,101.5307153197923,0.786971784254393,208.91592841181583,11.606440467323102,0.033843571773264094
+11,f1c87ff8b878416fc70b1da83e6f432606c94e73,Andy Tzeng,2017-11-10 17:47:17+00:00,"Populate id_token into credentials from oauth2 session (#20)
+
+* carry token expiry into Credentials object (#18)
+
+* populate id_token into credentials (#9)",False,9,9,0,0.0,1.0,0.7777777777777778,1765,493,773,347,1.3559322033898304,80.15312178709696,12.583333333333334,20.833333333333332,107.83506221879735,0.7944715934347272,222.00468846141902,12.333593803412166,0.03594502073959911
+12,a9c381a0a26c17892d6d692cf8a33f9dbb1c9845,Jon Wayne Parrott,2017-11-15 18:43:20+00:00,Release v0.2.0,False,9,8,1,,,,1765,493,773,347,1.3559322033898304,80.15312178709696,12.583333333333334,20.833333333333332,107.83506221879735,0.7944715934347272,222.00468846141902,12.333593803412166,0.03594502073959911
+13,72a31c791ea8c14754f8112bd3a8a8e22a2055cb,William Escande,2017-12-07 17:52:24+00:00,Allow saving credentials in the current directory (#25),False,2,1,1,,,,1765,493,773,347,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+14,d6e922b8f816d4e2cc37455d94ae982ba19c541e,Devon Sparks,2017-12-11 17:49:24+00:00,Use utc when parsing expiration timestamp (#26),False,2,1,1,,,,1765,493,773,347,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+15,64389c15af908b2a0fbd171612b330634e432816,Bu Sun Kim,2019-03-19 16:17:42+00:00,Release v0.3.0,False,8,7,1,,,,1765,493,773,347,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+16,cd6eaa0ee2f04c8d83a2c004f9f414288723bf20,Bu Sun Kim,2019-03-20 16:42:08+00:00,Disable useless-object-inheritance error,False,1,1,0,,,,1766,493,774,347,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+17,0fd1ee5d4c4f5c6979ba827f1ec62683d4ecb85e,Bu Sun Kim,2019-03-20 17:34:34+00:00,Only have flake check import order,False,1,1,0,,,,1767,493,775,348,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+18,4042e8c264988a05ffd254c26052ca75e239c32f,Bu Sun Kim,2019-03-22 18:10:20+00:00,Release v0.3.0,False,8,7,1,,,,1767,493,775,348,1.3728813559322033,80.04424739049793,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+19,c547be61c4c7a0accf44c5123ffd9adbafb9930e,Steve Bazyl,2019-05-09 21:23:40+00:00,"Use actual server port in redirect_uri to allow automatic assignment (#33)
+
+* Use actual server port in redirect_uri. Allows setting port to 0 to request an unassigned ephemeral port
+
+* Reformat to match linter rules",False,8,4,4,0.0,1.0,0.0,1767,493,776,348,1.3728813559322033,80.07915196028043,12.833333333333334,21.083333333333332,109.07716742670999,0.8361382601013938,225.80970096117858,12.544983386732143,0.03635905580890333
+20,e56853e0b29e4b67943e2dd7cc361dea5eb94d2e,Jay Lee,2019-05-29 22:37:30+00:00,Implement code verifier (PKCE) (#42),False,69,61,8,0.0,1.0,0.8809523809523809,1820,534,826,349,1.4,79.85389238846714,13.916666666666666,22.5,117.7407300645266,0.9178681869206061,240.44742394914184,13.358190219396766,0.03924691002150887
+21,b6d8eed0f8965da7eca2508bcad19d43d820fd46,Bu Sun Kim,2019-06-05 22:14:28+00:00,test: Add noxfile. (#43),False,76,76,0,0.49122807017543857,1.0,1.0,1893,565,889,349,1.3692307692307693,81.40359297396967,12.846153846153847,20.76923076923077,108.68375082879379,0.8472629417728672,221.9514682607463,12.330637125597015,0.03622791694293127
+22,dd0a1a29a546c9d2455b389b5221457a1e4ac1f9,Tim Swast,2019-06-10 20:09:06+00:00,"Add `get_user_credentials` function to get your user credentials. (#40)
+
+* Add `get_user_credentials` function to get your user credentials.
+
+This function is intended to be used in interactive code examples, such
+as from a Jupyter notebook or when developing scripts locally.",False,172,172,0,0.3684210526315789,1.0,0.631578947368421,2065,590,932,388,1.3582089552238805,83.64582689087156,11.466666666666667,18.4,95.12135528957624,0.7676278828698183,192.82232477829092,10.712351376571718,0.031707118429858745
+23,7ce2a728256c1522d66e62a3a47c8416bad6bc91,Bu Sun Kim,2019-06-10 22:26:05+00:00,Release v0.4.0 (#44),False,10,9,1,,,,2065,590,932,388,1.3582089552238805,83.64582689087156,11.466666666666667,18.4,95.12135528957624,0.7676278828698183,192.82232477829092,10.712351376571718,0.031707118429858745
+24,b57e129a54e1da93e289e24c58c183f387d88e78,Bu Sun Kim,2019-08-26 20:20:12+00:00,Don't auto-generate code_verifier by default. (#48),False,97,83,14,0.05660377358490566,1.0,0.32075471698113206,2134,621,987,390,1.391304347826087,83.6077058317433,11.933333333333334,19.4,102.73240313712147,0.7313751772421128,205.4868063565118,11.415933686472878,0.03424413437904049
+25,7ff0361533879839bcc2219fd45dd90e4458073b,William Chargin,2019-09-23 15:00:49+00:00,Fix comma splice in default success message (#63),False,2,1,1,,,,2134,621,987,390,1.391304347826087,83.6077058317433,11.933333333333334,19.4,102.73240313712147,0.7313751772421128,205.4868063565118,11.415933686472878,0.03424413437904049
+26,3758d8c2c2581fdf823136d7111db3cb0cf63e3c,Bu Sun Kim,2019-10-04 16:20:48+00:00,Release v0.4.1 (#60),False,81,43,38,,,,2134,621,987,390,1.391304347826087,83.6077058317433,11.933333333333334,19.4,102.73240313712147,0.7313751772421128,205.4868063565118,11.415933686472878,0.03424413437904049
+27,fb7fcd6cbecf8e6dbd94ae30b87b8e88e23de8e6,Bu Sun Kim,2019-11-04 23:44:08+00:00,chore: blacken (#66),False,750,391,359,0.35294117647058826,1.0,0.5882352941176471,2166,621,1017,390,1.391304347826087,83.4472838379233,11.933333333333334,19.4,102.73240313712147,0.7313751772421128,205.4868063565118,11.415933686472878,0.03424413437904049
+28,00040576ab096faec1f6eb54c886cb9c33be17ed,Bu Sun Kim,2020-10-28 00:39:44+00:00,"fix: don't open browser if port is occupied (#92)
+
+Set `allow_reuse_address` to `False` so a server is not created on a port that is already in use.
+
+```python
+wsgiref.simple_server.WSGIServer.allow_reuse_address = False
+```
+
+Drops support for EOL Python versions (python < 3.5)
+
+Fixes #75",False,3333,2764,569,0.4935064935064935,0.7402597402597403,0.8441558441558441,2402,733,1171,399,1.4230769230769231,82.53781754595278,12.125,19.3125,100.563867314151,0.8100427798008443,198.73838283423257,11.041021268568475,0.033521289104716995
+29,7638659586a91354d92a3b11ea4d02434ac5e59a,release-please[bot],2020-10-28 16:32:05+00:00,"chore: release 0.4.2 (#93)
+
+:robot: I have created a release \*beep\* \*boop\* 
+---
+### [0.4.2](https://www.github.com/googleapis/google-auth-library-python-oauthlib/compare/v0.4.1...v0.4.2) (2020-10-28)
+
+
+### Bug Fixes
+
+* don't open browser if port is occupied ([#92](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/92)) ([0004057](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/00040576ab096faec1f6eb54c886cb9c33be17ed)), closes [#75](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/75)
+---
+
+
+This PR was generated with [Release Please](https://github.com/googleapis/release-please).",False,11,10,1,,,,2404,734,1172,399,1.4230769230769231,82.53781754595278,12.125,19.3125,100.563867314151,0.8100427798008443,198.73838283423257,11.041021268568475,0.033521289104716995
+30,5587c6a72547742986e363e1f5ef6bcabd93bb02,Bu Sun Kim,2021-02-06 00:54:21+00:00,fix(deps): add lower bounds to all dependencies (#99),False,14,12,2,,,,2404,734,1172,399,1.4230769230769231,82.53781754595278,12.125,19.3125,100.563867314151,0.8100427798008443,198.73838283423257,11.041021268568475,0.033521289104716995
+31,53e31e2d03b315c12670370f67bdca29b1cd5422,Bu Sun Kim,2021-02-12 01:08:02+00:00,"fix: add `charset-utf-8` to response header (#104)
+
+Fixes #103
+
+Specify the charset in the header so the browser knows the success message should be treated as UTF-8.",False,2,1,1,,,,2404,734,1172,399,1.4230769230769231,82.53781754595278,12.125,19.3125,100.563867314151,0.8100427798008443,198.73838283423257,11.041021268568475,0.033521289104716995
+32,59e4c5865976b0123e67016330dc3768c1774011,release-please[bot],2021-03-01 16:43:38+00:00,"chore: release 0.4.3 (#105)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,10,9,1,,,,2404,734,1172,399,1.4230769230769231,82.53781754595278,12.125,19.3125,100.563867314151,0.8100427798008443,198.73838283423257,11.041021268568475,0.033521289104716995
+33,666863aeabb8d6b3608ea95edce09fe69a5f2679,arithmetic1728,2021-03-29 19:41:29+00:00,"fix: add redirect_uri_trailing slash param to run_local_server (#111)
+
+* fix: add redirect_uri_trailing slash param to run_local_server
+
+* chore: register webtest marker",False,21,19,2,0.0,1.0,0.0,2418,737,1184,399,1.435897435897436,82.51788927611331,12.375,19.6875,103.51004605863895,0.8089064161644806,203.18769945137487,11.288205525076382,0.03450334868621298
+34,708be131030f375b92ab1abdd042ffd1dab12278,release-please[bot],2021-03-29 19:47:56+00:00,"chore: release 0.4.4 (#112)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,9,8,1,,,,2418,737,1184,399,1.435897435897436,82.51788927611331,12.375,19.6875,103.51004605863895,0.8089064161644806,203.18769945137487,11.288205525076382,0.03450334868621298
+35,5eddcc8663b7a79e9cbb1ca388c74deeb767074f,Dan Lee,2021-04-28 15:46:47+00:00,"chore: use `gcp-sphinx-docfx-yaml` (#116)
+
+makes use of the updated plugin for generating DocFX YAMLs",False,4,1,3,,,,2416,737,1184,397,1.435897435897436,82.50361013690515,12.375,19.6875,103.51004605863895,0.8089064161644806,203.18769945137487,11.288205525076382,0.03450334868621298
+36,e8e5dbbf0b118fc68a9b60b91f0075f84908b6f6,Bu Sun Kim,2021-05-29 15:12:02+00:00,"docs: fix links to installed app, client secrets docs (#86)
+
+Closes #85",False,21,10,11,,,,2415,737,1184,397,1.435897435897436,82.51175918659482,12.375,19.6875,103.51004605863895,0.8089064161644806,203.18769945137487,11.288205525076382,0.03450334868621298
+37,d7b04b30af7ec69489c2ef836104e3edafd11e0a,Anthonios Partheniou,2021-06-01 18:56:03+00:00,"chore: migrate to owl bot (#119)
+
+This PR migrates from autosynth to [owl-bot](https://github.com/googleapis/repo-automation-bots/blob/master/packages/owl-bot/README.md).",False,625,448,177,0.0,0.3157894736842105,1.0,2475,746,1227,413,1.435897435897436,82.13952282457069,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+38,9b28b28dc9fa9ac7e85b3a27d716aa17ef7c7c35,gcf-owl-bot[bot],2021-06-17 10:52:01+00:00,"chore: new owl bot post processor docker image (#124)
+
+Post-Processor: gcr.io/repo-automation-bots/owlbot-python:latest@sha256:58c7342b0bccf85028100adaa3d856cb4a871c22ca9c01960d996e66c40548ce",False,28,7,21,,,,2475,746,1227,413,1.435897435897436,82.13952282457069,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+39,b08a0e8a85332adab3e326f95134e597ae0fc86a,Dan Lee,2021-06-21 19:27:31+00:00,"chore: move non-cloud package to staging bucket (#125)
+
+* chore: move non-cloud package to staging bucket
+
+* chore: update Kokoro config
+
+* chore: update Owlbot.py
+
+* 🦉 Updates from OwlBot
+
+See https://github.com/googleapis/repo-automation-bots/blob/master/packages/owl-bot/README.md
+
+* 🦉 Updates from OwlBot
+
+See https://github.com/googleapis/repo-automation-bots/blob/master/packages/owl-bot/README.md
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,13,11,2,,,,2484,747,1234,414,1.435897435897436,82.13952282457069,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+40,ff58ea4d1716a2e5342d7d55432d5e26418b916d,gcf-owl-bot[bot],2021-06-25 22:48:30+00:00,"chore(python): simplify nox steps in CONTRIBUTING.rst (#130)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/26558bae8976a985d73c2d98c31d8612273f907d
+Post-Processor: gcr.io/repo-automation-bots/owlbot-python:latest@sha256:99d90d097e4a4710cc8658ee0b5b963f4426d0e424819787c3ac1405c9a26719
+
+chore: Update CONTRIBUTING.rst to reflect supported versions",False,21,11,10,0.0,1.0,1.0,2487,748,1236,414,1.435897435897436,82.12890816762798,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+41,705389bcaffedc6dbe0c3a4f89f0d983896f9adb,release-please[bot],2021-07-29 16:34:29+00:00,"chore: release 0.4.5 (#138)
+
+:robot: I have created a release \*beep\* \*boop\*
+---
+### [0.4.5](https://www.github.com/googleapis/google-auth-library-python-oauthlib/compare/v0.4.4...v0.4.5) (2021-07-26)
+
+
+### Documentation
+
+* fix links to installed app, client secrets docs ([#86](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/86)) ([e8e5dbb](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/e8e5dbbf0b118fc68a9b60b91f0075f84908b6f6)), closes [#85](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/85)
+* omit mention of Python 2.7 in 'CONTRIBUTING.rst' ([#1127](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/1127)) ([#126](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/126)) ([8806324](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/8806324428b5aebe6659c49a16066afafbe4d400)), closes [#1126](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/1126)
+* add Samples section to CONTRIBUTING.rst ([#134](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/134)) ([1599a97](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/1599a97831bbe1c15cf5a0d257817967c1cd227f))
+
+
+### Miscellaneous Chores
+
+* release as 0.4.5 ([#137](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/137)) ([a54f283](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/a54f283ee7854367ff289ee863a7404692f31099))
+---
+
+
+This PR was generated with [Release Please](https://github.com/googleapis/release-please). See [documentation](https://github.com/googleapis/release-please#release-please).",False,16,15,1,,,,2487,748,1236,414,1.435897435897436,82.12890816762798,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+42,2fae94ad0118629d065ca88c61f3eaabfb049e65,gcf-owl-bot[bot],2021-08-12 15:55:55+00:00,"chore(python): avoid `.nox` directories when building docs (#142)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/7e1f6da50524b5d98eb67adbf6dd0805df54233d
+Post-Processor: gcr.io/repo-automation-bots/owlbot-python:latest@sha256:a1a891041baa4ffbe1a809ac1b8b9b4a71887293c9101c88e8e255943c5aec2d",False,3,2,1,,,,2488,748,1237,414,1.435897435897436,82.12890816762798,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+43,f4e4b8ce3f7385fee37c200f844cba82e1cb5a0c,gcf-owl-bot[bot],2021-08-13 15:05:08+00:00,"chore: drop mention of Python 2.7 from templates (#143)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/facee4cc1ea096cd8bcc008bb85929daa7c414c0
+Post-Processor: gcr.io/repo-automation-bots/owlbot-python:latest@sha256:9743664022bd63a8084be67f144898314c7ca12f0a03e422ac17c733c129d803
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,17,12,5,0.0,1.0,1.0,2495,748,1245,414,1.435897435897436,82.10396311795974,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+44,c3387335c49597870b437a9130aed92dca6571f2,Bu Sun Kim,2021-08-23 18:07:12+00:00,"fix: remove dependency on `six` (#146)
+
+Fixes #145",False,7,3,4,,,,2494,747,1244,414,1.435897435897436,82.09500393227661,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+45,c012a1163a8883371b8fed7dbbb6c21fffb9c622,Anthonios Partheniou,2021-08-27 09:46:12+00:00,chore: migrate default branch from master to main (#148),False,97,74,23,,,,2545,756,1285,417,1.435897435897436,82.17088837062322,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+46,d774c240d3bc2009e9a0710cc7caf8f0b8acb810,release-please[bot],2021-09-01 09:40:26+00:00,"chore: release 0.4.6 (#147)
+
+:robot: I have created a release \*beep\* \*boop\*
+---
+### [0.4.6](https://www.github.com/googleapis/google-auth-library-python-oauthlib/compare/v0.4.5...v0.4.6) (2021-08-30)
+
+
+### Bug Fixes
+
+* remove dependency on `six` ([#146](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/146)) ([c338733](https://www.github.com/googleapis/google-auth-library-python-oauthlib/commit/c3387335c49597870b437a9130aed92dca6571f2)), closes [#145](https://www.github.com/googleapis/google-auth-library-python-oauthlib/issues/145)
+---
+
+
+This PR was generated with [Release Please](https://github.com/googleapis/release-please). See [documentation](https://github.com/googleapis/release-please#release-please).",False,9,8,1,,,,2545,756,1285,417,1.435897435897436,82.17088837062322,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+47,fc7023cfd18f21c912905636cc3da987d431bb57,nicain,2021-09-01 23:52:48+00:00,chore: removing owlbot directives for conversion to main (#153),False,62,4,58,,,,2491,747,1244,414,1.435897435897436,82.17088837062322,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+48,271170a5dd66216b1ba55d434705b959e22a9072,gcf-owl-bot[bot],2021-10-21 16:34:39+00:00,"chore(python): modify templated noxfile to support non-cloud APIs (#160)
+
+* chore(python): modify templated noxfile to support non-cloud APIs
+
+Source-Link: https://github.com/googleapis/synthtool/commit/76d5fec7a9e77a12c28654b333103578623a0c1b
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:979d9498e07c50097c1aeda937dcd32094ecc7440278a83e832b6a05602f62b6
+
+* update replacement in owlbot.py
+
+* 🦉 Updates from OwlBot
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+* 🦉 Updates from OwlBot
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,4,2,2,,,,2491,747,1244,414,1.435897435897436,82.17088837062322,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+49,f2fb52e3ce92ddfe0e15662d5531e874f3113abb,gcf-owl-bot[bot],2022-01-22 15:06:30+00:00,"ci(python): run lint / unit tests / docs as GH actions (#172)
+
+* ci(python): run lint / unit tests / docs as GH actions
+
+Source-Link: https://github.com/googleapis/synthtool/commit/57be0cdb0b94e1669cee0ca38d790de1dfdbcd44
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:ed1f9983d5a935a89fe8085e8bb97d94e41015252c5b6c9771257cf8624367e6
+
+* add commit to trigger gh actions
+
+* work around template bug
+
+* add testing for python 3.10
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,154,143,11,,,,2487,747,1240,414,1.435897435897436,82.17088837062322,13.0,20.5,107.77161263573493,0.8401564161644806,212.95655564114958,11.830919757841643,0.03592387087857831
+50,1fb16be1bad9050ee29293541be44e41e82defd7,Bu Sun Kim,2022-02-24 00:11:51+00:00,"feat: deprecate OAuth out-of-band flow (#175)
+
+https://developers.googleblog.com/2022/02/making-oauth-flows-safer.html?m=1#disallowed-oob The OAuth out-of-band flow is being deprecated and will stop working completely in October 2022.",False,96,70,26,0.3548387096774194,1.0,0.7419354838709677,2531,757,1277,414,1.4430379746835442,82.29141686205799,13.25,21.0,110.89828205405853,0.8389535391803538,218.56474397637237,12.142485776465131,0.03696609401801951
+51,e315cec8135b32791db685885e4c44aff1e3993b,release-please[bot],2022-02-24 00:14:49+00:00,"chore(main): release 0.5.0 (#176)
+
+:robot: I have created a release *beep* *boop*
+---
+
+
+## [0.5.0](https://github.com/googleapis/google-auth-library-python-oauthlib/compare/v0.4.6...v0.5.0) (2022-02-24)
+
+
+### Features
+
+* deprecate OAuth out-of-band flow ([#175](https://github.com/googleapis/google-auth-library-python-oauthlib/issues/175)) ([1fb16be](https://github.com/googleapis/google-auth-library-python-oauthlib/commit/1fb16be1bad9050ee29293541be44e41e82defd7))
+
+---
+This PR was generated with [Release Please](https://github.com/googleapis/release-please). See [documentation](https://github.com/googleapis/release-please#release-please).",False,9,8,1,,,,2531,757,1277,414,1.4430379746835442,82.29141686205799,13.25,21.0,110.89828205405853,0.8389535391803538,218.56474397637237,12.142485776465131,0.03696609401801951
+52,f119c4e0f5cad25b1254b0783e8226eda2d361cb,Tim Swast,2022-03-15 15:52:08+00:00,"fix: avoid deprecated ""out-of-band"" authentication flow (#186)
+
+* fix: avoid deprecated ""out-of-band"" authentication flow
+
+* 🦉 Updates from OwlBot post-processor
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,135,132,3,0.703125,1.0,0.921875,2660,820,1344,415,1.4941176470588236,78.03889085082457,14.4375,22.375,116.63150667693431,0.9952035391803538,230.20635668143257,12.789242037857363,0.03887716889231144
+53,f424959f35f164ce272251b4b19384f9d3a76065,release-please[bot],2022-03-15 15:54:51+00:00,"chore(main): release 0.5.1 (#187)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,9,8,1,,,,2660,820,1344,415,1.4941176470588236,78.03889085082457,14.4375,22.375,116.63150667693431,0.9952035391803538,230.20635668143257,12.789242037857363,0.03887716889231144
+54,0f4e65d699d1fe66d8d8b990f9ad45e286ff6e47,gcf-owl-bot[bot],2022-03-29 00:08:14+00:00,"chore(python): use black==22.3.0 (#189)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/6fab84af09f2cf89a031fd8671d1def6b2931b11
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:7cffbc10910c3ab1b852c05114a08d374c195a81cdec1d4a67a1d129331d0bfe",False,16,11,5,1.0,1.0,1.0,2666,820,1350,415,1.4941176470588236,78.0297222556399,14.4375,22.375,116.63150667693431,0.9952035391803538,230.20635668143257,12.789242037857363,0.03887716889231144
+55,89a6b12163d84991e354f6ee9240a1d1280124e7,gcf-owl-bot[bot],2022-04-01 19:32:41+00:00,"chore(python): refactor unit / system test dependency install (#193)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/993985f0fc4b37152e588f0549bcbdaf34666023
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:1894490910e891a385484514b22eb5133578897eb5b3c380e6d8ad475c6647cd",False,112,89,23,0.0,0.0,1.0,2732,866,1404,413,1.6091954022988506,77.46499281077698,14.625,22.5625,117.79472745177259,1.0264535391803538,236.490914942659,13.138384163481053,0.03926490915059086
+56,93425644c5c1abfb37d82de35393e7af693e6f20,gcf-owl-bot[bot],2022-04-21 19:33:47+00:00,"chore(python): add nox session to sort python imports (#195)
+
+* chore(python): add nox session to sort python imports
+
+Source-Link: https://github.com/googleapis/synthtool/commit/1b71c10e20de7ed3f97f692f99a0e3399b67049f
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:00c9d764fd1cd56265f12a5ef4b99a0c9e87cf261018099141e2ca5158890416
+
+* ci: update replacement in owlbot.py
+
+* 🦉 Updates from OwlBot post-processor
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,42,30,12,1.0,1.0,1.0,2750,872,1416,414,1.6022727272727273,77.4775093276788,14.625,22.5625,117.79472745177259,1.0264535391803538,236.490914942659,13.138384163481053,0.03926490915059086
+57,e41b0b48b5f8787b8b887fb9ae8eb4137fb88bfb,gcf-owl-bot[bot],2022-05-05 15:44:49+00:00,"chore: [autoapprove] update readme_gen.py to include autoescape True (#198)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/6b4d5a6407d740beb4158b302194a62a4108a8a6
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:f792ee1320e03eda2d13a5281a2989f7ed8a9e50b73ef6da97fac7e1e850b149
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,9,6,3,,,,2753,872,1419,414,1.6022727272727273,77.46016043380821,14.625,22.5625,117.79472745177259,1.0264535391803538,236.490914942659,13.138384163481053,0.03926490915059086
+58,830651eff490c47aeb3ba0b6b27afa9f92ddccdf,release-please[bot],2022-06-09 15:16:23+00:00,"chore(main): release 0.5.2 (#205)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,9,8,1,,,,2753,872,1419,414,1.6022727272727273,77.46016043380821,14.625,22.5625,117.79472745177259,1.0264535391803538,236.490914942659,13.138384163481053,0.03926490915059086
+59,c09b2871979c9c919e5499a1361b2e9d909ed345,gcf-owl-bot[bot],2022-07-23 21:36:10+00:00,"chore: use latest post processor image (#214)
+
+* chore(python): drop python 3.6
+
+Source-Link: https://github.com/googleapis/synthtool/commit/4f89b13af10d086458f9b379e56a614f9d6dab7b
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:e7bb19d47c13839fe8c147e50e02e8b6cf5da8edd1af8b82208cd6f66cc2829c
+
+* revert
+
+* revert
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,116,110,6,0.0,0.0,1.0,2843,903,1482,425,1.6741573033707866,77.16485404705318,15.3125,23.5,123.5510504145331,1.0577035391803538,257.7180005424904,14.317666696805023,0.04118368347151104
+60,8e8d73aeb51d2c7da2e0d9db72165cceb700582a,gcf-owl-bot[bot],2022-07-26 02:32:58+00:00,"chore(python): fix prerelease session [autoapprove] (#217)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/1b9ad7694e44ddb4d9844df55ff7af77b51a4435
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:9db98b055a7f8bd82351238ccaacfd3cda58cdf73012ab58b8da146368330021
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,37,20,17,0.0,1.0,1.0,2846,899,1490,424,1.6404494382022472,77.18282289228328,15.25,23.5,123.43530322444865,1.0264535391803538,250.59235437434916,13.921797465241621,0.04114510107481621
+61,b081043431c3bd90aa273c3fc6089ad7020b3ccf,Giles Knap,2022-08-12 22:24:10+00:00,"local server bind address (#202)
+
+This PR adds the bind_addr parameter to run_local_server. When using localhost inside of a container this is needed to allow the redirect server to bind to an address to which response will return. In a container this address is not the same as the host address of localhost.
+
+- [x] Make sure to open an issue as a [bug/issue](https://github.com/googleapis/google-auth-library-python-oauthlib/issues/new/choose) before writing your code!  That way we can discuss the change, evaluate designs, and agree on the general idea
+- [x] Ensure the tests and linter pass
+- [x] Code coverage does not decrease (if any source code was changed)
+- [x] Appropriate docs were updated (if necessary)
+
+Fixes #201 🦕",False,26,25,1,0.9285714285714286,1.0,0.0,2870,911,1505,424,1.6555555555555554,77.01602073045733,15.5625,23.875,125.96836359108809,1.058753950387015,256.25063834746027,14.236146574858903,0.041989454530362694
+62,479330a49a28e4f7443982ba235d2adee3e49d58,Viicos,2022-08-15 22:04:05+00:00,"fix: Pass port range from `get_user_credentials` to `find_open_port` (#212)
+
+* Port range now passed in",False,4,2,2,,,,2870,911,1505,424,1.6555555555555554,77.01602073045733,15.5625,23.875,125.96836359108809,1.058753950387015,256.25063834746027,14.236146574858903,0.041989454530362694
+63,0a12fd0768cbddf504dd19648baca74b9d90bcc7,gcf-owl-bot[bot],2022-08-30 13:03:49+00:00,"chore(python): exclude `grpcio==1.49.0rc1` in tests (#227)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/c4dd5953003d13b239f872d329c3146586bb417e
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:ce3c1686bc81145c81dd269bd12c4025c6b275b22d14641358827334fddb1d72
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,17,10,7,,,,2873,911,1506,427,1.6555555555555554,77.04192393435856,15.5625,23.875,125.96836359108809,1.058753950387015,256.25063834746027,14.236146574858903,0.041989454530362694
+64,f9fd4417a0e62f50379a161d65e55fa09e854997,release-please[bot],2022-09-14 21:32:28+00:00,chore(main): release 0.5.3 (#222),False,9,8,1,,,,2873,911,1506,427,1.6555555555555554,77.04192393435856,15.5625,23.875,125.96836359108809,1.058753950387015,256.25063834746027,14.236146574858903,0.041989454530362694
+65,8d53bc304a079d011df2757be1b88211baf47549,GW,2022-10-20 17:14:27+00:00,"fix: Add timeout to run_local_server when waiting for response (#245)
+
+* fix:Add timeout to run_local_server when waiting for response",False,6,6,0,0.0,1.0,0.0,2879,912,1508,427,1.6555555555555554,77.03017102790213,15.5625,23.875,125.96836359108809,1.058753950387015,256.25063834746027,14.236146574858903,0.041989454530362694
+66,4a37dec027e3d742ed6615f9828ab51a594d2ca2,Ryan Kohler,2022-10-20 19:59:10+00:00,"feat: update to allow for 3PI credentials (#240)
+
+* Update to allow for 3PI credentials",False,60,47,13,0.0,1.0,1.0,2913,932,1538,427,1.6593406593406594,76.92245169618522,16.375,25.1875,134.24888405950824,1.0685172729140753,261.89010585935756,14.549450325519864,0.04474962801983608
+67,64e29875c9756dcfd7000a5006e31a7dce715e22,release-please[bot],2022-10-24 18:57:47+00:00,"chore(main): release 0.6.0 (#242)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,19,18,1,,,,2913,932,1538,427,1.6593406593406594,76.92245169618522,16.375,25.1875,134.24888405950824,1.0685172729140753,261.89010585935756,14.549450325519864,0.04474962801983608
+68,f8a15f75115ed5ef3ea47b50a707459ed62a8f48,Nicholas Klingler,2022-10-25 00:57:42+00:00,fix(setup.py): increase required google-auth version to >=2.13.0 (#246) (#247),False,2,1,1,,,,2913,932,1538,427,1.6593406593406594,76.92245169618522,16.375,25.1875,134.24888405950824,1.0685172729140753,261.89010585935756,14.549450325519864,0.04474962801983608
+69,dfaa869a6ee4e667fb709a006c48fa972ca1e607,release-please[bot],2022-10-25 21:49:57+00:00,"chore(main): release 0.7.0 (#248)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,9,8,1,,,,2913,932,1538,427,1.6593406593406594,76.92245169618522,16.375,25.1875,134.24888405950824,1.0685172729140753,261.89010585935756,14.549450325519864,0.04474962801983608
+70,58becac1a4030d9bc3daf089645c4412227c4679,Ryan Kohler,2022-11-03 17:22:56+00:00,"fix: include updates to properties from Google Auth lib (#249)
+
+* Include updates to properties from Google Auth lib
+
+* test for scopes
+
+* updating real deps",False,16,13,3,0.0,1.0,1.0,2923,936,1548,427,1.6593406593406594,76.85296599917577,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+71,9fedca13ee36565ef97cd4a01c08b104fd6a6ea6,release-please[bot],2022-11-03 17:25:52+00:00,"chore(main): release 0.7.1 (#250)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,9,8,1,,,,2923,936,1548,427,1.6593406593406594,76.85296599917577,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+72,f209fc3d5d36e0ab417f30258ab05445d1412d25,Sai Hanuma Rahul,2022-11-07 20:47:23+00:00,Referring to the latest version of the requests-oauthlib docs (#233),False,4,2,2,,,,2923,936,1548,427,1.6593406593406594,76.85296599917577,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+73,51399ef9ff60e3cdd1be13443e71030e1944bff6,Alex Peters,2022-11-08 17:12:31+00:00,"enable no printing to stdout during auth flow (#203)
+
+Currently, `run_console` and `run_local_server` unconditionally print a newline to `stdout` even when `authorization_prompt_message` is empty.
+
+This proposed change checks whether printing is actually desired, and if not, prints nothing.",False,16,10,6,0.0,1.0,0.0,2927,938,1550,427,1.6923076923076923,76.83376022445522,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+74,e9585db4ddfc2180336bc8a60fdcf1f5a6c085a4,gcf-owl-bot[bot],2022-11-11 17:39:59+00:00,"chore(python): update dependencies in .kokoro/requirements.txt (#251)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/e3a1277ac35fc88c09db1930533e24292b132ced
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:452901c74a22f9b9a3bd02bce780b8e8805c97270d424684bff809ce5be8c2a2
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,338,187,151,0.0,1.0,1.0,2934,938,1557,427,1.6923076923076923,76.82178264727774,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+75,85fd1dab50a6cb387f11a4f00ad9ec6c49f7994c,Daniel Ziegenberg,2022-11-11 17:45:32+00:00,"feat: add support for Python 3.11 (#253)
+
+* feat: add support for Python 3.11
+
+Signed-off-by: Daniel Ziegenberg <daniel@ziegenberg.at>
+
+* add 3.11 to unit_test_python_versions
+
+* run post processor locally
+
+Signed-off-by: Daniel Ziegenberg <daniel@ziegenberg.at>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,21,12,9,,,,2935,938,1558,427,1.6923076923076923,76.82178264727774,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+76,a3d7bd619fa3f090cb1ff96f242921f65223653f,gcf-owl-bot[bot],2022-11-19 16:38:58+00:00,"chore(python): update release script dependencies (#256)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/25083af347468dd5f90f69627420f7d452b6c50e
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:e6cbd61f1838d9ff6a31436dfc13717f372a7482a82fc1863ca954ec47bff8c8
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,91,48,43,,,,2935,938,1558,427,1.6923076923076923,76.82178264727774,16.75,25.75,138.1843045221984,1.0684282838300696,263.86590867431306,14.659217148572946,0.0460614348407328
+77,51fef3b9703a292f39054f80d9bf9780d115db6c,sai-sunder-s,2022-12-08 23:50:18+00:00,"feat: Introduce granted scopes to credentials (#257)
+
+* feat: Introduce granted scopes to credentials
+
+* adding test
+
+* check for empty granted scope
+
+* Remove 3.6
+
+* Remove 3.6 from requirements.txt
+
+* workaround for 3.6
+
+* exclude unittest file from owlbot",False,37,32,5,0.0,1.0,1.0,2962,954,1581,428,1.684782608695652,76.45787944375934,17.9375,27.625,151.81592038023612,1.1018390361907153,292.25030650534046,16.23612813918558,0.05060530679341205
+78,be42bec33c592711c91ac96ed40a925dafd9eab8,release-please[bot],2022-12-12 21:42:04+00:00,"chore(main): release 0.8.0 (#254)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,10,9,1,,,,2962,954,1581,428,1.684782608695652,76.45787944375934,17.9375,27.625,151.81592038023612,1.1018390361907153,292.25030650534046,16.23612813918558,0.05060530679341205
+79,13914865ec3cbdb1e4ab87a7bcfc34d0b4e184d3,sai-sunder-s,2023-01-26 19:04:53+00:00,"fix: Remove deprecated OOB code (#264)
+
+* fix: Remove deprecated OOB code
+
+* Removing more oob references",False,158,5,153,0.2976190476190476,0.0,0.6428571428571429,2815,909,1480,428,1.7011494252873562,76.74429323125628,17.0,25.9375,140.31665781056853,1.1099900314603455,268.56599087204063,14.920332826224481,0.046772219270189506
+80,c77edf12a84cc71622f25eee5091656652ff2c65,sai-sunder-s,2023-01-27 16:30:53+00:00,fix: change the library from preview to stable (#267),False,4,2,2,,,,2815,909,1480,428,1.7011494252873562,76.74429323125628,17.0,25.9375,140.31665781056853,1.1099900314603455,268.56599087204063,14.920332826224481,0.046772219270189506
+81,a5e75f7db19013d90a3ddb6a39ac088bef09854e,gcf-owl-bot[bot],2023-01-30 16:44:19+00:00,"chore: fix prerelease_deps nox session [autoapprove] (#268)
+
+Source-Link: https://togithub.com/googleapis/synthtool/commit/26c7505b2f76981ec1707b851e1595c8c06e90fc
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:f946c75373c2b0040e8e318c5e85d0cf46bc6e61d0a01f3ef94d8de974ac6790",False,16,7,9,1.0,0.0,0.0,2813,909,1478,428,1.7011494252873562,76.76486329023442,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+82,1e04d3f181b1734a73d82396c969754034f55b38,Carl Lundin,2023-02-06 16:07:59+00:00,feat!: PKCE is enabled by default. (#269),False,2,1,1,,,,2813,909,1478,428,1.7011494252873562,76.76486329023442,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+83,66cc177943a80b91b5dffce01a995b154e382099,release-please[bot],2023-02-07 20:43:29+00:00,"chore(main): release 1.0.0 (#265)
+
+Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",False,19,18,1,,,,2813,909,1478,428,1.7011494252873562,76.76486329023442,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+84,b2e3688462ea9326afee2cae0f580857bc59b5f7,Daniel Hahler,2023-03-27 18:02:10+00:00,docs: fix grammar with fetch_token docstring (#273),False,2,1,1,,,,2813,909,1478,428,1.7011494252873562,76.76486329023442,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+85,eae5c021d9b3b5ceaa8008f8e1db6bb06fbe79ed,gcf-owl-bot[bot],2023-06-28 16:01:24+00:00,"chore: remove pinned Sphinx version [autoapprove] (#283)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/909573ce9da2819eeb835909c795d29aea5c724e
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:ddf4551385d566771dc713090feb7b4c1164fb8a698fe52bbe7670b24236565b
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,7,3,4,1.0,0.0,0.0,2812,909,1477,428,1.7011494252873562,76.76656905439268,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+86,01b42511bf78071fc552bce0074396335d6b3ee6,gcf-owl-bot[bot],2023-06-29 16:39:11+00:00,"chore: store artifacts in placer (#284)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/cb960373d12d20f8dc38beee2bf884d49627165e
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:2d816f26f728ac8b24248741e7d4c461c09764ef9f7be3684d557c9632e46dbd
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,15,12,3,,,,2812,909,1477,428,1.7011494252873562,76.76656905439268,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+87,5022691fa570940cc51dbc7b0745587a603b21ac,gcf-owl-bot[bot],2023-07-17 15:55:26+00:00,"build(deps): [autoapprove] bump cryptography from 41.0.0 to 41.0.2 (#291)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/d6103f4a3540ba60f633a9e25c37ec5fe7e6286d
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:39f0f3f2be02ef036e297e376fe3b6256775576da8a6ccb1d5eeb80f4c8bf8fb
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,109,56,53,0.0,1.0,1.0,2813,910,1478,428,1.7011494252873562,76.7611741489347,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+88,328a4d058ec7768582486370070dec06573a01f4,gcf-owl-bot[bot],2023-08-01 20:32:33+00:00,"chore: [autoapprove] Pin flake8 version (#297)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/0ddbff8012e47cde4462fe3f9feab01fbc4cdfd6
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:bced5ca77c4dda0fd2f5d845d4035fc3c5d3d6b81f245246a36aee114970082b
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,9,5,4,,,,2814,911,1479,428,1.7011494252873562,76.75580735018016,16.875,25.75,139.1453393907599,1.1099900314603455,265.63769482251905,14.757649712362166,0.04638177979691995
+89,fe0853176f24fa8b71013a1d068ca8deaec7ff69,Keri Warr,2023-08-14 22:20:16+00:00,feat: pass thru OAuth audience during InstalledAppFlow.run_local_server (#300),False,50,49,1,0.0,1.0,0.0,2862,931,1518,429,1.7159090909090908,76.5999927902002,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+90,1a9dca889357b93bdad17d75a28ac81e3ba6067f,Anuj Maurice,2023-09-07 15:18:53+00:00,"feat: Adding support to specify browser while launching browser to authention (#305)
+
+Thank you for opening a Pull Request! Before submitting your PR, there are a few things you can do to make sure it goes smoothly:
+- [x] Make sure to open an issue as a [bug/issue](https://togithub.com/googleapis/google-auth-library-python-oauthlib/issues/new/choose) before writing your code!  That way we can discuss the change, evaluate designs, and agree on the general idea
+- [x] Ensure the tests and linter pass
+- [x] Code coverage does not decrease (if any source code was changed)
+- [x] Appropriate docs were updated (if necessary)
+
+Fixes #303",False,16,10,6,0.0,1.0,0.0,2866,931,1519,430,1.7159090909090908,76.5885567523459,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+91,d8aead77ed6f9cb6ee5527994cb6c58aea32761f,release-please[bot],2023-09-11 16:02:58+00:00,chore(main): release 1.1.0 (#275),False,15,14,1,,,,2866,931,1519,430,1.7159090909090908,76.5885567523459,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+92,a04de794b58f9306f79bb74ea0b79d9d44f50bbb,gcf-owl-bot[bot],2023-10-09 15:07:03+00:00,"chore: [autoapprove] Update `black` and `isort` to latest versions (#313)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/0c7b0333f44b2b7075447f43a121a12d15a7b76a
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:08e34975760f002746b1d8c86fdc90660be45945ee6d9db914d1508acdf9a547
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,46,24,22,,,,2868,945,1521,430,1.7159090909090908,76.53609324880846,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+93,b303c66305a8dd17b375aa719a87dd3f619cccaa,gcf-owl-bot[bot],2023-11-03 01:23:44+00:00,"chore: update docfx minimum Python version (#316)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/bc07fd415c39853b382bcf8315f8eeacdf334055
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:30470597773378105e239b59fce8eb27cc97375580d592699206d17d117143d0
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,8,4,4,,,,2868,945,1521,430,1.7159090909090908,76.53609324880846,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+94,ac8d3ee22e73bd95170091993cdbb9071b304573,gcf-owl-bot[bot],2023-11-24 16:55:52+00:00,"feat: Add support for Python 3.12 (#318)
+
+* chore(python): Add Python 3.12
+
+Source-Link: https://github.com/googleapis/synthtool/commit/af16e6d4672cc7b400f144de2fc3068b54ff47d2
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:bacc3af03bff793a03add584537b36b5644342931ad989e3ba1171d3bd5399f5
+
+* update common files to include python 3.12
+
+* 🦉 Updates from OwlBot post-processor
+
+See https://github.com/googleapis/repo-automation-bots/blob/main/packages/owl-bot/README.md
+
+* fix typo
+
+* fix typo
+
+* add constraints file
+
+---------
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,94,87,7,,,,2877,945,1530,430,1.7159090909090908,76.52275895855514,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+95,9a0728d67df989e9d0f87734350fee1903aee11f,Anthonios Partheniou,2023-11-28 17:29:16+00:00,fix: use setuptools.find_namespace_packages (#321),False,4,2,2,,,,2877,945,1530,430,1.7159090909090908,76.52275895855514,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+96,40c871efb9293444e6b6fc0107a1856f4985283f,arithmetic1728,2023-12-04 10:40:09+00:00,"chore: update author_email in setup.py (#324)
+
+* fix: update author in setup.py
+
+* Update setup.py
+
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>
+
+---------
+
+Co-authored-by: Anthonios Partheniou <partheniou@google.com>",False,2,1,1,,,,2877,945,1530,430,1.7159090909090908,76.52275895855514,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+97,6499eb083b9082933b08bc8fb5c0e916278aad21,release-please[bot],2023-12-12 17:36:17+00:00,chore(main): release 1.2.0 (#319),False,14,13,1,,,,2877,945,1530,430,1.7159090909090908,76.52275895855514,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+98,5f9f26ae1c205c87c8817a25fafec921c09e9bc1,gcf-owl-bot[bot],2024-01-25 12:44:10+00:00,"build(python): fix `docs` and `docfx` builds (#330)
+
+Source-Link: https://github.com/googleapis/synthtool/commit/fac8444edd5f5526e804c306b766a271772a3e2f
+Post-Processor: gcr.io/cloud-devrel-public-resources/owlbot-python:latest@sha256:5ea6d0ab82c956b50962f91d94e206d3921537ae5fe1549ec5326381d8905cfa
+
+Co-authored-by: Owl Bot <gcf-owl-bot[bot]@users.noreply.github.com>",False,32,25,7,0.0,1.0,1.0,2895,945,1548,438,1.7159090909090908,76.56110408660034,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
+99,7054d62600efccfebe4031bb97fc1a094f584b16,Carl Lundin,2024-04-23 20:32:17+00:00,"fix: Clean up local server socket on error (#339)
+
+This resolves
+https://togithub.com/googleapis/google-auth-library-python-oauthlib/issues/338.
+
+Thank you for opening a Pull Request! Before submitting your PR, there are a few things you can do to make sure it goes smoothly:
+- [ ] Make sure to open an issue as a [bug/issue](https://togithub.com/googleapis/google-auth-library-python-oauthlib/issues/new/choose) before writing your code!  That way we can discuss the change, evaluate designs, and agree on the general idea
+- [ ] Ensure the tests and linter pass
+- [ ] Code coverage does not decrease (if any source code was changed)
+- [ ] Appropriate docs were updated (if necessary)
+
+Fixes #<issue_number_goes_here> 🦕",False,67,42,25,0.6923076923076923,0.0,0.0,2912,957,1564,437,1.7078651685393258,76.56799065467625,17.375,26.625,145.84523269700344,1.1092997329528826,277.0430876126677,15.391282645148205,0.04861507756566781
