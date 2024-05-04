@@ -123,7 +123,7 @@ class MetricParse:
                 '\n\tcommit message:', self.shorten_commit_message(commit.msg)
             )
 
-            if time_taken > 60 or (time_taken > 10 and commit_count - i > 1000):
+            if time_taken > 60 or (time_taken > 20 and commit_count - i > 1000):
                 logger.info(f"Estimated time too high. Skipped repo {self.repo_name}.")
                 if os.path.exists(self._default_save_path):
                     os.remove(self._default_save_path)
