@@ -1,0 +1,3 @@
+ID,hash,author,date,commit_message,is_merge,lines_changed,insertions,deletions,dmm_unit_size,dmm_unit_complexity,dmm_unit_interfacing,radon_LOC,radon_LLOC,radon_SLOC,radon_comments,radon_avg_cc,radon_avg_MI,radon_avg_vocabulary,radon_avg_length,radon_avg_volume,radon_avg_difficulty,radon_avg_effort,radon_avg_time,radon_avg_bugs
+0,994a792e3a6690cba472c214e128330b1305dcc5,Marc Abramowitz,2014-06-15 17:54:00+00:00,Initial commit,False,61,61,0,,,,25,2,24,0,,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1,db41cb0ed03ce6749f54c4095ef2de6f5a7d1f6b,Marc Abramowitz,2014-06-15 18:03:35+00:00,setup.py: Correct URL,False,2,1,1,,,,25,2,24,0,,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
