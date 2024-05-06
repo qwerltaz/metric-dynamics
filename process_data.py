@@ -25,15 +25,16 @@ def merge_results():
 
             all_results_dataframes_list.append(results)
 
-
-
-
     # Concatenate, reset index, drop duplicates.
     all_results = pd.concat(all_results_dataframes_list, ignore_index=True)
     all_results.drop(columns=["ID"], inplace=True)
     all_results.drop_duplicates(subset="hash", inplace=True)
     all_results.reset_index(drop=True, inplace=True)
     all_results.index.name = "ID"
+
+    # all_results.drop(columns=["commit_message"], inplace=True)
+    all_results["commit_message"] = all_results["commit_message"].str.replace("\r\n", " ")
+
     all_results.to_csv(os.path.join(DATA_DIR, "results", "_all_results.csv"), encoding="utf-8")
 
 
