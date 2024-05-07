@@ -1,0 +1,18 @@
+{
+   "lines_changed": "Lines changed",
+    "insertions": "Insertions",
+    "deletions": "Deletions",
+    "radon_LOC": "LOC",
+    "radon_LLOC": "LLOC",
+    "radon_SLOC": "SLOC",
+    "radon_comments": "Comments",
+    "radon_avg_cc": "Cyclomatic Complexity",
+    "radon_avg_MI": "Maintainability Index",
+    "radon_avg_vocabulary": "Halstead Vocabulary",
+    "radon_avg_length": "Halstead Length",
+    "radon_avg_volume": "Halstead Volume",
+    "radon_avg_difficulty": "Halstead Difficulty",
+    "radon_avg_effort": "Halstead Effort",
+    "radon_avg_time": "Halstead Time",
+    "radon_avg_bugs": "Halstead Bugs"
+ }
