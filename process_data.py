@@ -5,12 +5,11 @@ import os
 from typing import Literal
 
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
 
 from parse import DATA_DIR
 
 
-def process_results(mode: Literal["merge"] = "merge"):
+def process_results(mode: Literal["merge"] = "merge") -> None:
     """Merge all results into a separate table and save to the results directory."""
     merge_dir = os.path.join(DATA_DIR, "results")
     all_results = pd.DataFrame()
@@ -28,7 +27,7 @@ def process_results(mode: Literal["merge"] = "merge"):
     all_results.to_csv(os.path.join(DATA_DIR, "results", save_path), encoding="utf-8")
 
 
-def get_results_df_list(path: str):
+def get_results_df_list(path: str) -> list[pd.DataFrame]:
     """Get a list of dataframes from the directory."""
     df_list = []
     for file in os.listdir(path):
@@ -44,7 +43,7 @@ def get_results_df_list(path: str):
     return df_list
 
 
-def process_default(df: pd.DataFrame):
+def process_default(df: pd.DataFrame) -> pd.DataFrame:
     """Default data processing."""
     df.drop(columns=["ID"], inplace=True)
     df.drop_duplicates(subset="hash", inplace=True)
