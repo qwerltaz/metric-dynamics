@@ -41,15 +41,11 @@ def main():
     default_urls_path = "data/url/pypi_top_1000.csv"
 
     parser = argparse.ArgumentParser(description="Schedule metrics collection for a number of repositories.")
-    parser.add_argument("--mode", "-m", choices=["tiny", "full"], 
-                        help="Run mode. 'full' for ",
-                        default="tiny", required=False)
+    parser.add_argument("--urls-path", default=default_urls_path,
+                        help="Path to csv file with repository urls.")
     args = parser.parse_args()
 
-    if args.mode == "tiny":
-        schedule_repositories(tiny_urls_path)
-    elif args.mode == "full":
-        schedule_repositories(default_urls_path)
+    schedule_repositories(args.urls_path)
 
 
 if __name__ == "__main__":
