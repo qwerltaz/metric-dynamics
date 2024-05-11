@@ -31,17 +31,25 @@ def schedule_repositories(repo_urls_csv_path: str) -> None:
         repo_urls.loc[i, "computed"] = True
         repo_urls.to_csv(repo_urls_csv_path, index=False, encoding="utf-8")
 
+    repo_urls.drop(columns=["computed"], inplace=True)
+    repo_urls.to_csv(repo_urls_csv_path, index=False, encoding="utf-8")
+    print("Finished processing all repositories.")
+
 
 def main():
+    tiny_urls_path = "data/url/urls_tiny.csv"
+    default_urls_path = "data/url/pypi_top_1000.csv"
+
     parser = argparse.ArgumentParser(description="Schedule metrics collection for a number of repositories.")
-    parser.add_argument("--mode", "-m", choices=["tiny", "full"], help="Mode to run the script in.",
+    parser.add_argument("--mode", "-m", choices=["tiny", "full"], 
+                        help="Run mode. 'full' for ",
                         default="tiny", required=False)
     args = parser.parse_args()
 
     if args.mode == "tiny":
-        schedule_repositories("data/url/urls_tiny.csv")
+        schedule_repositories(tiny_urls_path)
     elif args.mode == "full":
-        schedule_repositories("data/url/pypi_top_1000.csv")
+        schedule_repositories(default_urls_path)
 
 
 if __name__ == "__main__":

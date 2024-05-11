@@ -10,7 +10,11 @@ from parse import DATA_DIR
 
 
 def process_results(mode: Literal["merge"] = "merge") -> None:
-    """Merge all results into a separate table and save to the results directory."""
+    """
+    Process default results.
+
+    :param mode: Mode of processing the data. 'merge' to merge all results and save them in a single file.
+    """
     merge_dir = os.path.join(DATA_DIR, "results")
     all_results = pd.DataFrame()
 
