@@ -8,6 +8,8 @@ import pandas as pd
 
 from parse import DATA_DIR
 
+ALL_RESULTS_FILE = "_all_results.csv"
+
 
 def process_results(mode: Literal["merge"] = "merge") -> None:
     """
@@ -23,19 +25,18 @@ def process_results(mode: Literal["merge"] = "merge") -> None:
 
     if mode == "merge":
         all_results = pd.concat(all_results_dataframes_list, ignore_index=True)
-        save_path = "_all_results.csv"
     else:
         raise ValueError("Invalid mode.")
 
     all_results = process_default(all_results)
-    all_results.to_csv(os.path.join(DATA_DIR, "results", save_path), encoding="utf-8")
+    all_results.to_csv(os.path.join(DATA_DIR, "results", ALL_RESULTS_FILE), encoding="utf-8")
 
 
 def get_results_df_list(path: str) -> list[pd.DataFrame]:
     """Get a list of dataframes from the directory."""
     df_list = []
     for file in os.listdir(path):
-        if file.endswith(".csv"):
+        if file.endswith(".csv") and file != ALL_RESULTS_FILE:
             results = pd.read_csv(os.path.join(path, file), encoding="utf-8")
 
             # Add repo name column to the results.
