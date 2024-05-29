@@ -300,7 +300,7 @@ class MetricParse:
                     return None, HarvesterOutcome.PYTHON_VERSION_2
 
                 logger.info(f"Error in harvester at {file_path}: {file['error']}")
-                return None, HarvesterOutcome.INVALID_CODE
+            return None, HarvesterOutcome.INVALID_CODE
 
         # Compute average of each metric, across the commit.
         for metric in unit_complexity_lists:
